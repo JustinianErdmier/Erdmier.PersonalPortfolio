@@ -1,9 +1,5 @@
 @use '../utilities' as *;
 
-.hidden {
-  display: none !important;
-}
-
 .brand {
   font-family: $ff-header;
 
@@ -16,6 +12,14 @@
     font-weight: $fw-light !important;
     font-size: $fs-h3;
   }
+}
+
+.hidden {
+  display: none !important;
+}
+
+.anchor--no-link {
+  text-decoration: none;
 }
 
 .width {

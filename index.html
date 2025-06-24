@@ -35,7 +35,7 @@
                             id="about-nav-button"
                             onclick="setNavButtonAsActive('about-nav-button')">
                             <a class="nav__link"
-                               href="#">
+                               href="#about-me-section">
                                 <span class="nav__label">About Me</span>
                             </a>
                         </li>
@@ -43,7 +43,7 @@
                             id="skills-nav-button"
                             onclick="setNavButtonAsActive('skills-nav-button')">
                             <a class="nav__link"
-                               href="#">
+                               href="#skills-section">
                                 <span class="nav__label">Skills</span>
                             </a>
                         </li>
@@ -51,7 +51,7 @@
                             id="projects-nav-button"
                             onclick="setNavButtonAsActive('projects-nav-button')">
                             <a class="nav__link"
-                               href="#">
+                               href="#projects-section">
                                 <span class="nav__label">Projects</span>
                             </a>
                         </li>
@@ -83,7 +83,10 @@
                 </nav>
                 <button class="btn btn--primary btn--header"
                         type="button">
-                    Say Hello 👋
+                    <a class="anchor--no-link"
+                       href="#contact-me-section">
+                        Say Hello 👋
+                    </a>
                 </button>
             </div>
         </header>
@@ -101,7 +104,10 @@
                         <div class="buttons">
                             <button class="btn btn--with-icon btn--primary btn--primary--light"
                                     type="button">
-                                View My Works
+                                <a class="anchor--no-link"
+                                   href="#projects-section">
+                                    View My Works
+                                </a>
                                 <span class="bi bi-arrow-right"></span>
                             </button>
                             <button class="btn btn--with-icon btn--primary btn--primary--outline"
@@ -127,6 +133,7 @@
                      class="blob-two"
                      src="wwwroot/images/blob-two.svg" />
             </section>
+            <a id="about-me-section"> </a>
             <section class="section section--about">
                 <div class="about about--wrapper">
                     <div class="image">
@@ -140,13 +147,14 @@
                         <p class="section__content">
                             My name is Justinian Erdmier, and I started my
                             journey as a software engineer in 2021. After
-                            graduating from Eleven Fifty Academy, I accepted
-                            my first professional role at Lieberman Technologies.
-                            I have worked with a variety of technologies,
-                            including .NET, C#, JavaScript, PHP, and so much
-                            more. My second role was with Toyota, where I
-                            designed and developed solutions for their
-                            manufacturing and administrative processes.
+                            graduating from <a href="#">Eleven Fifty Academy</a>,
+                            I accepted my first professional role at
+                            <a href="#">Lieberman Technologies</a>. I have worked
+                            with a variety of technologies, including .NET, C#,
+                            JavaScript, PHP, and so much more. My second role
+                            was with <a href="#">Toyota</a>, where I designed
+                            and developed solutions for their manufacturing and
+                            administrative processes.
                         </p>
                         <p class="section__content">
                             I have a deep passion for all things .NET, especially
@@ -182,7 +190,10 @@
                                 <p class="stat-label">Projects Completed</p>
                                 <button class="btn btn--with-icon btn--primary btn--small"
                                         type="button">
-                                    Learn More
+                                    <a class="anchor--no-link"
+                                       href="#projects-section">
+                                        Learn More
+                                    </a>
                                     <span class="bi bi-arrow-right"></span>
                                 </button>
                             </div>
@@ -198,6 +209,8 @@
                         </div>
                     </div>
                 </div>
+
+                <a id="skills-section"> </a>
             </section>
             <section class="section section--skills">
                 <div class="skills skills--wrapper">
@@ -205,11 +218,10 @@
                         <p class="section__sub-title">WHAT I DO</p>
                         <h1 class="section__title">Specializing In</h1>
                         <p class="section__content">
-                            I always prioritize the quality and convenience of
-                            consumers to create an attractive and fast website.
-                            *Change this text*
+                            My passion for learning has given me a diverse set of skills and knowledge. However, I also recognize the importance of specialization. The skills
+                            listed here represent my core competencies and provide me with the foundation to craft working, scalable solutions.
                         </p>
-                        <img alt=""
+                        <img alt="Animated portrait of Justinian sitting in a chair and working on a laptop."
                              id="programming-img"
                              src="wwwroot/images/programming.svg" />
                     </div>
@@ -219,7 +231,7 @@
                                 <div class="skill__icon">
                                     <span class="bi bi-braces-asterisk"></span>
                                 </div>
-                                <h1 class="skill__title">C# & .NET Core</h1>
+                                <h1 class="skill__title">.NET</h1>
                                 <span class="skill__link"
                                       onclick='openModal("skill-one")'>
                                     LEARN MORE →
@@ -229,7 +241,7 @@
                                     <div class="modal__content modal__content--40">
                                         <div class="modal__header">
                                             <h3 class="modal__title">
-                                                C# & .NET Core
+                                                .NET
                                             </h3>
                                             <div class="modal__close-icon"
                                                  onclick='closeModal("skill-one")'>
@@ -237,8 +249,24 @@
                                             </div>
                                         </div>
                                         <p class="modal__dialog">
-                                            Write some info about my knowledge
-                                            and passion for C# and .NET Core.
+                                            I was first introduced to .NET when I attended Eleven Fifty Academy. There I learned C# and built applications using .NET Framework.
+                                            After graduating, I started learning and using .NET Core and took a special interest in Blazor. Working with .NET feels very homely to
+                                            me. I think C# is an amazing language that has really blossomed and been polished these last few years. It's elegant and beautiful. But
+                                            more than that, I also love the .NET community. Our community is brimming with passionate, helpful members who are always willing to
+                                            help and share their knowledge. I'm so grateful for every opportunity I get to work with them.
+
+                                            <br /><br />
+
+                                            The thing I love most about .NET is its versatility. It can be used to build virtually anything from native and web applications;
+                                            machine learning and AI; IoT and machine programming; and games to name a few. While I've dabbled in a few of these spaces, my career
+                                            has been focused on web applications. I've built countless APIs and used both Razor Pages and ASP.NET's MVC framework. But I've
+                                            dedicated my focus on Blazor, particularly.
+
+                                            <br /><br />
+
+                                            Blazor is an astounding framework that lets you build rich, interactive web applications using C#. It's almost identical to React, but
+                                            offers all the great features and tooling of C# and .NET. It can run as a server-side application, or it can be built on top of
+                                            WebAssembly, which means it's blazing fast and can run on any device.
                                         </p>
                                     </div>
                                 </div>
@@ -247,7 +275,7 @@
                                 <div class="skill__icon">
                                     <span class="bi bi-circle-square"></span>
                                 </div>
-                                <h1 class="skill__title">Web UI/UX Design</h1>
+                                <h1 class="skill__title">UI/UX Design</h1>
                                 <span class="skill__link"
                                       onclick='openModal("skill-two")'>
                                     LEARN MORE →
@@ -257,7 +285,7 @@
                                     <div class="modal__content modal__content--40">
                                         <div class="modal__header">
                                             <h3 class="modal__title">
-                                                Web UI/UX Design
+                                                UI/UX Design
                                             </h3>
                                             <div class="modal__close-icon"
                                                  onclick='closeModal("skill-two")'>
@@ -265,8 +293,25 @@
                                             </div>
                                         </div>
                                         <p class="modal__dialog">
-                                            Write about my passion for UI/UX
-                                            design.
+                                            I have found that I am unique amongst most developers. I don't just enjoy working on the back-end (e.g., server-side development,
+                                            database design, infrastructure, etc.). I also really love UI and UX design. A common theme with me is the prioritization of quality,
+                                            and I wholly believe this extends to how my solutions look to and work for end-users. This means learning and understanding UI and UX
+                                            best practices and processes; accessibility concerns; tools for designing and developing. Even for projects where I am not directly
+                                            charged with designing the UI and UX, I always take pride in reviewing given designs and being vocal about things that might need to be
+                                            changed.
+
+                                            <br /><br />
+
+                                            When I start new projects, I like to start by wire-framing the UI. I find that this gives me a better understanding of how the backend
+                                            needs to be designed and what kind of technologies I'll need to use (e.g., API Endpoints, caching, authentication, etc.). Once I've
+                                            gotten a sense of how the app will look and work, I'll spend some time developing a more concrete design in Figma and/or Canva.
+
+                                            <br /><br />
+
+                                            I try not to constrain myself to one particular technology or framework when implementing UI designs. I've dedicated myself to having a
+                                            strong understanding in CSS, which has allowed me to easily understand how other technologies work and even troubleshoot them when they
+                                            don't work as expected. For example, I wrote all the CSS for this site from scratch using BEM convention and Sass. I've also used
+                                            Bootstrap and Tailwind CSS to build responsive, mobile-friendly UIs.
                                         </p>
                                     </div>
                                 </div>
@@ -295,107 +340,115 @@
                                             </div>
                                         </div>
                                         <p class="modal__dialog">
-                                            Write about my passion for project
-                                            management
+                                            One of the aspects of working on projects I really enjoy is planning and managing them. Before becoming a software engineer, I helped
+                                            small businesses and entrepreneurs plan and execute a variety of projects. I was working towards getting my PMP certification but
+                                            ultimately decided to put all my efforts towards software engineering. However, the skills I have as a project manager have carried over
+                                            and give me a unique way of approaching my job. When working solo, I can easily plan and manage projects efficiently, providing clear
+                                            expectations to customers. When working on a team, I help to define the scope of the project, prioritize tasks, and ensure that the
+                                            project is on track. I also have a strong understanding of project management best practices and tools, including Jira, Trello,
+                                            Confluence, Microsoft Planner, and GitHub Issues & Projects. I'm also very familiar with the Agile methodology and have worked with
+                                            Scrum and Kanban.
                                         </p>
                                     </div>
                                 </div>
                             </div>
-                            <div class="skill">
-                                <div class="skill__icon">
-                                    <span class="bi bi-flask-florence"></span>
-                                </div>
-                                <h1 class="skill__title">Testing & QA</h1>
-                                <span class="skill__link"
-                                      onclick='openModal("skill-four")'>
-                                    LEARN MORE →
-                                </span>
-                                <div class="modal"
-                                     id="skill-four">
-                                    <div class="modal__content modal__content--40">
-                                        <div class="modal__header">
-                                            <h3 class="modal__title">
-                                                Testing & QA
-                                            </h3>
-                                            <div class="modal__close-icon"
-                                                 onclick='closeModal("skill-four")'>
-                                                <span class="bi bi-x"></span>
-                                            </div>
-                                        </div>
-                                        <p class="modal__dialog">
-                                            Write about my knowledge and use of
-                                            Git, branch management, and semantic
-                                            versioning.
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="skill">
-                                <div class="skill__icon">
-                                    <span class="bi bi-infinity"></span>
-                                </div>
-                                <h1 class="skill__title">DevOps & CI/CD</h1>
-                                <span class="skill__link"
-                                      onclick='openModal("skill-five")'>
-                                    LEARN MORE →
-                                </span>
-                                <div class="modal"
-                                     id="skill-five">
-                                    <div class="modal__content modal__content--40">
-                                        <div class="modal__header">
-                                            <h3 class="modal__title">
-                                                DevOps & CI/CD
-                                            </h3>
-                                            <div class="modal__close-icon"
-                                                 onclick='closeModal("skill-five")'>
-                                                <span class="bi bi-x"></span>
-                                            </div>
-                                        </div>
-                                        <p class="modal__dialog">
-                                            Write about my knowledge and use of
-                                            Git, branch management, and semantic
-                                            versioning.
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="skill">
-                                <div class="skill__icon">
-                                    <span class="bi bi-database"></span>
-                                </div>
-                                <h1 class="skill__title">Data</h1>
-                                <span class="skill__link"
-                                      onclick='openModal("skill-six")'>
-                                    LEARN MORE →
-                                </span>
-                                <div class="modal"
-                                     id="skill-six">
-                                    <div class="modal__content modal__content--40">
-                                        <div class="modal__header">
-                                            <h3 class="modal__title">
-                                                Data
-                                            </h3>
-                                            <div class="modal__close-icon"
-                                                 onclick='closeModal("skill-six")'>
-                                                <span class="bi bi-x"></span>
-                                            </div>
-                                        </div>
-                                        <p class="modal__dialog">
-                                            Write about my knowledge and use of
-                                            Git, branch management, and semantic
-                                            versioning.
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
+                            <!--                             <div class="skill"> -->
+                            <!--                                 <div class="skill__icon"> -->
+                            <!--                                     <span class="bi bi-flask-florence"></span> -->
+                            <!--                                 </div> -->
+                            <!--                                 <h1 class="skill__title">Testing & QA</h1> -->
+                            <!--                                 <span class="skill__link" -->
+                            <!--                                       onclick='openModal("skill-four")'> -->
+                            <!--                                     LEARN MORE → -->
+                            <!--                                 </span> -->
+                            <!--                                 <div class="modal" -->
+                            <!--                                      id="skill-four"> -->
+                            <!--                                     <div class="modal__content modal__content&#45;&#45;40"> -->
+                            <!--                                         <div class="modal__header"> -->
+                            <!--                                             <h3 class="modal__title"> -->
+                            <!--                                                 Testing & QA -->
+                            <!--                                             </h3> -->
+                            <!--                                             <div class="modal__close-icon" -->
+                            <!--                                                  onclick='closeModal("skill-four")'> -->
+                            <!--                                                 <span class="bi bi-x"></span> -->
+                            <!--                                             </div> -->
+                            <!--                                         </div> -->
+                            <!--                                         <p class="modal__dialog"> -->
+                            <!--                                             Write about my knowledge and use of -->
+                            <!--                                             Git, branch management, and semantic -->
+                            <!--                                             versioning. -->
+                            <!--                                         </p> -->
+                            <!--                                     </div> -->
+                            <!--                                 </div> -->
+                            <!--                             </div> -->
+                            <!--                             <div class="skill"> -->
+                            <!--                                 <div class="skill__icon"> -->
+                            <!--                                     <span class="bi bi-infinity"></span> -->
+                            <!--                                 </div> -->
+                            <!--                                 <h1 class="skill__title">DevOps & CI/CD</h1> -->
+                            <!--                                 <span class="skill__link" -->
+                            <!--                                       onclick='openModal("skill-five")'> -->
+                            <!--                                     LEARN MORE → -->
+                            <!--                                 </span> -->
+                            <!--                                 <div class="modal" -->
+                            <!--                                      id="skill-five"> -->
+                            <!--                                     <div class="modal__content modal__content&#45;&#45;40"> -->
+                            <!--                                         <div class="modal__header"> -->
+                            <!--                                             <h3 class="modal__title"> -->
+                            <!--                                                 DevOps & CI/CD -->
+                            <!--                                             </h3> -->
+                            <!--                                             <div class="modal__close-icon" -->
+                            <!--                                                  onclick='closeModal("skill-five")'> -->
+                            <!--                                                 <span class="bi bi-x"></span> -->
+                            <!--                                             </div> -->
+                            <!--                                         </div> -->
+                            <!--                                         <p class="modal__dialog"> -->
+                            <!--                                             Write about my knowledge and use of -->
+                            <!--                                             Git, branch management, and semantic -->
+                            <!--                                             versioning. -->
+                            <!--                                         </p> -->
+                            <!--                                     </div> -->
+                            <!--                                 </div> -->
+                            <!--                             </div> -->
+                            <!--                             <div class="skill"> -->
+                            <!--                                 <div class="skill__icon"> -->
+                            <!--                                     <span class="bi bi-database"></span> -->
+                            <!--                                 </div> -->
+                            <!--                                 <h1 class="skill__title">Data</h1> -->
+                            <!--                                 <span class="skill__link" -->
+                            <!--                                       onclick='openModal("skill-six")'> -->
+                            <!--                                     LEARN MORE → -->
+                            <!--                                 </span> -->
+                            <!--                                 <div class="modal" -->
+                            <!--                                      id="skill-six"> -->
+                            <!--                                     <div class="modal__content modal__content&#45;&#45;40"> -->
+                            <!--                                         <div class="modal__header"> -->
+                            <!--                                             <h3 class="modal__title"> -->
+                            <!--                                                 Data -->
+                            <!--                                             </h3> -->
+                            <!--                                             <div class="modal__close-icon" -->
+                            <!--                                                  onclick='closeModal("skill-six")'> -->
+                            <!--                                                 <span class="bi bi-x"></span> -->
+                            <!--                                             </div> -->
+                            <!--                                         </div> -->
+                            <!--                                         <p class="modal__dialog"> -->
+                            <!--                                             Write about my knowledge and use of -->
+                            <!--                                             Git, branch management, and semantic -->
+                            <!--                                             versioning. -->
+                            <!--                                         </p> -->
+                            <!--                                     </div> -->
+                            <!--                                 </div> -->
+                            <!--                             </div> -->
                         </div>
                     </div>
                 </div>
+
+                <a id="projects-section"> </a>
             </section>
             <section class="section section--projects">
                 <div class="projects projects--wrapper">
-                    <p class="section__sub-title">MY PORTFOLIO</p>
-                    <h1 class="section__title">Recent Works</h1>
+                    <p class="section__sub-title">MY PROJECTS</p>
+                    <h1 class="section__title">Notable Works</h1>
                     <p class="section__content">
                         My portfolio consists of previous client work,
                         personal/learning projects, and work from my current
@@ -404,328 +457,331 @@
                     </p>
                     <p class="section__content">
                         Each project provides a detailed assessment of why
-                        and/or how I started it, what my expectations were and
-                        how they measured against reality, any major obstacles
-                        and how I overcame them, and finally an honest
-                        reflection of how the project helped me grow as a
-                        developer. Where available, additional resources may be
-                        shared, including design files and code.
+                        and/or how I started it; what my expectations were and
+                        how they compared to actual outcomes; any major obstacles
+                        and how I overcame them; and an honest reflection of how
+                        the project helped me grow as a developer. Where available,
+                        additional resources may be shared, including design files
+                        and code.
                     </p>
-                    <div class="portfolio-grid">
-                        <div class="project__card">
-                            <div class="project__img">
-                                <img alt=""
-                                     src="wwwroot/images/Portfolio Card Img.svg" />
-                                <div class="overlay">
-                                    <div class="fly-out">
-                                        <a class="link"
-                                           href="#"
-                                           target="_blank"
-                                        >Read Project Summary →</a
-                                        >
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="project__banner">
-                                <div class="project__type">UI/UX</div>
-                                <div class="project__actions">
-                                    <div class="action">
-                                        <a class="action__link"
-                                           href="#"
-                                           target="_blank">
-                                            <span class="action__icon bi bi-circle-square"></span>
-                                        </a>
-                                    </div>
-                                    <div class="action">
-                                        <a class="action__link"
-                                           href="#"
-                                           target="_blank">
-                                            <span class="action__icon bi bi-code"></span>
-                                        </a>
-                                    </div>
-                                    <div class="action">
-                                        <a class="action__link"
-                                           href="#"
-                                           target="_blank">
-                                            <span class="action__icon bi bi-box-arrow-up-right"></span>
-                                        </a>
-                                    </div>
-                                </div>
-                                <h1 class="project__title">
-                                    Custom Design System
-                                </h1>
-                                <div class="project__technologies">
-                                    <span class="iconify-inline"
-                                          data-height="32"
-                                          data-icon="cib:sass-alt"
-                                          data-width="32"></span>
-                                    &nbsp;
-                                    <span class="iconify-inline"
-                                          data-height="32"
-                                          data-icon="carbon:logo-github"
-                                          data-width="32"></span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="project__card">
-                            <div class="project__img">
-                                <img alt=""
-                                     src="wwwroot/images/Portfolio Card Img.svg" />
-                                <div class="overlay">
-                                    <div class="fly-out">
-                                        <a class="link"
-                                           href="#"
-                                           target="_blank">
-                                            Read Project Summary →
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="project__banner">
-                                <div class="project__type">
-                                    Design & Development
-                                </div>
-                                <div class="project__actions">
-                                    <div class="action">
-                                        <a class="action__link"
-                                           href="#"
-                                           target="_blank">
-                                            <span class="action__icon bi bi-circle-square"></span>
-                                        </a>
-                                    </div>
-                                    <div class="action">
-                                        <a class="action__link"
-                                           href="#"
-                                           target="_blank">
-                                            <span class="action__icon bi bi-code"></span>
-                                        </a>
-                                    </div>
-                                    <div class="action">
-                                        <a class="action__link"
-                                           href="#"
-                                           target="_blank">
-                                            <span class="action__icon bi bi-box-arrow-up-right"></span>
-                                        </a>
-                                    </div>
-                                </div>
-                                <h1 class="project__title">
-                                    Personal Portfolio Site
-                                </h1>
-                                <div class="project__technologies">
-                                    <span class="iconify-inline"
-                                          data-height="32"
-                                          data-icon="simple-icons:blazor"
-                                          data-width="32"></span>
-                                    &nbsp;
-                                    <span class="iconify-inline"
-                                          data-height="32"
-                                          data-icon="cib:sass-alt"
-                                          data-width="32"></span>
-                                    &nbsp;
-                                    <span class="iconify-inline"
-                                          data-height="32"
-                                          data-icon="akar-icons:figma-fill"
-                                          data-width="32"></span>
-                                    &nbsp;
-                                    <span class="iconify-inline"
-                                          data-height="32"
-                                          data-icon="cib:canva"
-                                          data-width="32"></span>
-                                    &nbsp;
-                                    <span class="iconify-inline"
-                                          data-height="32"
-                                          data-icon="carbon:logo-github"
-                                          data-width="32"></span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="project__card">
-                            <div class="project__img">
-                                <img alt=""
-                                     src="wwwroot/images/Portfolio Card Img.svg" />
-                                <div class="overlay">
-                                    <div class="fly-out">
-                                        <a class="link"
-                                           href="#"
-                                           target="_blank">
-                                            Read Project Summary →
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="project__banner">
-                                <div class="project__type">
-                                    Design & Development
-                                </div>
-                                <div class="project__actions">
-                                    <div class="action">
-                                        <a class="action__link"
-                                           href="#"
-                                           target="_blank">
-                                            <span class="action__icon bi bi-circle-square"></span>
-                                        </a>
-                                    </div>
-                                    <div class="action">
-                                        <a class="action__link"
-                                           href="#"
-                                           target="_blank">
-                                            <span class="action__icon bi bi-box-arrow-up-right"></span>
-                                        </a>
-                                    </div>
-                                </div>
-                                <h1 class="project__title">ATWS Clone</h1>
-                                <div class="project__technologies">
-                                    <span class="iconify-inline"
-                                          data-height="32"
-                                          data-icon="simple-icons:blazor"
-                                          data-width="32"></span>
-                                    &nbsp;
-                                    <span class="iconify-inline"
-                                          data-height="32"
-                                          data-icon="cib:sass-alt"
-                                          data-width="32"></span>
-                                    &nbsp;
-                                    <span class="iconify-inline"
-                                          data-height="32"
-                                          data-icon="akar-icons:figma-fill"
-                                          data-width="32"></span>
-                                    &nbsp;
-                                    <span class="iconify-inline"
-                                          data-height="32"
-                                          data-icon="cib:canva"
-                                          data-width="32"></span>
-                                    &nbsp;
-                                    <span class="iconify-inline"
-                                          data-height="32"
-                                          data-icon="carbon:logo-github"
-                                          data-width="32"></span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="project__card">
-                            <div class="project__img">
-                                <img alt=""
-                                     src="wwwroot/images/Portfolio Card Img.svg" />
-                                <div class="overlay">
-                                    <div class="fly-out">
-                                        <a class="link"
-                                           href="#"
-                                           target="_blank">
-                                            Read Project Summary →
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="project__banner">
-                                <div class="project__type">
-                                    Design & Development
-                                </div>
-                                <div class="project__actions">
-                                    <div class="action">
-                                        <a class="action__link"
-                                           href="#"
-                                           target="_blank">
-                                            <span class="action__icon bi bi-circle-square"></span>
-                                        </a>
-                                    </div>
-                                    <div class="action">
-                                        <a class="action__link"
-                                           href="#"
-                                           target="_blank">
-                                            <span class="action__icon bi bi-code"></span>
-                                        </a>
-                                    </div>
-                                    <div class="action">
-                                        <a class="action__link"
-                                           href="#"
-                                           target="_blank">
-                                            <span class="action__icon bi bi-box-arrow-up-right"></span>
-                                        </a>
-                                    </div>
-                                </div>
-                                <h1 class="project__title">Haus Manager</h1>
-                                <div class="project__technologies">
-                                    <span class="iconify-inline"
-                                          data-height="32"
-                                          data-icon="simple-icons:blazor"
-                                          data-width="32"></span>
-                                    &nbsp;
-                                    <span class="iconify-inline"
-                                          data-height="32"
-                                          data-icon="cib:sass-alt"
-                                          data-width="32"></span>
-                                    &nbsp;
-                                    <span class="iconify-inline"
-                                          data-height="32"
-                                          data-icon="akar-icons:figma-fill"
-                                          data-width="32"></span>
-                                    &nbsp;
-                                    <span class="iconify-inline"
-                                          data-height="32"
-                                          data-icon="cib:canva"
-                                          data-width="32"></span>
-                                    &nbsp;
-                                    <span class="iconify-inline"
-                                          data-height="32"
-                                          data-icon="carbon:logo-github"
-                                          data-width="32"></span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="project__card">
-                            <div class="project__img">
-                                <img alt=""
-                                     src="wwwroot/images/Portfolio Card Img.svg" />
-                                <div class="overlay">
-                                    <div class="fly-out">
-                                        <a class="link"
-                                           href="#"
-                                           target="_blank">
-                                            Read Project Summary →
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="project__banner">
-                                <div class="project__type">
-                                    Design & Development
-                                </div>
-                                <div class="project__actions">
-                                    <div class="action">
-                                        <a class="action__link"
-                                           href="#">
-                                            <span class="action__icon bi bi-box-arrow-up-right"></span>
-                                        </a>
-                                    </div>
-                                </div>
-                                <h1 class="project__title">
-                                    Germania Maennerchor Site
-                                </h1>
-                                <div class="project__technologies">
-                                    <span class="iconify-inline"
-                                          data-height="32"
-                                          data-icon="la:wix"
-                                          data-width="32"></span>
-                                    &nbsp;
-                                    <span class="iconify-inline"
-                                          data-height="32"
-                                          data-icon="cib:canva"
-                                          data-width="32"></span>
-                                    &nbsp;
-                                    <span class="iconify-inline"
-                                          data-height="32"
-                                          data-icon="carbon:logo-github"
-                                          data-width="32"></span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    <!--                     <div class="portfolio-grid"> -->
+                    <!--                         <div class="project__card"> -->
+                    <!--                             <div class="project__img"> -->
+                    <!--                                 <img alt="" -->
+                    <!--                                      src="wwwroot/images/Portfolio Card Img.svg" /> -->
+                    <!--                                 <div class="overlay"> -->
+                    <!--                                     <div class="fly-out"> -->
+                    <!--                                         <a class="link" -->
+                    <!--                                            href="#" -->
+                    <!--                                            target="_blank" -->
+                    <!--                                         >Read Project Summary →</a -->
+                    <!--                                         > -->
+                    <!--                                     </div> -->
+                    <!--                                 </div> -->
+                    <!--                             </div> -->
+                    <!--                             <div class="project__banner"> -->
+                    <!--                                 <div class="project__type">UI/UX</div> -->
+                    <!--                                 <div class="project__actions"> -->
+                    <!--                                     <div class="action"> -->
+                    <!--                                         <a class="action__link" -->
+                    <!--                                            href="#" -->
+                    <!--                                            target="_blank"> -->
+                    <!--                                             <span class="action__icon bi bi-circle-square"></span> -->
+                    <!--                                         </a> -->
+                    <!--                                     </div> -->
+                    <!--                                     <div class="action"> -->
+                    <!--                                         <a class="action__link" -->
+                    <!--                                            href="#" -->
+                    <!--                                            target="_blank"> -->
+                    <!--                                             <span class="action__icon bi bi-code"></span> -->
+                    <!--                                         </a> -->
+                    <!--                                     </div> -->
+                    <!--                                     <div class="action"> -->
+                    <!--                                         <a class="action__link" -->
+                    <!--                                            href="#" -->
+                    <!--                                            target="_blank"> -->
+                    <!--                                             <span class="action__icon bi bi-box-arrow-up-right"></span> -->
+                    <!--                                         </a> -->
+                    <!--                                     </div> -->
+                    <!--                                 </div> -->
+                    <!--                                 <h1 class="project__title"> -->
+                    <!--                                     Custom Design System -->
+                    <!--                                 </h1> -->
+                    <!--                                 <div class="project__technologies"> -->
+                    <!--                                     <span class="iconify-inline" -->
+                    <!--                                           data-height="32" -->
+                    <!--                                           data-icon="cib:sass-alt" -->
+                    <!--                                           data-width="32"></span> -->
+                    <!--                                     &nbsp; -->
+                    <!--                                     <span class="iconify-inline" -->
+                    <!--                                           data-height="32" -->
+                    <!--                                           data-icon="carbon:logo-github" -->
+                    <!--                                           data-width="32"></span> -->
+                    <!--                                 </div> -->
+                    <!--                             </div> -->
+                    <!--                         </div> -->
+                    <!--                         <div class="project__card"> -->
+                    <!--                             <div class="project__img"> -->
+                    <!--                                 <img alt="" -->
+                    <!--                                      src="wwwroot/images/Portfolio Card Img.svg" /> -->
+                    <!--                                 <div class="overlay"> -->
+                    <!--                                     <div class="fly-out"> -->
+                    <!--                                         <a class="link" -->
+                    <!--                                            href="#" -->
+                    <!--                                            target="_blank"> -->
+                    <!--                                             Read Project Summary → -->
+                    <!--                                         </a> -->
+                    <!--                                     </div> -->
+                    <!--                                 </div> -->
+                    <!--                             </div> -->
+                    <!--                             <div class="project__banner"> -->
+                    <!--                                 <div class="project__type"> -->
+                    <!--                                     Design & Development -->
+                    <!--                                 </div> -->
+                    <!--                                 <div class="project__actions"> -->
+                    <!--                                     <div class="action"> -->
+                    <!--                                         <a class="action__link" -->
+                    <!--                                            href="#" -->
+                    <!--                                            target="_blank"> -->
+                    <!--                                             <span class="action__icon bi bi-circle-square"></span> -->
+                    <!--                                         </a> -->
+                    <!--                                     </div> -->
+                    <!--                                     <div class="action"> -->
+                    <!--                                         <a class="action__link" -->
+                    <!--                                            href="#" -->
+                    <!--                                            target="_blank"> -->
+                    <!--                                             <span class="action__icon bi bi-code"></span> -->
+                    <!--                                         </a> -->
+                    <!--                                     </div> -->
+                    <!--                                     <div class="action"> -->
+                    <!--                                         <a class="action__link" -->
+                    <!--                                            href="#" -->
+                    <!--                                            target="_blank"> -->
+                    <!--                                             <span class="action__icon bi bi-box-arrow-up-right"></span> -->
+                    <!--                                         </a> -->
+                    <!--                                     </div> -->
+                    <!--                                 </div> -->
+                    <!--                                 <h1 class="project__title"> -->
+                    <!--                                     Personal Portfolio Site -->
+                    <!--                                 </h1> -->
+                    <!--                                 <div class="project__technologies"> -->
+                    <!--                                     <span class="iconify-inline" -->
+                    <!--                                           data-height="32" -->
+                    <!--                                           data-icon="simple-icons:blazor" -->
+                    <!--                                           data-width="32"></span> -->
+                    <!--                                     &nbsp; -->
+                    <!--                                     <span class="iconify-inline" -->
+                    <!--                                           data-height="32" -->
+                    <!--                                           data-icon="cib:sass-alt" -->
+                    <!--                                           data-width="32"></span> -->
+                    <!--                                     &nbsp; -->
+                    <!--                                     <span class="iconify-inline" -->
+                    <!--                                           data-height="32" -->
+                    <!--                                           data-icon="akar-icons:figma-fill" -->
+                    <!--                                           data-width="32"></span> -->
+                    <!--                                     &nbsp; -->
+                    <!--                                     <span class="iconify-inline" -->
+                    <!--                                           data-height="32" -->
+                    <!--                                           data-icon="cib:canva" -->
+                    <!--                                           data-width="32"></span> -->
+                    <!--                                     &nbsp; -->
+                    <!--                                     <span class="iconify-inline" -->
+                    <!--                                           data-height="32" -->
+                    <!--                                           data-icon="carbon:logo-github" -->
+                    <!--                                           data-width="32"></span> -->
+                    <!--                                 </div> -->
+                    <!--                             </div> -->
+                    <!--                         </div> -->
+                    <!--                         <div class="project__card"> -->
+                    <!--                             <div class="project__img"> -->
+                    <!--                                 <img alt="" -->
+                    <!--                                      src="wwwroot/images/Portfolio Card Img.svg" /> -->
+                    <!--                                 <div class="overlay"> -->
+                    <!--                                     <div class="fly-out"> -->
+                    <!--                                         <a class="link" -->
+                    <!--                                            href="#" -->
+                    <!--                                            target="_blank"> -->
+                    <!--                                             Read Project Summary → -->
+                    <!--                                         </a> -->
+                    <!--                                     </div> -->
+                    <!--                                 </div> -->
+                    <!--                             </div> -->
+                    <!--                             <div class="project__banner"> -->
+                    <!--                                 <div class="project__type"> -->
+                    <!--                                     Design & Development -->
+                    <!--                                 </div> -->
+                    <!--                                 <div class="project__actions"> -->
+                    <!--                                     <div class="action"> -->
+                    <!--                                         <a class="action__link" -->
+                    <!--                                            href="#" -->
+                    <!--                                            target="_blank"> -->
+                    <!--                                             <span class="action__icon bi bi-circle-square"></span> -->
+                    <!--                                         </a> -->
+                    <!--                                     </div> -->
+                    <!--                                     <div class="action"> -->
+                    <!--                                         <a class="action__link" -->
+                    <!--                                            href="#" -->
+                    <!--                                            target="_blank"> -->
+                    <!--                                             <span class="action__icon bi bi-box-arrow-up-right"></span> -->
+                    <!--                                         </a> -->
+                    <!--                                     </div> -->
+                    <!--                                 </div> -->
+                    <!--                                 <h1 class="project__title">ATWS Clone</h1> -->
+                    <!--                                 <div class="project__technologies"> -->
+                    <!--                                     <span class="iconify-inline" -->
+                    <!--                                           data-height="32" -->
+                    <!--                                           data-icon="simple-icons:blazor" -->
+                    <!--                                           data-width="32"></span> -->
+                    <!--                                     &nbsp; -->
+                    <!--                                     <span class="iconify-inline" -->
+                    <!--                                           data-height="32" -->
+                    <!--                                           data-icon="cib:sass-alt" -->
+                    <!--                                           data-width="32"></span> -->
+                    <!--                                     &nbsp; -->
+                    <!--                                     <span class="iconify-inline" -->
+                    <!--                                           data-height="32" -->
+                    <!--                                           data-icon="akar-icons:figma-fill" -->
+                    <!--                                           data-width="32"></span> -->
+                    <!--                                     &nbsp; -->
+                    <!--                                     <span class="iconify-inline" -->
+                    <!--                                           data-height="32" -->
+                    <!--                                           data-icon="cib:canva" -->
+                    <!--                                           data-width="32"></span> -->
+                    <!--                                     &nbsp; -->
+                    <!--                                     <span class="iconify-inline" -->
+                    <!--                                           data-height="32" -->
+                    <!--                                           data-icon="carbon:logo-github" -->
+                    <!--                                           data-width="32"></span> -->
+                    <!--                                 </div> -->
+                    <!--                             </div> -->
+                    <!--                         </div> -->
+                    <!--                         <div class="project__card"> -->
+                    <!--                             <div class="project__img"> -->
+                    <!--                                 <img alt="" -->
+                    <!--                                      src="wwwroot/images/Portfolio Card Img.svg" /> -->
+                    <!--                                 <div class="overlay"> -->
+                    <!--                                     <div class="fly-out"> -->
+                    <!--                                         <a class="link" -->
+                    <!--                                            href="#" -->
+                    <!--                                            target="_blank"> -->
+                    <!--                                             Read Project Summary → -->
+                    <!--                                         </a> -->
+                    <!--                                     </div> -->
+                    <!--                                 </div> -->
+                    <!--                             </div> -->
+                    <!--                             <div class="project__banner"> -->
+                    <!--                                 <div class="project__type"> -->
+                    <!--                                     Design & Development -->
+                    <!--                                 </div> -->
+                    <!--                                 <div class="project__actions"> -->
+                    <!--                                     <div class="action"> -->
+                    <!--                                         <a class="action__link" -->
+                    <!--                                            href="#" -->
+                    <!--                                            target="_blank"> -->
+                    <!--                                             <span class="action__icon bi bi-circle-square"></span> -->
+                    <!--                                         </a> -->
+                    <!--                                     </div> -->
+                    <!--                                     <div class="action"> -->
+                    <!--                                         <a class="action__link" -->
+                    <!--                                            href="#" -->
+                    <!--                                            target="_blank"> -->
+                    <!--                                             <span class="action__icon bi bi-code"></span> -->
+                    <!--                                         </a> -->
+                    <!--                                     </div> -->
+                    <!--                                     <div class="action"> -->
+                    <!--                                         <a class="action__link" -->
+                    <!--                                            href="#" -->
+                    <!--                                            target="_blank"> -->
+                    <!--                                             <span class="action__icon bi bi-box-arrow-up-right"></span> -->
+                    <!--                                         </a> -->
+                    <!--                                     </div> -->
+                    <!--                                 </div> -->
+                    <!--                                 <h1 class="project__title">Haus Manager</h1> -->
+                    <!--                                 <div class="project__technologies"> -->
+                    <!--                                     <span class="iconify-inline" -->
+                    <!--                                           data-height="32" -->
+                    <!--                                           data-icon="simple-icons:blazor" -->
+                    <!--                                           data-width="32"></span> -->
+                    <!--                                     &nbsp; -->
+                    <!--                                     <span class="iconify-inline" -->
+                    <!--                                           data-height="32" -->
+                    <!--                                           data-icon="cib:sass-alt" -->
+                    <!--                                           data-width="32"></span> -->
+                    <!--                                     &nbsp; -->
+                    <!--                                     <span class="iconify-inline" -->
+                    <!--                                           data-height="32" -->
+                    <!--                                           data-icon="akar-icons:figma-fill" -->
+                    <!--                                           data-width="32"></span> -->
+                    <!--                                     &nbsp; -->
+                    <!--                                     <span class="iconify-inline" -->
+                    <!--                                           data-height="32" -->
+                    <!--                                           data-icon="cib:canva" -->
+                    <!--                                           data-width="32"></span> -->
+                    <!--                                     &nbsp; -->
+                    <!--                                     <span class="iconify-inline" -->
+                    <!--                                           data-height="32" -->
+                    <!--                                           data-icon="carbon:logo-github" -->
+                    <!--                                           data-width="32"></span> -->
+                    <!--                                 </div> -->
+                    <!--                             </div> -->
+                    <!--                         </div> -->
+                    <!--                         <div class="project__card"> -->
+                    <!--                             <div class="project__img"> -->
+                    <!--                                 <img alt="" -->
+                    <!--                                      src="wwwroot/images/Portfolio Card Img.svg" /> -->
+                    <!--                                 <div class="overlay"> -->
+                    <!--                                     <div class="fly-out"> -->
+                    <!--                                         <a class="link" -->
+                    <!--                                            href="#" -->
+                    <!--                                            target="_blank"> -->
+                    <!--                                             Read Project Summary → -->
+                    <!--                                         </a> -->
+                    <!--                                     </div> -->
+                    <!--                                 </div> -->
+                    <!--                             </div> -->
+                    <!--                             <div class="project__banner"> -->
+                    <!--                                 <div class="project__type"> -->
+                    <!--                                     Design & Development -->
+                    <!--                                 </div> -->
+                    <!--                                 <div class="project__actions"> -->
+                    <!--                                     <div class="action"> -->
+                    <!--                                         <a class="action__link" -->
+                    <!--                                            href="#"> -->
+                    <!--                                             <span class="action__icon bi bi-box-arrow-up-right"></span> -->
+                    <!--                                         </a> -->
+                    <!--                                     </div> -->
+                    <!--                                 </div> -->
+                    <!--                                 <h1 class="project__title"> -->
+                    <!--                                     Germania Maennerchor Site -->
+                    <!--                                 </h1> -->
+                    <!--                                 <div class="project__technologies"> -->
+                    <!--                                     <span class="iconify-inline" -->
+                    <!--                                           data-height="32" -->
+                    <!--                                           data-icon="la:wix" -->
+                    <!--                                           data-width="32"></span> -->
+                    <!--                                     &nbsp; -->
+                    <!--                                     <span class="iconify-inline" -->
+                    <!--                                           data-height="32" -->
+                    <!--                                           data-icon="cib:canva" -->
+                    <!--                                           data-width="32"></span> -->
+                    <!--                                     &nbsp; -->
+                    <!--                                     <span class="iconify-inline" -->
+                    <!--                                           data-height="32" -->
+                    <!--                                           data-icon="carbon:logo-github" -->
+                    <!--                                           data-width="32"></span> -->
+                    <!--                                 </div> -->
+                    <!--                             </div> -->
+                    <!--                         </div> -->
+                    <!--                     </div> -->
                 </div>
             </section>
             <section class="section section--contact">
                 <div class="contact contact--wrapper">
                     <div class="top--wrapper">
-                        <p class="section__sub-title">CONTACT ME</p>
+                        <a class="section__sub-title"
+                           id="contact-me-section">
+                            CONTACT ME
+                        </a>
                         <h1 class="section__title">SAY HELLO 😁</h1>
                     </div>
                     <div class="bottom--wrapper">
@@ -740,7 +796,7 @@
                             <ul class="contact-information-list">
                                 <li class="item">
                                     <span class="icon bi bi-person"></span>
-                                    &nbsp; Justin Erdmier
+                                    &nbsp; Justinian Erdmier
                                 </li>
                                 <li class="item">
                                     <span class="icon bi bi-phone"></span>
@@ -748,47 +804,42 @@
                                 </li>
                                 <li class="item">
                                     <span class="icon bi bi-envelope"></span>
-                                    &nbsp; justin.erdmier@outlook.com
+                                    <!-- TODO: mail:to -->
+                                    &nbsp; justinian.erdmier@outlook.com
                                 </li>
                             </ul>
                             <div class="nav nav--socials">
                                 <ul class="nav__items">
-                                    <li class="nav__item">
+                                    <li class="nav__item"
+                                        title="GitHub">
                                         <a class="nav__link"
-                                           href="#">
+                                           href="https://github.com/JustinianErdmier"
+                                           target="_blank">
                                             <span class="nav__icon bi bi-github"></span>
                                         </a>
                                     </li>
-                                    <li class="nav__item">
+                                    <li class="nav__item"
+                                        title="LinkedIn">
                                         <a class="nav__link"
-                                           href="#">
-                                            <span class="nav__icon bi bi-stack-overflow"></span>
-                                        </a>
-                                    </li>
-                                    <li class="nav__item">
-                                        <a class="nav__link"
-                                           href="#">
+                                           href="https://www.linkedin.com/in/justinian-erdmier/"
+                                           target="_blank">
                                             <span class="nav__icon bi bi-linkedin"></span>
                                         </a>
                                     </li>
-                                    <li class="nav__item">
+                                    <li class="nav__item"
+                                        title="Twitter">
                                         <a class="nav__link"
-                                           href="#">
+                                           href="https://x.com/JustinianCodes"
+                                           target="_blank">
                                             <span class="nav__icon bi bi-twitter"></span>
-                                        </a>
-                                    </li>
-                                    <li class="nav__item">
-                                        <a class="nav__link"
-                                           href="#">
-                                            <span class="nav__icon bi bi-youtube"></span>
                                         </a>
                                     </li>
                                 </ul>
                             </div>
-                            <img alt=""
+                            <img alt="A decorative shape used for the background."
                                  class="blob-one"
                                  src="wwwroot/images/blob-one.svg" />
-                            <img alt=""
+                            <img alt="A decorative shape used for the background."
                                  class="blob-two"
                                  src="wwwroot/images/blob-two.svg" />
                         </div>
@@ -827,12 +878,7 @@
                 </a>
             </div>
             <div class="copyright">
-                <span> COPYRIGHT &copy; 2022 CREATED BY JUSTIN ERDMIER </span>
-                &nbsp; &middot; &nbsp;
-                <span>
-                    COPYRIGHT &copy; 2018 ORIGINAL UI/UX DESIGN BY
-                    <a href="https://rauliqbal.vercel.app/">RAULIQBAL</a>
-                </span>
+                <span> COPYRIGHT &copy; 2025 CREATED BY JUSTINIAN ERDMIER </span>
             </div>
         </footer>
     </body>
