@@ -1,0 +1,275 @@
+@use '../utilities' as *;
+@use 'sass:color';
+
+// TODO: Add box shadow to all buttons.
+
+%button-base {
+  border-radius: 0.25rem;
+  cursor: pointer;
+  display: inline-block;
+  font-size: $fs-small;
+  font-weight: $fw-regular;
+  padding: 0.25rem 0.5rem;
+  text-align: center;
+  text-decoration: none;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+  border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+  vertical-align: middle;
+}
+
+.btn {
+  @extend %button-base;
+  background-color: color.adjust($gray-300, $lightness: 3%);
+  border: 1px solid rgba(#000, 0.2);
+  color: $black;
+  transition: all 150ms linear;
+
+  &--with-icon {
+    @include display-flex($align-items: unset);
+
+    gap: 0.5rem;
+  }
+
+  &:hover {
+    background-color: color.adjust($gray-300, $lightness: -1.5%);
+    border: 1px solid rgba(#000, 0.2);
+    box-shadow: 1px 1px 2px rgba(#fff, 0.2);
+    color: color.adjust($black, $lightness: 50%);
+    text-shadow: -1px -1px 0 color.adjust($gray-300, $lightness: -9.5%);
+    transition: all 250ms linear;
+  }
+
+  &:disabled {
+    background-color: color.adjust($gray-300, $lightness: -1.5%);
+    border: 1px solid rgba(#000, 0.2);
+    box-shadow: 1px 1px 2px rgba(#fff, 0.2);
+    color: color.adjust($black, $lightness: 30%);
+    cursor: not-allowed;
+  }
+}
+
+.btn--primary {
+  @extend %button-base;
+  background-color: color.adjust($primary, $lightness: 3%);
+  border: 1px solid color.adjust($primary, $lightness: -4%);
+  box-shadow: 0 2px 0 color.adjust($primary, $lightness: -5%), 2px 4px 6px color.adjust($primary, $lightness: -2%);
+  color: $white;
+  transition: all 150ms linear;
+
+  &:hover {
+    background-color: color.adjust($primary, $lightness: -1.5%);
+    border: 1px solid rgba(#000, 0.2);
+    box-shadow: 1px 1px 2px rgba(#fff, 0.2);
+    color: color.adjust($primary, $lightness: 50%);
+    text-shadow: -1px -1px 0 color.adjust($primary, $lightness: -9.5%);
+    transition: all 250ms linear;
+  }
+
+  &:disabled {
+    background-color: color.adjust($primary, $lightness: -1.5%);
+    border: 1px solid rgba(#000, 0.2);
+    box-shadow: 1px 1px 2px rgba(#fff, 0.2);
+    color: color.adjust($primary, $lightness: 30%);
+    cursor: not-allowed;
+    text-shadow: -1px -1px 0 color.adjust($primary, $lightness: -9.5%);
+  }
+
+  &--light {
+    background-color: $white;
+    border: 1px solid color.adjust($primary, $lightness: 4%);
+    box-shadow: 0 2px 0 color.adjust($primary, $lightness: 5%),
+    2px 4px 6px color.adjust($primary, $lightness: -2%);
+    color: $primary;
+  }
+
+  &--outline {
+    background-color: unset;
+    border: 1px solid $white;
+    box-shadow: 0 1px 0 color.adjust($gray-500, $lightness: 5%),
+    1px 1px 1px color.adjust($gray-500, $lightness: -2%);
+
+    &:hover {
+      background-color: color.adjust($primary, $lightness: -1.5%);
+      border: 1px solid $white;
+      color: $white;
+      text-shadow: -1px -1px 0 color.adjust($primary, $lightness: -9.5%);
+      transition: all 250ms linear;
+    }
+  }
+}
+
+.btn--secondary {
+  @extend %button-base;
+  background-color: color.adjust($secondary, $lightness: 3%);
+  border: 1px solid color.adjust($secondary, $lightness: -4%);
+  box-shadow: 0 2px 0 color.adjust($secondary, $lightness: -5%),
+  2px 4px 6px color.adjust($secondary, $lightness: -2%);
+  color: $black;
+  transition: all 150ms linear;
+
+  &:hover {
+    background-color: color.adjust($secondary, $lightness: -1.5%);
+    border: 1px solid rgba(#000, 0.2);
+    box-shadow: 1px 1px 2px rgba(#fff, 0.2);
+    color: color.adjust($secondary, $lightness: 50%);
+    text-shadow: -1px -1px 0 color.adjust($secondary, $lightness: -9.5%);
+    transition: all 250ms linear;
+  }
+
+  &:disabled {
+    background-color: color.adjust($secondary, $lightness: -1.5%);
+    border: 1px solid rgba(#000, 0.2);
+    box-shadow: 1px 1px 2px rgba(#fff, 0.2);
+    color: color.adjust($secondary, $lightness: 30%);
+    cursor: not-allowed;
+    text-shadow: -1px -1px 0 color.adjust($secondary, $lightness: -9.5%);
+  }
+}
+
+.btn--tertiary {
+  @extend %button-base;
+  background-color: color.adjust($light-blue, $lightness: 3%);
+  border: 1px solid color.adjust($light-blue, $lightness: -4%);
+  box-shadow: 0 2px 0 color.adjust($gray-700, $lightness: -5%), 2px 4px 6px color.adjust($gray-700, $lightness: -2%);
+  color: $white;
+  transition: all 150ms linear;
+
+  &:hover {
+    background-color: color.adjust($light-blue, $lightness: -1.5%);
+    border: 1px solid rgba(#000, 0.2);
+    box-shadow: 1px 1px 2px rgba(#fff, 0.2);
+    color: color.adjust($light-blue, $lightness: 50%);
+    text-shadow: -1px -1px 0 color.adjust($light-blue, $lightness: -9.5%);
+    transition: all 250ms linear;
+  }
+
+  &:disabled {
+    background-color: color.adjust($light-blue, $lightness: -1.5%);
+    border: 1px solid rgba(#000, 0.2);
+    box-shadow: 1px 1px 2px rgba(#fff, 0.2);
+    color: color.adjust($light-blue, $lightness: 30%);
+    cursor: not-allowed;
+    text-shadow: -1px -1px 0 color.adjust($light-blue, $lightness: -9.5%);
+  }
+}
+
+.btn--info {
+  @extend %button-base;
+  background-color: color.adjust($info, $lightness: 3%);
+  border: 1px solid color.adjust($info, $lightness: -4%);
+  box-shadow: 0 2px 0 color.adjust($gray-700, $lightness: -5%), 2px 4px 6px color.adjust($gray-700, $lightness: -2%);
+  color: $white;
+  transition: all 150ms linear;
+
+  &:hover {
+    background-color: color.adjust($info, $lightness: -1.5%);
+    border: 1px solid rgba(#000, 0.2);
+    box-shadow: 1px 1px 2px rgba(#fff, 0.2);
+    color: color.adjust($info, $lightness: 50%);
+    text-shadow: -1px -1px 0 color.adjust($info, $lightness: -9.5%);
+    transition: all 250ms linear;
+  }
+
+  &:disabled {
+    background-color: color.adjust($info, $lightness: -1.5%);
+    border: 1px solid rgba(#000, 0.2);
+    box-shadow: 1px 1px 2px rgba(#fff, 0.2);
+    color: color.adjust($info, $lightness: 30%);
+    cursor: not-allowed;
+    text-shadow: -1px -1px 0 color.adjust($info, $lightness: -9.5%);
+  }
+}
+
+.btn--success {
+  @extend %button-base;
+  background-color: color.adjust($success, $lightness: 3%);
+  border: 1px solid color.adjust($success, $lightness: -4%);
+  box-shadow: 0 2px 0 color.adjust($gray-700, $lightness: -5%), 2px 4px 6px color.adjust($gray-700, $lightness: -2%);
+  color: $white;
+  transition: all 150ms linear;
+
+  &:hover {
+    background-color: color.adjust($success, $lightness: -1.5%);
+    border: 1px solid rgba(#000, 0.2);
+    box-shadow: 1px 1px 2px rgba(#fff, 0.2);
+    color: color.adjust($success, $lightness: 50%);
+    text-shadow: -1px -1px 0 color.adjust($success, $lightness: -9.5%);
+    transition: all 250ms linear;
+  }
+
+  &:disabled {
+    background-color: color.adjust($success, $lightness: -1.5%);
+    border: 1px solid rgba(#000, 0.2);
+    box-shadow: 1px 1px 2px rgba(#fff, 0.2);
+    color: color.adjust($success, $lightness: 30%);
+    cursor: not-allowed;
+    text-shadow: -1px -1px 0 color.adjust($success, $lightness: -9.5%);
+  }
+}
+
+.btn--warning {
+  @extend %button-base;
+  background-color: color.adjust($warning, $lightness: 3%);
+  border: 1px solid color.adjust($warning, $lightness: -4%);
+  box-shadow: 0 2px 0 color.adjust($gray-700, $lightness: -5%), 2px 4px 6px color.adjust($gray-700, $lightness: -2%);
+  color: $white;
+  transition: all 150ms linear;
+
+  &:hover {
+    background-color: color.adjust($warning, $lightness: -1.5%);
+    border: 1px solid rgba(#000, 0.2);
+    box-shadow: 1px 1px 2px rgba(#fff, 0.2);
+    color: color.adjust($warning, $lightness: 50%);
+    text-shadow: -1px -1px 0 color.adjust($warning, $lightness: -9.5%);
+    transition: all 250ms linear;
+  }
+
+  &:disabled {
+    background-color: color.adjust($warning, $lightness: -1.5%);
+    border: 1px solid rgba(#000, 0.2);
+    box-shadow: 1px 1px 2px rgba(#fff, 0.2);
+    color: color.adjust($warning, $lightness: 30%);
+    cursor: not-allowed;
+    text-shadow: -1px -1px 0 color.adjust($warning, $lightness: -9.5%);
+  }
+}
+
+.btn--danger {
+  @extend %button-base;
+  background-color: color.adjust($danger, $lightness: 3%);
+  border: 1px solid color.adjust($danger, $lightness: -4%);
+  box-shadow: 0 2px 0 color.adjust($gray-700, $lightness: -5%), 2px 4px 6px color.adjust($gray-700, $lightness: -2%);
+  color: $white;
+  transition: all 150ms linear;
+
+  &:hover {
+    background-color: color.adjust($danger, $lightness: -1.5%);
+    border: 1px solid rgba(#000, 0.2);
+    box-shadow: 1px 1px 2px rgba(#fff, 0.2);
+    color: color.adjust($danger, $lightness: 50%);
+    text-shadow: -1px -1px 0 color.adjust($danger, $lightness: -9.5%);
+    transition: all 250ms linear;
+  }
+
+  &:disabled {
+    background-color: color.adjust($danger, $lightness: -1.5%);
+    border: 1px solid rgba(#000, 0.2);
+    box-shadow: 1px 1px 2px rgba(#fff, 0.2);
+    color: color.adjust($danger, $lightness: 30%);
+    cursor: not-allowed;
+    text-shadow: -1px -1px 0 color.adjust($danger, $lightness: -9.5%);
+  }
+}
+
+.btn--small {
+  font-size: $fs-smaller;
+  font-weight: $fw-medium;
+}
+
+.btn--large {
+  font-size: $fs-medium;
+}
