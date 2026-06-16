@@ -1,8 +1,8 @@
 # Blazor WASM Rework — Design Spec
 
-**Date:** 2026-06-16
-**Project:** JustinianErdmier.github.io
-**Status:** Approved
+- **Date:** 2026-06-16
+- **Project:** JustinianErdmier.github.io
+- **Status:** Approved
 
 ## Goals
 
@@ -79,42 +79,50 @@ JustinianErdmier.Portfolio/
 
 ### Shell Components
 
-**`MainLayout`** — composes the entire desktop shell. Renders: wallpaper, `.win` (with `TitleBar` + `NavigationRail` + `@Body`), `StartMenu`, `Taskbar`, `DetailModal`, `Toast`. Binds `.minimized`/`.maximized` CSS classes on `.win` from `WindowStateService`. Owns start menu open/close as local `bool` state.
+**`MainLayout`** — composes the entire desktop shell. Renders: wallpaper, `.win` (with `TitleBar` + `NavigationRail` + `@Body`), `StartMenu`, `Taskbar`, `DetailModal`, `Toast`.
+Binds `.minimized`/`.maximized` CSS classes on `.win` from `WindowStateService`. Owns start menu open/close as local `bool` state.
 
-**`TitleBar`** — caption buttons (minimize/maximize/close). Injects `WindowStateService` and `ToastService`. The close button triggers a toast ("A portfolio is never really closed…") rather than closing.
+**`TitleBar`** — caption buttons (minimize/maximize/close). Injects `WindowStateService` and `ToastService`. The close button triggers a toast ("A portfolio is never really
+closed…") rather than closing.
 
-**`NavigationRail`** — nav buttons + theme toggle. Injects `NavigationManager` (to highlight active route) and `ThemeService`. Active item derived from `NavigationManager.Uri`, updated via `LocationChanged`.
+**`NavigationRail`** — nav buttons + theme toggle. Injects `NavigationManager` (to highlight active route) and `ThemeService`. Active item derived from `NavigationManager.Uri`,
+updated via `LocationChanged`.
 
-**`Taskbar`** — start button, app button (restore/minimize toggle), résumé/GitHub/LinkedIn/email links, live clock. Clock runs via a C# `PeriodicTimer` — no JS needed. Injects `WindowStateService` and `NavigationManager`.
+**`Taskbar`** — start button, app button (restore/minimize toggle), résumé/GitHub/LinkedIn/email links, live clock. Clock runs via a C# `PeriodicTimer` — no JS needed. Injects
+`WindowStateService` and `NavigationManager`.
 
 **`StartMenu`** — jump-to grid and user footer. Parameters: `bool IsOpen`, `EventCallback OnClose`. Injects `NavigationManager` for tile clicks.
 
-**`DetailModal`** — subscribes to `ModalService.OnChange`. Accepts a `RenderFragment` for body content (replaces the current string-based `renderExp`/`renderProj` approach). Focus trap handled via `IJSRuntime`. Closes on overlay click, close button, or Escape key.
+**`DetailModal`** — subscribes to `ModalService.OnChange`. Accepts a `RenderFragment` for body content (replaces the current string-based `renderExp`/`renderProj` approach). Focus
+trap handled via `IJSRuntime`. Closes on overlay click, close button, or Escape key.
 
 **`Toast`** — subscribes to `ToastService.OnChange`. Auto-dismisses after 5.2 s via `Task.Delay`.
 
 ### Boot Screen
 
-The boot screen is **not a Razor component**. It lives entirely in `index.html` as a static overlay, visible immediately before any JS or WASM loads. `blazor.webassembly.js` uses `autostart="false"`; a script calls `Blazor.start().then(() => endBoot())` where `endBoot()` is defined in `interop.js`. This ensures the boot overlay covers both the WASM download phase and the Blazor initialization phase seamlessly.
+The boot screen is **not a Razor component**. It lives entirely in `index.html` as a static overlay, visible immediately before any JS or WASM loads. `blazor.webassembly.js` uses
+`autostart="false"`; a script calls `Blazor.start().then(() => endBoot())` where `endBoot()` is defined in `interop.js`. This ensures the boot overlay covers both the WASM download
+phase and the Blazor initialization phase seamlessly.
 
 ### Section Pages
 
-`About`, `Skills`, `Experience`, `Education`, `Projects`, `Contact` — `@page` components, pure content. `Experience` and `Projects` inject `ModalService` to open the modal with a `RenderFragment` for the entry detail view.
+`About`, `Skills`, `Experience`, `Education`, `Projects`, `Contact` — `@page` components, pure content. `Experience` and `Projects` inject `ModalService` to open the modal with a
+`RenderFragment` for the entry detail view.
 
 ### Shared Components
 
-| Component | Parameters | Used in |
-|---|---|---|
-| `SectionHeader` | `string Title`, `string Subtitle` | All 6 sections |
-| `Card` | `RenderFragment Title`, `RenderFragment ChildContent` | Skills, Education |
-| `ChipList` | `IEnumerable<string> Items` | Skills, Experience modal, Projects modal |
-| `StatItem` | `string Number`, `string Label` | About |
-| `SkillRow` | `string Name`, `string Years`, `string Tier` | Skills |
-| `ProjectCard` | `ProjectEntry Entry`, `EventCallback OnClick` | Projects |
-| `TimelineItem` | `ExperienceEntry Entry`, `bool IsLeft`, `EventCallback OnViewDetails` | Experience |
-| `EducationItem` | `string Title`, `string Subtitle`, `string Description` | Education |
-| `CertificationItem` | `string Title`, `string Subtitle`, `RenderFragment Actions` | Education |
-| `ContactMethod` | `string Label`, `string Value`, `string Href`, `RenderFragment Icon` | Contact |
+| Component           | Parameters                                                            | Used in                                  |
+|---------------------|-----------------------------------------------------------------------|------------------------------------------|
+| `SectionHeader`     | `string Title`, `string Subtitle`                                     | All 6 sections                           |
+| `Card`              | `RenderFragment Title`, `RenderFragment ChildContent`                 | Skills, Education                        |
+| `ChipList`          | `IEnumerable<string> Items`                                           | Skills, Experience modal, Projects modal |
+| `StatItem`          | `string Number`, `string Label`                                       | About                                    |
+| `SkillRow`          | `string Name`, `string Years`, `string Tier`                          | Skills                                   |
+| `ProjectCard`       | `ProjectEntry Entry`, `EventCallback OnClick`                         | Projects                                 |
+| `TimelineItem`      | `ExperienceEntry Entry`, `bool IsLeft`, `EventCallback OnViewDetails` | Experience                               |
+| `EducationItem`     | `string Title`, `string Subtitle`, `string Description`               | Education                                |
+| `CertificationItem` | `string Title`, `string Subtitle`, `RenderFragment Actions`           | Education                                |
+| `ContactMethod`     | `string Label`, `string Value`, `string Href`, `RenderFragment Icon`  | Contact                                  |
 
 ---
 
@@ -122,13 +130,17 @@ The boot screen is **not a Razor component**. It lives entirely in `index.html` 
 
 All four services registered as singletons in `Program.cs`.
 
-**`ThemeService`** — manages dark/light theme state. On initialization, reads the saved preference from `localStorage` via `IJSRuntime`, falling back to `prefers-color-scheme`. `ApplyTheme(ThemeMode mode)` sets `data-theme` on `<body>` and writes to `localStorage` via JS interop. Exposes `event Action OnChange`. `ThemeMode` is `enum { Light, Dark }`.
+**`ThemeService`** — manages dark/light theme state. On initialization, reads the saved preference from `localStorage` via `IJSRuntime`, falling back to `prefers-color-scheme`.
+`ApplyTheme(ThemeMode mode)` sets `data-theme` on `<body>` and writes to `localStorage` via JS interop. Exposes `event Action OnChange`. `ThemeMode` is `enum { Light, Dark }`.
 
-**`ModalService`** — manages modal visibility and content. Exposes `Open(string title, string subtitle, RenderFragment content)` and `Close()`. `DetailModal` subscribes to `event Action OnChange` and reads `Title`, `Subtitle`, `Content`, and `IsOpen`. No JS interop needed.
+**`ModalService`** — manages modal visibility and content. Exposes `Open(string title, string subtitle, RenderFragment content)` and `Close()`. `DetailModal` subscribes to
+`event Action OnChange` and reads `Title`, `Subtitle`, `Content`, and `IsOpen`. No JS interop needed.
 
-**`ToastService`** — manages toast visibility and message. Exposes `Show(MarkupString message)` (accepts `MarkupString` so the close-button toast can include an anchor tag). Sets message, raises `OnChange`, fires `Task.Delay(5200)` then auto-dismisses.
+**`ToastService`** — manages toast visibility and message. Exposes `Show(MarkupString message)` (accepts `MarkupString` so the close-button toast can include an anchor tag). Sets
+message, raises `OnChange`, fires `Task.Delay(5200)` then auto-dismisses.
 
-**`WindowStateService`** — manages minimize/maximize state. Exposes `Minimize()`, `Restore()`, `ToggleMaximize()`, and `WindowState` (`enum { Normal, Minimized, Maximized }`). `MainLayout` binds CSS classes; `TitleBar` calls the methods; `Taskbar` app button calls `Minimize`/`Restore`.
+**`WindowStateService`** — manages minimize/maximize state. Exposes `Minimize()`, `Restore()`, `ToggleMaximize()`, and `WindowState` (`enum { Normal, Minimized, Maximized }`).
+`MainLayout` binds CSS classes; `TitleBar` calls the methods; `Taskbar` app button calls `Minimize`/`Restore`.
 
 ---
 
@@ -210,9 +222,11 @@ static class PortfolioContent
 
 ### Per-component `.razor.css` (scoped)
 
-Each Shell component and each Section page gets its own scoped stylesheet for styles that belong exclusively to it. `ChipList` and `StatItem` have no component-specific styles and need no `.razor.css`.
+Each Shell component and each Section page gets its own scoped stylesheet for styles that belong exclusively to it. `ChipList` and `StatItem` have no component-specific styles and
+need no `.razor.css`.
 
-Where styles target child content rendered via `@Body` or `RenderFragment` (e.g. modal body content from `Experience`/`Projects`), use `::deep` to pierce the CSS isolation scope boundary.
+Where styles target child content rendered via `@Body` or `RenderFragment` (e.g. modal body content from `Experience`/`Projects`), use `::deep` to pierce the CSS isolation scope
+boundary.
 
 The existing `site.css` is the source of truth for all values — no styles are invented, only reorganised.
 
@@ -224,7 +238,8 @@ The goal is to minimise JS to only what Blazor genuinely cannot do.
 
 ### Pre-first-paint (inline in `index.html` `<head>`)
 
-Two inline scripts remain inline — not extracted to an external file — to guarantee deterministic execution before any CSS renders, eliminating theme and boot flash on cold-cache first loads:
+Two inline scripts remain inline — not extracted to an external file — to guarantee deterministic execution before any CSS renders, eliminating theme and boot flash on cold-cache
+first loads:
 
 - **Theme application** — reads `localStorage['je-theme']` and `prefers-color-scheme`, sets `data-theme` on `<body>`
 - **Boot-skip** — reads `sessionStorage['je-booted']`; hides the boot overlay immediately if already booted
@@ -237,16 +252,16 @@ Two inline scripts remain inline — not extracted to an external file — to gu
 
 ### `wwwroot/js/interop.js`
 
-| Function | Purpose |
-|---|---|
-| `getTheme()` | Read `localStorage['je-theme']` |
-| `setTheme(mode)` | Write `localStorage['je-theme']` |
-| `setBodyTheme(mode)` | Set `data-theme` attribute on `<body>` |
-| `getIsBooted()` | Read `sessionStorage['je-booted']` |
-| `setBooted()` | Write `sessionStorage['je-booted']` |
-| `endBoot()` | Trigger boot overlay fade and removal |
-| `trapFocus(element)` | Activate focus trap for `DetailModal` |
-| `releaseFocus(element)` | Release focus trap |
+| Function                | Purpose                                        |
+|-------------------------|------------------------------------------------|
+| `getTheme()`            | Read `localStorage['je-theme']`                |
+| `setTheme(mode)`        | Write `localStorage['je-theme']`               |
+| `setBodyTheme(mode)`    | Set `data-theme` attribute on `<body>`         |
+| `getIsBooted()`         | Read `sessionStorage['je-booted']`             |
+| `setBooted()`           | Write `sessionStorage['je-booted']`            |
+| `endBoot()`             | Trigger boot overlay fade and removal          |
+| `trapFocus(element)`    | Activate focus trap for `DetailModal`          |
+| `releaseFocus(element)` | Release focus trap                             |
 | `restoreFocus(element)` | Return focus to trigger element on modal close |
 
 Both storage access functions wrap calls in `try/catch` and fail gracefully (private browsing mode).
@@ -266,20 +281,21 @@ Both storage access functions wrap calls in `try/catch` and fail gracefully (pri
 
 Each section is a `@page` component. The URL updates naturally; `MainLayout` persists across all navigation so the shell never re-renders.
 
-| Route | Component |
-|---|---|
-| `/` | `About.razor` |
-| `/skills` | `Skills.razor` |
+| Route         | Component          |
+|---------------|--------------------|
+| `/`           | `About.razor`      |
+| `/skills`     | `Skills.razor`     |
 | `/experience` | `Experience.razor` |
-| `/education` | `Education.razor` |
-| `/projects` | `Projects.razor` |
-| `/contact` | `Contact.razor` |
+| `/education`  | `Education.razor`  |
+| `/projects`   | `Projects.razor`   |
+| `/contact`    | `Contact.razor`    |
 
 **`App.razor`** — standard Blazor router with `MainLayout` as default layout. `NotFound` redirects to `/`.
 
 **Active nav item** — `NavigationRail` injects `NavigationManager` and derives the active item from `NavigationManager.Uri` via `LocationChanged`.
 
-**Programmatic navigation** — `StartMenu` tiles, the hero "View projects" button, and About CTAs call `NavigationManager.NavigateTo(route)`. The `data-go` attribute pattern from the current JS is replaced by `@onclick` handlers.
+**Programmatic navigation** — `StartMenu` tiles, the hero "View projects" button, and About CTAs call `NavigationManager.NavigateTo(route)`. The `data-go` attribute pattern from
+the current JS is replaced by `@onclick` handlers.
 
 ### Hosting decision gate (open)
 
@@ -296,7 +312,8 @@ This decision is deferred pending research into Azure Static Web Apps free tier 
 
 ### Error handling
 
-The only meaningful failure surface is JS interop — `localStorage` and `sessionStorage` are unavailable in some private browsing modes. Both the inline boot-skip script and `ThemeService` wrap storage access in `try/catch` and fall back gracefully:
+The only meaningful failure surface is JS interop — `localStorage` and `sessionStorage` are unavailable in some private browsing modes. Both the inline boot-skip script and
+`ThemeService` wrap storage access in `try/catch` and fall back gracefully:
 
 - Theme: defaults to `prefers-color-scheme`
 - Boot sequence: defaults to showing the boot animation

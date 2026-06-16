@@ -36,7 +36,7 @@ $$('[data-go]').forEach(b => b.addEventListener('click', e => {
 // detail modal (experience + projects)
 const detailModal = $('#detailModal');
 const EXP = {
-    onemain:   {
+    one_main:  {
         desc:   ['Drove data engineering initiatives across Snowflake, SQL Server, and IBM Mainframe, operating with high autonomy across multiple concurrent priorities.',
                  'Developed complex SQL solutions, including advanced queries, stored procedures, and data transformations, to power enterprise reporting and cross-departmental analytics.',
                  'Led strategic data analysis efforts that delivered actionable insights to business and technical stakeholders, directly informing operational decision-making.',
@@ -112,7 +112,7 @@ const EXP = {
     }
 };
 const PROJ = {
-    zoo:        {
+    zoo:         {
         img:        'wwwroot/images/zoo-tycoon-nexus.png',
         shotAlt:    'Zoo Tycoon Nexus screenshot',
         shotRatio:  '730 / 676',
@@ -124,7 +124,7 @@ const PROJ = {
         tech:       ['C# / .NET 10', 'Avalonia', 'MVVM', 'EF Core', 'SQLite'],
         href:       'https://github.com/JustinianErdmier/Erdmier.ZooTycoonLauncher'
     },
-    domaincore: {
+    domain_core: {
         code:       '<div class="m-code">' +
                     '<div class="m-code-bar"><span class="dot r"></span><span class="dot y"></span><span class="dot g"></span><span class="nm">Order.cs</span><span class="pkg">NuGet \u00b7 400+ downloads</span></div>' +
                     '<pre><span class="c-cmd">$ dotnet add package Erdmier.DomainCore</span>\n\n' +
@@ -142,7 +142,7 @@ const PROJ = {
         tech:       ['C#', 'Domain-Driven Design', 'NuGet', 'EF Core'],
         href:       'https://github.com/JustinianErdmier/Erdmier.DomainCore'
     },
-    reliquary:  {
+    reliquary:   {
         img:        'wwwroot/images/reliquary.png',
         shotAlt:    'Reliquary screenshot',
         shotRatio:  '996 / 560',
@@ -174,7 +174,7 @@ function renderExp(d) {
 }
 
 function renderProj(d) {
-    if (!d) return '<p class="modal-empty">Details coming soon.</p>';
+    if (!d) return '<p class="modal-empty">Details are coming soon.</p>';
     const ov = d.overview.map(p => '<p style="margin:0 0 11px; font-size:13px; line-height:1.65; color:var(--text-2);">' + esc(p) + '</p>').join('');
     const hl = d.highlights.map(h => '<li>' + esc(h) + '</li>').join('');
     const tech = d.tech.map(t => '<span class="m-chip">' + esc(t) + '</span>').join('');
