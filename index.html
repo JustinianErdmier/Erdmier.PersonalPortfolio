@@ -1,0 +1,1041 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta content="width=device-width, initial-scale=1.0"
+              name="viewport" />
+        <title>Justinian Erdmier — Software Engineer</title>
+        <meta content="Portfolio of Justinian Erdmier, a software engineer specialising in modern .NET — clean architecture, domain-driven design, and data engineering across enterprise environments."
+              name="description" />
+        <meta content="Justinian Erdmier"
+              name="author" />
+        <meta content="#0067c0"
+              name="theme-color" />
+        <!-- Open Graph -->
+        <meta content="website"
+              property="og:type" />
+        <meta content="Justinian Erdmier — Software Engineer"
+              property="og:title" />
+        <meta content="Software engineer specialising in modern .NET — clean architecture, DDD, and data engineering across enterprise environments."
+              property="og:description" />
+        <meta content="https://justinianerdmier.github.io/"
+              property="og:url" />
+        <meta content="https://justinianerdmier.github.io/wwwroot/images/headshot.png"
+              property="og:image" />
+        <!-- Twitter -->
+        <meta content="summary"
+              name="twitter:card" />
+        <meta content="Justinian Erdmier — Software Engineer"
+              name="twitter:title" />
+        <meta content="Software engineer specialising in modern .NET — clean architecture, DDD, and data engineering across enterprise environments."
+              name="twitter:description" />
+        <meta content="https://justinianerdmier.github.io/wwwroot/images/headshot.png"
+              name="twitter:image" />
+        <!-- Favicon: Fluent-style gradient mark -->
+        <link href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%230067c0'/%3E%3Cstop offset='1' stop-color='%23005ba1'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='32' height='32' rx='7' fill='url(%23g)'/%3E%3Ctext x='16' y='22' font-family='Segoe UI,sans-serif' font-size='17' font-weight='700' fill='white' text-anchor='middle'%3EJE%3C/text%3E%3C/svg%3E"
+              rel="icon" />
+        <link href="wwwroot/css/site.css"
+              rel="stylesheet" />
+    </head>
+    <body>
+        <div class="boot"
+             id="boot">
+            <div class="boot-brand">
+                <div class="boot-mark">JE</div>
+                <div class="boot-title">
+                    <div class="boot-name">Justinian Erdmier</div>
+                    <div class="boot-sub">Portfolio</div>
+                </div>
+            </div>
+            <div class="boot-loader"><i></i></div>
+            <div class="boot-foot">Starting portfolio…</div>
+        </div>
+        <script>
+            // Skip the boot sequence if it's already played this session (unless the user opted into every-load)
+            (function () {
+                var b = document.getElementById('boot');
+                var always = localStorage.getItem('je-boot-always') === '1';
+                var seen = sessionStorage.getItem('je-booted') === '1';
+                if (!(always || !seen)) b.hidden = true;
+            })();
+        </script>
+        <script>
+            // Apply theme before first paint to avoid a flash
+            (function () {
+                var saved = localStorage.getItem('je-theme');
+                var dark = saved ? saved === 'dark' : (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches);
+                document.body.setAttribute('data-theme', dark ? 'dark' : 'light');
+                var a = localStorage.getItem('je-accent');
+                if (a && a !== 'blue') document.body.setAttribute('data-accent', a);
+            })();
+        </script>
+        <div class="wallpaper"></div>
+
+        <div class="stage">
+            <div class="win">
+                <div class="titlebar">
+                    <div class="app"><span class="mark"></span> Justinian Erdmier — Portfolio</div>
+                    <div class="caption">
+                        <button aria-label="Minimize"
+                                class="cap"
+                                id="capMin">
+                            <svg viewBox="0 0 10 10">
+                                <line stroke="currentColor"
+                                      x1="0"
+                                      x2="10"
+                                      y1="5"
+                                      y2="5" />
+                            </svg>
+                        </button>
+                        <button aria-label="Maximize"
+                                class="cap"
+                                id="capMax">
+                            <svg viewBox="0 0 10 10">
+                                <rect fill="none"
+                                      height="9"
+                                      stroke="currentColor"
+                                      width="9"
+                                      x="0.5"
+                                      y="0.5" />
+                            </svg>
+                        </button>
+                        <button aria-label="Close"
+                                class="cap close"
+                                id="capClose">
+                            <svg viewBox="0 0 10 10">
+                                <line stroke="currentColor"
+                                      x1="0"
+                                      x2="10"
+                                      y1="0"
+                                      y2="10" />
+                                <line stroke="currentColor"
+                                      x1="10"
+                                      x2="0"
+                                      y1="0"
+                                      y2="10" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="shell">
+                    <nav aria-label="Sections"
+                         class="nav">
+                        <div class="title">Portfolio</div>
+                        <button aria-current="true"
+                                class="navitem sel"
+                                data-go="hero"><span class="gi"><svg fill="none"
+                                                                     height="18"
+                                                                     stroke="currentColor"
+                                                                     stroke-width="1.7"
+                                                                     viewBox="0 0 24 24"
+                                                                     width="18"><circle cx="12"
+                                                                                        cy="8"
+                                                                                        r="4" /><path d="M4 21c1-5 15-5 16 0" /></svg></span>About
+                        </button>
+                        <button class="navitem"
+                                data-go="skills"><span class="gi"><svg fill="none"
+                                                                       height="18"
+                                                                       stroke="currentColor"
+                                                                       stroke-width="1.7"
+                                                                       viewBox="0 0 24 24"
+                                                                       width="18"><path d="M12 2l2.5 6.5L21 9l-5 4.5L17.5 21 12 17l-5.5 4L8 13.5 3 9l6.5-.5z" /></svg></span>Skills
+                        </button>
+                        <button class="navitem"
+                                data-go="experience"><span class="gi"><svg fill="none"
+                                                                           height="18"
+                                                                           stroke="currentColor"
+                                                                           stroke-width="1.7"
+                                                                           viewBox="0 0 24 24"
+                                                                           width="18"><rect height="13"
+                                                                                            rx="2"
+                                                                                            width="18"
+                                                                                            x="3"
+                                                                                            y="7" /><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2" /></svg></span>Experience
+                        </button>
+                        <button class="navitem"
+                                data-go="education"><span class="gi"><svg fill="none"
+                                                                          height="18"
+                                                                          stroke="currentColor"
+                                                                          stroke-width="1.7"
+                                                                          viewBox="0 0 24 24"
+                                                                          width="18"><path d="M2 8l10-5 10 5-10 5z" /><path d="M6 10.5V15c0 1.5 2.7 3 6 3s6-1.5 6-3v-4.5" /></svg></span>Education
+                        </button>
+                        <button class="navitem"
+                                data-go="projects"><span class="gi"><svg fill="none"
+                                                                         height="18"
+                                                                         stroke="currentColor"
+                                                                         stroke-width="1.7"
+                                                                         viewBox="0 0 24 24"
+                                                                         width="18"><path d="M3 7h6l2 2h10v9a2 2 0 0 1-2 2H3z" /></svg></span>Projects
+                        </button>
+                        <button class="navitem"
+                                data-go="contact"><span class="gi"><svg fill="none"
+                                                                        height="18"
+                                                                        stroke="currentColor"
+                                                                        stroke-width="1.7"
+                                                                        viewBox="0 0 24 24"
+                                                                        width="18"><rect height="14"
+                                                                                         rx="2"
+                                                                                         width="18"
+                                                                                         x="3"
+                                                                                         y="5" /><path d="M3 7l9 6 9-6" /></svg></span>Contact
+                        </button>
+                        <div class="spacer"></div>
+                        <button aria-pressed="false"
+                                class="theme-toggle"
+                                id="themeToggle"><span aria-hidden="true"
+                                                       class="gi"><svg class="th-moon"
+                                                                       fill="none"
+                                                                       height="18"
+                                                                       stroke="currentColor"
+                                                                       stroke-linecap="round"
+                                                                       stroke-linejoin="round"
+                                                                       stroke-width="1.7"
+                                                                       viewBox="0 0 24 24"
+                                                                       width="18"><path d="M21 12.79A9 9 0 1 1 11.21 3a7 7 0 0 0 9.79 9.79z" /></svg><svg class="th-sun"
+                                                                                                                                                          fill="none"
+                                                                                                                                                          height="18"
+                                                                                                                                                          stroke="currentColor"
+                                                                                                                                                          stroke-linecap="round"
+                                                                                                                                                          stroke-linejoin="round"
+                                                                                                                                                          stroke-width="1.7"
+                                                                                                                                                          viewBox="0 0 24 24"
+                                                                                                                                                          width="18"><circle cx="12"
+                                                                                                                                                                             cy="12"
+                                                                                                                                                                             r="5" /><line x1="12"
+                                                                                                                                                                                           x2="12"
+                                                                                                                                                                                           y1="1"
+                                                                                                                                                                                           y2="3" /><line x1="12"
+                                                                                                                                                                                                          x2="12"
+                                                                                                                                                                                                          y1="21"
+                                                                                                                                                                                                          y2="23" /><line x1="4.22"
+                                                                                                                                                                                                                          x2="5.64"
+                                                                                                                                                                                                                          y1="4.22"
+                                                                                                                                                                                                                          y2="5.64" /><line x1="18.36"
+                                                                                                                                                                                                                                            x2="19.78"
+                                                                                                                                                                                                                                            y1="18.36"
+                                                                                                                                                                                                                                            y2="19.78" /><line x1="1"
+                                                                                                                                                                                                                                                               x2="3"
+                                                                                                                                                                                                                                                               y1="12"
+                                                                                                                                                                                                                                                               y2="12" /><line x1="21"
+                                                                                                                                                                                                                                                                               x2="23"
+                                                                                                                                                                                                                                                                               y1="12"
+                                                                                                                                                                                                                                                                               y2="12" /><line x1="4.22"
+                                                                                                                                                                                                                                                                                               x2="5.64"
+                                                                                                                                                                                                                                                                                               y1="19.78"
+                                                                                                                                                                                                                                                                                               y2="18.36" /><line x1="18.36"
+                                                                                                                                                                                                                                                                                                                  x2="19.78"
+                                                                                                                                                                                                                                                                                                                  y1="5.64"
+                                                                                                                                                                                                                                                                                                                  y2="4.22" /></svg></span><span aria-hidden="true"
+                                                                                                                                                                                                                                                                                                                                                 class="switch"></span><span id="themeLabel">Dark mode</span>
+                        </button>
+                    </nav>
+
+                    <div class="content"
+                         id="content">
+                        <section class="pane active"
+                                 data-screen-label="About"
+                                 id="hero">
+                            <h2 class="pane-title">Hello, I'm Justinian</h2>
+                            <div class="crumb">Building resilient .NET systems across enterprise environments</div>
+                            <div class="hero">
+                                <div class="avatar"><img alt="Justinian Erdmier"
+                                                         src="wwwroot/images/headshot.png" /></div>
+                                <div class="htext">
+                                    <h1>About Me</h1>
+                                    <div class="role"><span class="pip"></span> Software Engineer · Web &amp; .NET</div>
+                                    <p>I'm a software engineer specialising in modern .NET — building resilient, maintainable systems with clean architecture, domain-driven design,
+                                       and a strong data foundation.</p>
+                                    <p>Since 2021, I've delivered production-grade solutions across enterprise environments, from high-performance Blazor applications to
+                                       data-intensive ETL pipelines and Snowflake-backed analytics.</p>
+                                    <p>My strongest tools are C# and .NET, but I'm comfortable working across the stack and adapting to the technologies that best serve the
+                                       problem.</p>
+                                    <div class="cta">
+                                        <a class="btn primary"
+                                           href="wwwroot/documents/Justinian Erdmier Resume for Mid-Sr Full Stack Engineer.pdf"
+                                           rel="noopener noreferrer"
+                                           target="_blank">
+                                            <svg fill="none"
+                                                 height="15"
+                                                 stroke="currentColor"
+                                                 stroke-linecap="round"
+                                                 stroke-linejoin="round"
+                                                 stroke-width="1.9"
+                                                 viewBox="0 0 24 24"
+                                                 width="15">
+                                                <path d="M12 3v12m0 0l-4-4m4 4l4-4" />
+                                                <path d="M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-2" />
+                                            </svg>
+                                            Résumé</a>
+                                        <a class="btn"
+                                           data-go="projects"
+                                           href="#projects">View projects</a>
+                                        <a class="btn"
+                                           href="mailto:justinian.erdmier@outlook.com">Get in touch</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="statstrip">
+                                <div class="stat">
+                                    <div class="n">5</div>
+                                    <div class="l">Years building for the web</div>
+                                </div>
+                                <div class="stat">
+                                    <div class="n">3</div>
+                                    <div class="l">Companies shipped for</div>
+                                </div>
+                                <div class="stat">
+                                    <div class="n">100K<span class="u">+</span></div>
+                                    <div class="l">Users reached</div>
+                                </div>
+                                <div class="stat">
+                                    <div class="n">80<span class="u">%</span></div>
+                                    <div class="l">Faster data transfer</div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section class="pane"
+                                 data-screen-label="Skills"
+                                 id="skills">
+                            <h2 class="pane-title">Skills &amp; Expertise</h2>
+                            <div class="crumb">Engineering across business systems and data</div>
+                            <div class="cardrow">
+                                <div class="card">
+                                    <h3><span class="gi"><svg fill="none"
+                                                              height="18"
+                                                              stroke="currentColor"
+                                                              stroke-width="1.8"
+                                                              viewBox="0 0 24 24"
+                                                              width="18"><path d="M16 18l6-6-6-6M8 6l-6 6 6 6" /></svg></span> Core .NET Stack
+                                    </h3>
+                                    <p style="margin:0 0 12px; font-size:13px; color:var(--text-2); line-height:1.6;">I work daily across the modern .NET ecosystem, with deep
+                                                                                                                      experience in Blazor, ASP.NET Core, and data-driven
+                                                                                                                      architectures.</p>
+                                    <div class="sk-list">
+                                        <div class="sk-row">
+                                            <span class="sk-name">C#</span>
+                                            <span class="sk-meta"><span class="sk-yrs">5 yrs · daily</span><span class="sk-tier t-expert">Expert</span></span>
+                                        </div>
+                                        <div class="sk-row">
+                                            <span class="sk-name">ASP.NET Core</span>
+                                            <span class="sk-meta"><span class="sk-yrs">5 yrs · daily</span><span class="sk-tier t-expert">Expert</span></span>
+                                        </div>
+                                        <div class="sk-row">
+                                            <span class="sk-name">Blazor</span>
+                                            <span class="sk-meta"><span class="sk-yrs">5 yrs · daily</span><span class="sk-tier t-sme">SME</span></span>
+                                        </div>
+                                        <div class="sk-row">
+                                            <span class="sk-name">EF Core</span>
+                                            <span class="sk-meta"><span class="sk-yrs">4 yrs · regular</span><span class="sk-tier t-adv">Advanced</span></span>
+                                        </div>
+                                        <div class="sk-row">
+                                            <span class="sk-name">Unit Testing</span>
+                                            <span class="sk-meta"><span class="sk-yrs">4 yrs · regular</span><span class="sk-tier t-adv">Advanced</span></span>
+                                        </div>
+                                    </div>
+                                    <div class="sk-legend">
+                                        <span><b>SME</b> — go-to person, set the standards</span>
+                                        <span><b>Expert</b> — production-grade, unsupervised</span>
+                                        <span><b>Advanced</b> — confident across most tasks</span>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <h3><span class="gi"><svg fill="none"
+                                                              height="18"
+                                                              stroke="currentColor"
+                                                              stroke-width="1.8"
+                                                              viewBox="0 0 24 24"
+                                                              width="18"><ellipse cx="12"
+                                                                                  cy="5"
+                                                                                  rx="8"
+                                                                                  ry="3" /><path d="M4 5v14c0 1.7 3.6 3 8 3s8-1.3 8-3V5M4 12c0 1.7 3.6 3 8 3s8-1.3 8-3" /></svg></span>
+                                        Foundations &amp; Data
+                                    </h3>
+                                    <p style="margin:0 0 4px; font-size:13px; color:var(--text-2); line-height:1.6;">Beyond the app layer, I work across the data side of business
+                                                                                                                     and enterprise systems — modeling relational schemas, shaping
+                                                                                                                     ETL/ELT flows, and keeping pipelines reliable and auditable.
+                                                                                                                     .NET is my preferred toolkit, but the focus is always solving
+                                                                                                                     the business problem, whatever the stack.</p>
+                                    <div class="chips">
+                                        <span class="chip">Clean Architecture</span>
+                                        <span class="chip">Domain-Driven Design</span>
+                                        <span class="chip">SQL Server</span>
+                                        <span class="chip">T-SQL</span>
+                                        <span class="chip">Snowflake</span>
+                                        <span class="chip">Data Engineering</span>
+                                        <span class="chip">Data Warehousing</span>
+                                        <span class="chip">ETL / ELT</span>
+                                        <span class="chip">Azure</span>
+                                        <span class="chip">AWS</span>
+                                        <span class="chip">.NET Aspire</span>
+                                        <span class="chip">CQRS</span>
+                                        <span class="chip">Microservices</span>
+                                    </div>
+                                    <p class="note">Also experienced with JavaScript/TypeScript, Python for data workflows, and cloud-native tooling across Azure and AWS.</p>
+                                </div>
+                            </div>
+                            <div class="card"
+                                 style="margin-top:16px;">
+                                <h3><span class="gi"><svg fill="none"
+                                                          height="18"
+                                                          stroke="currentColor"
+                                                          stroke-width="1.8"
+                                                          viewBox="0 0 24 24"
+                                                          width="18"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" /><circle cx="9"
+                                                                                                                                   cy="7"
+                                                                                                                                   r="4" /><path d="M22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75" /></svg></span>
+                                    How I Work
+                                </h3>
+                                <div class="chips">
+                                    <span class="chip">Scrum / Agile</span>
+                                    <span class="chip">Code Review &amp; Standards</span>
+                                    <span class="chip">Stakeholder Communication</span>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section class="pane"
+                                 data-screen-label="Experience"
+                                 id="experience">
+                            <h2 class="pane-title">Experience</h2>
+                            <div class="crumb">Professional software engineering roles</div>
+                            <p class="tl-intro">This timeline highlights only my professional experience as a software engineer. For my full experience history, please see my
+                                <a href="https://www.linkedin.com/in/justinian-erdmier/details/experience/"
+                                   rel="noopener"
+                                   target="_blank">LinkedIn profile</a>.</p>
+                            <div class="timeline">
+                                <div class="tl-item left"><span class="tl-dot"></span>
+                                    <div class="tl-card">
+                                        <span class="tl-date">Jul 2025 – Jan 2026</span>
+                                        <h4>Software Engineer &amp; Data Analyst</h4>
+                                        <div class="org">OneMain Financial · Evansville, IN</div>
+                                        <ul>
+                                            <li>Built the Law Coding Dev Portal end-to-end as principal architect, giving the law coding team a unified, authoritative platform for
+                                                law grid management and mainframe publication.
+                                            </li>
+                                            <li>Drove enterprise reporting and cross-departmental analytics by engineering advanced SQL solutions across Snowflake, SQL Server, and
+                                                IBM Mainframe.
+                                            </li>
+                                            <li>Replaced error-prone Excel-based workflows with purpose-built .NET automation tools, eliminating manual errors across two
+                                                business-critical processes.
+                                            </li>
+                                        </ul>
+                                        <button class="tl-btn"
+                                                data-key="onemain"
+                                                data-modal="exp"
+                                                data-sub="OneMain Financial · Jul 2025 – Jan 2026"
+                                                data-title="Software Engineer &amp; Data Analyst">View full description →
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="tl-item right"><span class="tl-dot"></span>
+                                    <div class="tl-card">
+                                        <span class="tl-date">May 2023 – May 2025</span>
+                                        <h4>Software Engineer</h4>
+                                        <div class="org">Toyota Motor North America (via Work4ce) · Georgetown, KY</div>
+                                        <ul>
+                                            <li>Shaped the architecture and implementation of a mission-critical Blazor application serving hundreds of thousands of TMNA employees
+                                                and contractors, acting as the team's primary Blazor subject matter expert.
+                                            </li>
+                                            <li>Improved codebase maintainability and testability by migrating a legacy JavaScript/MVC stack to Blazor WebAssembly and ASP.NET Core,
+                                                adopting CQRS to remove monolithic service classes.
+                                            </li>
+                                            <li>Reduced factory-floor inspection data transfer times by over 80% — from 3+ minutes to 15–30 seconds — by implementing offline-first
+                                                IndexedDB support for low-connectivity environments.
+                                            </li>
+                                        </ul>
+                                        <button class="tl-btn"
+                                                data-key="toyota"
+                                                data-modal="exp"
+                                                data-sub="Toyota Motor North America (via Work4ce) · May 2023 – May 2025"
+                                                data-title="Software Engineer">View full description →
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="tl-item left"><span class="tl-dot"></span>
+                                    <div class="tl-card">
+                                        <span class="tl-date">Oct 2021 – Jan 2023</span>
+                                        <h4>Software Engineer</h4>
+                                        <div class="org">Lieberman Technologies · Evansville, IN</div>
+                                        <ul>
+                                            <li>Eliminated systemic technical debt by authoring a custom PHP micro-framework modelled on ASP.NET Core and clean architecture,
+                                                replacing a fragmented legacy codebase across multiple client projects.
+                                            </li>
+                                            <li>Delivered an in-house business management application that increased lead-to-customer conversion by approximately 15% within the
+                                                first three months of adoption.
+                                            </li>
+                                            <li>Expanded the company's technology stack by building production-grade C# and .NET solutions, establishing a scalable foundation
+                                                beyond its decade-long PHP-centric environment.
+                                            </li>
+                                        </ul>
+                                        <button class="tl-btn"
+                                                data-key="lieberman"
+                                                data-modal="exp"
+                                                data-sub="Lieberman Technologies · Oct 2021 – Jan 2023"
+                                                data-title="Software Engineer">View full description →
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section class="pane"
+                                 data-screen-label="Education"
+                                 id="education">
+                            <h2 class="pane-title">Education &amp; Certifications</h2>
+                            <div class="crumb">Where it started — and the credentials along the way</div>
+                            <div class="eduwrap">
+                                <div class="edu-card">
+                                    <h3><span class="gi"><svg fill="none"
+                                                              height="18"
+                                                              stroke="currentColor"
+                                                              stroke-width="1.8"
+                                                              viewBox="0 0 24 24"
+                                                              width="18"><path d="M2 8l10-5 10 5-10 5z" /><path d="M6 10.5V15c0 1.5 2.7 3 6 3s6-1.5 6-3v-4.5" /></svg></span>
+                                        Education
+                                    </h3>
+                                    <div class="edu-item">
+                                        <span class="edu-ic"><svg fill="none"
+                                                                  height="18"
+                                                                  stroke="currentColor"
+                                                                  stroke-width="1.8"
+                                                                  viewBox="0 0 24 24"
+                                                                  width="18"><path d="M2 8l10-5 10 5-10 5z" /><path d="M6 10.5V15c0 1.5 2.7 3 6 3s6-1.5 6-3v-4.5" /></svg></span>
+                                        <div>
+                                            <div class="ti">Immersive Software Development Program</div>
+                                            <div class="su">Eleven Fifty Academy · Indianapolis, IN · Mar – May 2021</div>
+                                            <div class="ds">Immersive, industry-guided curriculum with real-world, project-based learning and 500+ logged coding hours.</div>
+                                        </div>
+                                    </div>
+                                    <div class="edu-item">
+                                        <span class="edu-ic"><svg fill="none"
+                                                                  height="18"
+                                                                  stroke="currentColor"
+                                                                  stroke-width="1.8"
+                                                                  viewBox="0 0 24 24"
+                                                                  width="18"><circle cx="12"
+                                                                                     cy="12"
+                                                                                     r="9" /><path d="M12 7v5l3 2" /></svg></span>
+                                        <div>
+                                            <div class="ti">Atlas Project — Continuing Education Internship</div>
+                                            <div class="su">Eleven Fifty Academy · Indianapolis, IN · Aug – Oct 2021</div>
+                                            <div class="ds">Post-graduation program with mentorship from volunteers across Indiana's tech leadership.</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="edu-card">
+                                    <h3><span class="gi"><svg fill="none"
+                                                              height="18"
+                                                              stroke="currentColor"
+                                                              stroke-width="1.8"
+                                                              viewBox="0 0 24 24"
+                                                              width="18"><circle cx="12"
+                                                                                 cy="9"
+                                                                                 r="6" /><path d="M8.5 14l-1.5 7 5-3 5 3-1.5-7" /></svg></span> Certifications
+                                    </h3>
+                                    <div class="cert-item">
+                                        <span class="edu-ic"><svg fill="none"
+                                                                  height="18"
+                                                                  stroke="currentColor"
+                                                                  stroke-width="1.8"
+                                                                  viewBox="0 0 24 24"
+                                                                  width="18"><circle cx="12"
+                                                                                     cy="9"
+                                                                                     r="6" /><path d="M8.5 14l-1.5 7 5-3 5 3-1.5-7" /></svg></span>
+                                        <div class="cert-body">
+                                            <div class="ti">Unit Testing for C# Developers</div>
+                                            <div class="su">Dometrain · Issued Jun 2025</div>
+                                            <div class="cert-actions">
+                                                <a class="cert-btn primary"
+                                                   href="https://dometrain.com/certificate/WL3eyjgy76hhP6/"
+                                                   rel="noopener"
+                                                   target="_blank">Show credential ↗</a>
+                                                <a class="cert-btn"
+                                                   href="wwwroot/documents/Unit Testing for C-Sharp Developers - Dometrain.pdf"
+                                                   rel="noopener"
+                                                   target="_blank">PDF ↗</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="cert-item">
+                                        <span class="edu-ic"><svg fill="none"
+                                                                  height="18"
+                                                                  stroke="currentColor"
+                                                                  stroke-width="1.8"
+                                                                  viewBox="0 0 24 24"
+                                                                  width="18"><circle cx="12"
+                                                                                     cy="9"
+                                                                                     r="6" /><path d="M8.5 14l-1.5 7 5-3 5 3-1.5-7" /></svg></span>
+                                        <div class="cert-body">
+                                            <div class="ti">Codecademy</div>
+                                            <div class="su">Issued Oct 2021</div>
+                                            <div class="cert-actions">
+                                                <a class="cert-btn"
+                                                   href="https://www.codecademy.com/profiles/JustinianErdmier/certificates/042a4e5884e3eb6ea1f2a12be6abb851"
+                                                   rel="noopener"
+                                                   target="_blank">SQL ↗</a>
+                                                <a class="cert-btn"
+                                                   href="wwwroot/documents/Learn SQL Course - Codecademy.pdf"
+                                                   rel="noopener"
+                                                   target="_blank">SQL PDF ↗</a>
+                                                <a class="cert-btn"
+                                                   href="https://www.codecademy.com/profiles/JustinianErdmier/certificates/d24ce3aa4ed99ac04afffec4a78e2e44"
+                                                   rel="noopener"
+                                                   target="_blank">PHP ↗</a>
+                                                <a class="cert-btn"
+                                                   href="wwwroot/documents/Learn PHP Course - Codecademy.pdf"
+                                                   rel="noopener"
+                                                   target="_blank">PHP PDF ↗</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="cert-item">
+                                        <span class="edu-ic"><svg fill="none"
+                                                                  height="18"
+                                                                  stroke="currentColor"
+                                                                  stroke-width="1.8"
+                                                                  viewBox="0 0 24 24"
+                                                                  width="18"><circle cx="12"
+                                                                                     cy="9"
+                                                                                     r="6" /><path d="M8.5 14l-1.5 7 5-3 5 3-1.5-7" /></svg></span>
+                                        <div class="cert-body">
+                                            <div class="ti">Software Development Red Badge</div>
+                                            <div class="su">Blaizing Academy (Eleven Fifty Academy) · Issued May 2021</div>
+                                            <div class="cert-actions">
+                                                <a class="cert-btn primary"
+                                                   href="https://www.credly.com/badges/4029b5d0-04a8-49dd-9564-f9a4f53c5b35"
+                                                   rel="noopener"
+                                                   target="_blank">Show credential ↗</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="cert-note"><a href="https://www.linkedin.com/in/justinian-erdmier/details/certifications/"
+                                                              rel="noopener"
+                                                              target="_blank">View all certifications on LinkedIn →</a></div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section class="pane"
+                                 data-screen-label="Projects"
+                                 id="projects">
+                            <h2 class="pane-title">Projects</h2>
+                            <div class="crumb">Personal projects — where I explore beyond the day job</div>
+                            <div class="projects">
+                                <button class="proj p1"
+                                        data-href="https://github.com/JustinianErdmier/Erdmier.ZooTycoonLauncher"
+                                        data-key="zoo"
+                                        data-modal="proj">
+                                    <div class="top">
+                                        <svg fill="none"
+                                             stroke="#7e57c2"
+                                             stroke-linecap="round"
+                                             stroke-linejoin="round"
+                                             stroke-width="1.8"
+                                             viewBox="0 0 24 24">
+                                            <rect height="10"
+                                                  rx="5"
+                                                  width="20"
+                                                  x="2"
+                                                  y="7" />
+                                            <path d="M6.5 10.5v3M5 12h3" />
+                                            <circle cx="15.5"
+                                                    cy="11"
+                                                    r="1" />
+                                            <circle cx="18.5"
+                                                    cy="13.5"
+                                                    r="1" />
+                                        </svg>
+                                    </div>
+                                    <div class="pad">
+                                        <h4>Zoo Tycoon Nexus</h4>
+                                        <div class="meta">Windows Desktop Launcher · Avalonia</div>
+                                        <p>Native launcher for Zoo Tycoon (2001). Discovers and manages multiple installs, edits every <code>zoo.ini</code> setting with full
+                                           SQLite-backed version history, and launches in one click.</p>
+                                        <div class="tags"><span class="t">.NET 10</span><span class="t">Avalonia</span><span class="t">EF Core / SQLite</span></div>
+                                        <div class="open">View details →</div>
+                                    </div>
+                                </button>
+                                <button class="proj p2"
+                                        data-href="https://github.com/JustinianErdmier/Erdmier.DomainCore"
+                                        data-key="domaincore"
+                                        data-modal="proj">
+                                    <div class="top">
+                                        <svg fill="none"
+                                             stroke="#2e9e4f"
+                                             stroke-linecap="round"
+                                             stroke-linejoin="round"
+                                             stroke-width="1.8"
+                                             viewBox="0 0 24 24">
+                                            <path d="M12 2.5l8.5 4.75v9.5L12 21.5l-8.5-4.75v-9.5z" />
+                                            <path d="M3.5 7.25L12 12l8.5-4.75M12 12v9.5" />
+                                        </svg>
+                                    </div>
+                                    <div class="pad">
+                                        <h4>Domain Core</h4>
+                                        <div class="meta">C# Library · NuGet Package</div>
+                                        <p>Lightweight DDD building blocks for .NET — base types for entities, aggregate roots &amp; value objects that work with EF Core out of the
+                                           box. Published on NuGet, 400+ downloads.</p>
+                                        <div class="tags"><span class="t">C#</span><span class="t">DDD</span><span class="t">NuGet</span></div>
+                                        <div class="open">View details →</div>
+                                    </div>
+                                </button>
+                                <button class="proj p3"
+                                        data-href="https://github.com/JustinianErdmier/Erdmier.Reliquary"
+                                        data-key="reliquary"
+                                        data-modal="proj">
+                                    <div class="top">
+                                        <svg fill="none"
+                                             stroke="#1f86d8"
+                                             stroke-linecap="round"
+                                             stroke-linejoin="round"
+                                             stroke-width="1.8"
+                                             viewBox="0 0 24 24">
+                                            <path d="M4 14V6a2 2 0 0 1 2-2h8" />
+                                            <rect height="12"
+                                                  rx="2"
+                                                  width="13"
+                                                  x="8"
+                                                  y="8" />
+                                            <circle cx="12"
+                                                    cy="12"
+                                                    r="1.2" />
+                                            <path d="M8 17l3.5-3 2.5 2 3-2.5L21 17" />
+                                        </svg>
+                                    </div>
+                                    <div class="pad">
+                                        <h4>Reliquary</h4>
+                                        <div class="meta">Windows Desktop App · Avalonia</div>
+                                        <p>Native app for curating, deduplicating &amp; tidying large media collections. Import to staging, clean, then commit into a managed
+                                           library — content-hash identity survives cloud-sync moves.</p>
+                                        <div class="tags"><span class="t">Avalonia</span><span class="t">Dedup</span><span class="t">EF Core / SQLite</span></div>
+                                        <div class="open">View details →</div>
+                                    </div>
+                                </button>
+                            </div>
+                        </section>
+
+                        <section class="pane"
+                                 data-screen-label="Contact"
+                                 id="contact">
+                            <h2 class="pane-title">Get in Touch</h2>
+                            <div class="crumb">Open to interesting web and .NET work</div>
+                            <div class="contact-lead">
+                                <p>The fastest way to reach me is email or LinkedIn — I usually reply within a day or two. Whether it's a web engineering role, a .NET project, or
+                                   just a good conversation about clean architecture, I'd be glad to hear from you.</p>
+                                <span class="avail"><span class="pip"></span> Available for new web &amp; .NET roles · Evansville, IN · open to remote</span>
+                            </div>
+                            <div class="contact-grid">
+                                <a class="cmethod"
+                                   href="https://www.linkedin.com/in/justinian-erdmier/"
+                                   rel="noopener"
+                                   target="_blank">
+                                    <span class="ci"
+                                          style="background:rgba(10,102,194,.16);"><svg height="20"
+                                                                                        viewBox="0 0 24 24"
+                                                                                        width="20"><rect fill="#0a66c2"
+                                                                                                         height="24"
+                                                                                                         rx="4"
+                                                                                                         width="24" /><rect fill="#fff"
+                                                                                                                            height="11"
+                                                                                                                            width="3.2"
+                                                                                                                            x="4"
+                                                                                                                            y="9" /><circle cx="5.6"
+                                                                                                                                            cy="5.5"
+                                                                                                                                            fill="#fff"
+                                                                                                                                            r="1.9" /><path d="M10 20V9h3v1.6c.6-1 1.8-1.9 3.5-1.9 2.5 0 4 1.6 4 4.6V20h-3.2v-5.3c0-1.4-.5-2.3-1.8-2.3-1 0-1.6.7-1.8 1.4-.1.2-.1.6-.1.9V20z"
+                                                                                                                                                            fill="#fff" /></svg></span>
+                                    <span><span class="k">LinkedIn</span><br /><span class="v">in/justinian-erdmier</span></span>
+                                </a>
+                                <a class="cmethod"
+                                   href="https://github.com/JustinianErdmier"
+                                   rel="noopener"
+                                   target="_blank">
+                                    <span class="ci"
+                                          style="background:rgba(127,127,127,.16);"><svg fill="currentColor"
+                                                                                         height="20"
+                                                                                         viewBox="0 0 24 24"
+                                                                                         width="20"><path d="M12 2a10 10 0 0 0-3.2 19.5c.5.1.7-.2.7-.5v-1.7c-2.8.6-3.4-1.3-3.4-1.3-.5-1.2-1.1-1.5-1.1-1.5-.9-.6.1-.6.1-.6 1 .1 1.5 1 1.5 1 .9 1.5 2.3 1.1 2.9.8.1-.6.3-1.1.6-1.3-2.2-.25-4.6-1.1-4.6-5a4 4 0 0 1 1-2.7c-.1-.3-.4-1.3.1-2.6 0 0 .8-.3 2.7 1a9.4 9.4 0 0 1 5 0c1.9-1.3 2.7-1 2.7-1 .5 1.3.2 2.3.1 2.6a4 4 0 0 1 1 2.7c0 3.9-2.3 4.7-4.6 5 .4.3.7.9.7 1.8v2.6c0 .3.2.6.7.5A10 10 0 0 0 12 2z" /></svg></span>
+                                    <span><span class="k">GitHub</span><br /><span class="v">JustinianErdmier</span></span>
+                                </a>
+                                <a class="cmethod"
+                                   href="mailto:justinian.erdmier@outlook.com">
+                                    <span class="ci"
+                                          style="background:rgba(0,103,192,.14);"><svg fill="none"
+                                                                                       height="20"
+                                                                                       stroke="var(--accent)"
+                                                                                       stroke-width="1.8"
+                                                                                       viewBox="0 0 24 24"
+                                                                                       width="20"><rect height="14"
+                                                                                                        rx="2"
+                                                                                                        width="18"
+                                                                                                        x="3"
+                                                                                                        y="5" /><path d="M3 7l9 6 9-6" /></svg></span>
+                                    <span><span class="k">Email</span><br /><span class="v">justinian.erdmier@outlook.com</span></span>
+                                </a>
+                                <a class="cmethod"
+                                   href="wwwroot/documents/Justinian Erdmier Resume for Mid-Sr Full Stack Engineer.pdf"
+                                   rel="noopener noreferrer"
+                                   target="_blank">
+                                    <span class="ci"
+                                          style="background:rgba(0,103,192,.14);"><svg fill="none"
+                                                                                       height="20"
+                                                                                       stroke="var(--accent)"
+                                                                                       stroke-linecap="round"
+                                                                                       stroke-linejoin="round"
+                                                                                       stroke-width="1.7"
+                                                                                       viewBox="0 0 24 24"
+                                                                                       width="20"><path d="M6 2h9l5 5v13a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2z" /><path d="M14 2v6h6M8 13h8M8 17h5" /></svg></span>
+                                    <span><span class="k">Résumé</span><br /><span class="v">View the full résumé ↗</span></span>
+                                </a>
+                            </div>
+                            <p class="contact-note">Prefer something formal? My résumé lists every role, certification, and the full tech stack — or connect on LinkedIn for the
+                                                    complete history.</p>
+                        </section>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal-overlay"
+             id="detailModal">
+            <div aria-labelledby="detailModalTitle"
+                 aria-modal="true"
+                 class="modal"
+                 role="dialog">
+                <div class="modal-head">
+                    <div style="flex:1;">
+                        <h3 id="detailModalTitle">Details</h3>
+                        <div class="ms"
+                             id="detailModalSub"></div>
+                    </div>
+                    <button aria-label="Close dialog"
+                            class="modal-close"
+                            id="detailModalClose">✕
+                    </button>
+                </div>
+                <div class="modal-body"
+                     id="detailModalBody"></div>
+            </div>
+        </div>
+
+        <div aria-label="Start"
+             class="startmenu"
+             id="startMenu"
+             role="menu">
+            <div class="sm-eyebrow">Jump to</div>
+            <div class="sm-grid">
+                <button class="sm-tile"
+                        data-go="hero"><span class="gi"><svg fill="none"
+                                                             height="20"
+                                                             stroke="currentColor"
+                                                             stroke-width="1.7"
+                                                             viewBox="0 0 24 24"
+                                                             width="20"><circle cx="12"
+                                                                                cy="8"
+                                                                                r="4" /><path d="M4 21c1-5 15-5 16 0" /></svg></span><span class="tl">About</span><span class="ds">Who I am</span>
+                </button>
+                <button class="sm-tile"
+                        data-go="skills"><span class="gi"><svg fill="none"
+                                                               height="20"
+                                                               stroke="currentColor"
+                                                               stroke-width="1.7"
+                                                               viewBox="0 0 24 24"
+                                                               width="20"><path d="M12 2l2.5 6.5L21 9l-5 4.5L17.5 21 12 17l-5.5 4L8 13.5 3 9l6.5-.5z" /></svg></span><span class="tl">Skills</span><span class="ds">Stack &amp; expertise</span>
+                </button>
+                <button class="sm-tile"
+                        data-go="experience"><span class="gi"><svg fill="none"
+                                                                   height="20"
+                                                                   stroke="currentColor"
+                                                                   stroke-width="1.7"
+                                                                   viewBox="0 0 24 24"
+                                                                   width="20"><rect height="13"
+                                                                                    rx="2"
+                                                                                    width="18"
+                                                                                    x="3"
+                                                                                    y="7" /><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2" /></svg></span><span class="tl">Experience</span><span class="ds">Where I've worked</span>
+                </button>
+                <button class="sm-tile"
+                        data-go="education"><span class="gi"><svg fill="none"
+                                                                  height="20"
+                                                                  stroke="currentColor"
+                                                                  stroke-width="1.7"
+                                                                  viewBox="0 0 24 24"
+                                                                  width="20"><path d="M2 8l10-5 10 5-10 5z" /><path d="M6 10.5V15c0 1.5 2.7 3 6 3s6-1.5 6-3v-4.5" /></svg></span><span class="tl">Education</span><span class="ds">&amp; certifications</span>
+                </button>
+                <button class="sm-tile"
+                        data-go="projects"><span class="gi"><svg fill="none"
+                                                                 height="20"
+                                                                 stroke="currentColor"
+                                                                 stroke-width="1.7"
+                                                                 viewBox="0 0 24 24"
+                                                                 width="20"><path d="M3 7h6l2 2h10v9a2 2 0 0 1-2 2H3z" /></svg></span><span class="tl">Projects</span><span class="ds">What I build</span>
+                </button>
+                <button class="sm-tile"
+                        data-go="contact"><span class="gi"><svg fill="none"
+                                                                height="20"
+                                                                stroke="currentColor"
+                                                                stroke-width="1.7"
+                                                                viewBox="0 0 24 24"
+                                                                width="20"><rect height="14"
+                                                                                 rx="2"
+                                                                                 width="18"
+                                                                                 x="3"
+                                                                                 y="5" /><path d="M3 7l9 6 9-6" /></svg></span><span class="tl">Contact</span><span class="ds">Get in touch</span>
+                </button>
+            </div>
+            <div class="sm-foot">
+                <img alt="Justinian Erdmier"
+                     class="av"
+                     src="wwwroot/images/headshot.png" />
+                <div class="who">
+                    <div class="nm">Justinian Erdmier</div>
+                    <div class="rl">Software Engineer · Web &amp; .NET</div>
+                </div>
+                <a class="pwr"
+                   href="wwwroot/documents/Justinian Erdmier Resume for Mid-Sr Full Stack Engineer.pdf"
+                   rel="noopener noreferrer"
+                   target="_blank">
+                    <svg fill="none"
+                         height="14"
+                         stroke="currentColor"
+                         stroke-linecap="round"
+                         stroke-linejoin="round"
+                         stroke-width="1.8"
+                         viewBox="0 0 24 24"
+                         width="14">
+                        <path d="M12 3v12m0 0l-4-4m4 4l4-4" />
+                        <path d="M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-2" />
+                    </svg>
+                    Résumé</a>
+            </div>
+        </div>
+
+        <div aria-label="Taskbar"
+             class="taskbar"
+             role="toolbar">
+            <div class="tb-center">
+                <button aria-label="Start"
+                        class="tb-btn"
+                        data-tip="Start"
+                        id="tbStart">
+                    <svg fill="currentColor"
+                         viewBox="0 0 24 24">
+                        <rect height="8"
+                              rx="1"
+                              width="8"
+                              x="3"
+                              y="3" />
+                        <rect height="8"
+                              rx="1"
+                              width="8"
+                              x="13"
+                              y="3" />
+                        <rect height="8"
+                              rx="1"
+                              width="8"
+                              x="3"
+                              y="13" />
+                        <rect height="8"
+                              rx="1"
+                              width="8"
+                              x="13"
+                              y="13" />
+                    </svg>
+                </button>
+                <span class="tb-sep"></span>
+                <button aria-label="Portfolio window"
+                        class="tb-btn active"
+                        data-tip="Portfolio"
+                        id="tbApp"><span class="tb-mark">JE</span></button>
+                <a aria-label="Open résumé"
+                   class="tb-btn"
+                   data-tip="Résumé"
+                   href="wwwroot/documents/Justinian Erdmier Resume for Mid-Sr Full Stack Engineer.pdf"
+                   rel="noopener noreferrer"
+                   target="_blank">
+                    <svg fill="none"
+                         stroke="currentColor"
+                         stroke-linecap="round"
+                         stroke-linejoin="round"
+                         stroke-width="1.7"
+                         viewBox="0 0 24 24">
+                        <path d="M6 2h9l5 5v13a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2z" />
+                        <path d="M14 2v6h6M8 13h8M8 17h5" />
+                    </svg>
+                </a>
+                <a aria-label="GitHub"
+                   class="tb-btn"
+                   data-tip="GitHub"
+                   href="https://github.com/JustinianErdmier"
+                   rel="noopener"
+                   target="_blank">
+                    <svg fill="currentColor"
+                         viewBox="0 0 24 24">
+                        <path d="M12 2a10 10 0 0 0-3.2 19.5c.5.1.7-.2.7-.5v-1.7c-2.8.6-3.4-1.3-3.4-1.3-.5-1.2-1.1-1.5-1.1-1.5-.9-.6.1-.6.1-.6 1 .1 1.5 1 1.5 1 .9 1.5 2.3 1.1 2.9.8.1-.6.3-1.1.6-1.3-2.2-.25-4.6-1.1-4.6-5a4 4 0 0 1 1-2.7c-.1-.3-.4-1.3.1-2.6 0 0 .8-.3 2.7 1a9.4 9.4 0 0 1 5 0c1.9-1.3 2.7-1 2.7-1 .5 1.3.2 2.3.1 2.6a4 4 0 0 1 1 2.7c0 3.9-2.3 4.7-4.6 5 .4.3.7.9.7 1.8v2.6c0 .3.2.6.7.5A10 10 0 0 0 12 2z" />
+                    </svg>
+                </a>
+                <a aria-label="LinkedIn"
+                   class="tb-btn"
+                   data-tip="LinkedIn"
+                   href="https://www.linkedin.com/in/justinian-erdmier/"
+                   rel="noopener"
+                   target="_blank">
+                    <svg fill="currentColor"
+                         viewBox="0 0 24 24">
+                        <rect height="11"
+                              width="3.2"
+                              x="3"
+                              y="9" />
+                        <circle cx="4.6"
+                                cy="5.5"
+                                r="1.9" />
+                        <path d="M9 20V9h3v1.6c.6-1 1.8-1.9 3.5-1.9 2.5 0 4 1.6 4 4.6V20h-3.2v-5.3c0-1.4-.5-2.3-1.8-2.3-1 0-1.6.7-1.8 1.4-.1.2-.1.6-.1.9V20z" />
+                    </svg>
+                </a>
+                <a aria-label="Email"
+                   class="tb-btn"
+                   data-tip="Email"
+                   href="mailto:justinian.erdmier@outlook.com">
+                    <svg fill="none"
+                         stroke="currentColor"
+                         stroke-width="1.7"
+                         viewBox="0 0 24 24">
+                        <rect height="14"
+                              rx="2"
+                              width="18"
+                              x="3"
+                              y="5" />
+                        <path d="M3 7l9 6 9-6" />
+                    </svg>
+                </a>
+            </div>
+            <div aria-label="Clock"
+                 class="tb-clock"
+                 id="tbClock">
+                <span class="t"
+                      id="clockTime">--:--</span>
+                <span class="d"
+                      id="clockDate">———</span>
+            </div>
+        </div>
+
+        <div aria-live="polite"
+             class="toast"
+             id="toast"
+             role="status">
+            <span class="ti"><svg fill="none"
+                                  height="20"
+                                  stroke="currentColor"
+                                  stroke-width="1.8"
+                                  viewBox="0 0 24 24"
+                                  width="20"><circle cx="12"
+                                                     cy="12"
+                                                     r="9" /><path d="M9 12l2 2 4-4" /></svg></span>
+            <span id="toastMsg"></span>
+        </div>
+        <script src="wwwroot/js/site.js"></script>
+    </body>
+</html>
