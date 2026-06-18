@@ -285,7 +285,7 @@ $('#tbStart').addEventListener('click', e => {
     toggleStart();
 });
 $('#capClose').addEventListener('click', () => {
-    showToast('A portfolio is never really closed. <a href="mailto:justinian.erdmier@outlook.com">Let\u2019s connect</a> instead.');
+    showToast('A portfolio is never really closed. <a data-go="contact" href="#contact">Let\u2019s connect</a> instead.');
 });
 
 // ---- toast ----
@@ -293,7 +293,19 @@ let toastTimer = null;
 
 function showToast(msg) {
     const t = $('#toast');
-    $('#toastMsg').innerHTML = msg;
+    const toastMsg = $('#toastMsg');
+    toastMsg.innerHTML = msg;
+
+    toastMsg.querySelectorAll('[data-go]').forEach(a => a.addEventListener('click', e => {
+        e.preventDefault();
+        activatePane(a.dataset.go);
+        t.classList.remove('show');
+        closeStart();
+    }));
+
+    t.classList.add('show');
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(() => t.classList.remove('show'), 5200);
     t.classList.add('show');
     clearTimeout(toastTimer);
     toastTimer = setTimeout(() => t.classList.remove('show'), 5200);
