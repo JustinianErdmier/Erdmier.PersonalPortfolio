@@ -2323,3 +2323,651 @@ section {
         width:  auto;
     }
 }
+
+/* =========================================================================
+   Research report page (/one-electron-research-report)
+   Reuses the Fluent Mica shell (.win, .nav, .content, tokens) and adds
+   document-specific styles for a long-form academic monograph.
+   ========================================================================= */
+
+/* Continuous, top-level document — no desktop-OS shell */
+body.rr-page {
+    background: var(--bg);
+    height:     auto;
+    min-height: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.rr-main {
+    padding:  clamp(26px, 5vw, 60px) 20px 96px;
+    position: relative;
+    z-index:  1;
+}
+
+/* One continuous Mica reading surface */
+.rr-doc {
+    -webkit-backdrop-filter: blur(40px) saturate(1.4);
+    backdrop-filter:         blur(40px) saturate(1.4);
+    background:              var(--mica);
+    border:                  1px solid var(--stroke-strong);
+    border-radius:           14px;
+    box-shadow:              var(--shadow);
+    color:                   var(--text);
+    margin:                  0 auto;
+    max-width:               900px;
+    padding:                 clamp(26px, 4vw, 56px) clamp(20px, 4vw, 56px) 48px;
+}
+
+/* Floating theme toggle (the only chrome; no navigation) */
+.rr-theme {
+    align-items:             center;
+    -webkit-backdrop-filter: blur(20px) saturate(1.4);
+    backdrop-filter:         blur(20px) saturate(1.4);
+    background:              var(--mica);
+    border:                  1px solid var(--stroke-strong);
+    border-radius:           20px;
+    box-shadow:              var(--shadow);
+    color:                   var(--text-2);
+    cursor:                  pointer;
+    display:                 inline-flex;
+    font-family:             inherit;
+    font-size:               12.5px;
+    gap:                     8px;
+    padding:                 8px 14px;
+    position:                fixed;
+    right:                   18px;
+    top:                     18px;
+    z-index:                 50;
+}
+
+.rr-theme:hover {
+    border-color: var(--accent);
+    color:        var(--text);
+}
+
+.rr-theme .gi {
+    align-items: center;
+    display:     flex;
+}
+
+/* In-document table of contents */
+.rr-toc {
+    background:    var(--card);
+    border:        1px solid var(--stroke);
+    border-radius: var(--radius);
+    margin:        0 0 34px;
+    padding:       18px 24px 12px;
+}
+
+.rr-toc-title {
+    align-items:    center;
+    color:          var(--text-3);
+    display:        flex;
+    font-size:      11px;
+    font-weight:    700;
+    gap:            8px;
+    letter-spacing: .09em;
+    margin:         0 0 8px;
+    text-transform: uppercase;
+}
+
+.rr-toc-title::after {
+    background: var(--stroke);
+    content:    "";
+    flex:       1;
+    height:     1px;
+}
+
+.rr-toc-grid {
+    column-gap: 30px;
+    columns:    2;
+}
+
+@media (max-width: 620px) {
+    .rr-toc-grid {
+        columns: 1;
+    }
+}
+
+.rr-toc-grid a {
+    align-items:     baseline;
+    break-inside:    avoid;
+    color:           var(--text);
+    display:         flex;
+    font-size:       13.5px;
+    gap:             10px;
+    padding:         7px 0;
+    text-decoration: none;
+}
+
+.rr-toc-grid a:hover {
+    color: var(--accent);
+}
+
+.rr-toc-grid a:hover .rr-toc-tx {
+    text-decoration: underline;
+}
+
+.rr-toc-no {
+    color:                var(--accent);
+    flex:                 0 0 auto;
+    font-variant-numeric: tabular-nums;
+    font-weight:          700;
+    min-width:            20px;
+}
+
+/* --- Two-column layout with a sticky nav rail --- */
+.rr-layout {
+    align-items: flex-start;
+    display:     flex;
+    gap:         24px;
+    margin:      0 auto;
+    max-width:   1180px;
+}
+
+.rr-layout .rr-doc {
+    flex:      1 1 auto;
+    margin:    0;
+    min-width: 0;
+}
+
+.rr-rail {
+    align-self:              flex-start;
+    -webkit-backdrop-filter: blur(40px) saturate(1.4);
+    backdrop-filter:         blur(40px) saturate(1.4);
+    background:              var(--mica);
+    border:                  1px solid var(--stroke-strong);
+    border-radius:           14px;
+    box-shadow:              var(--shadow);
+    display:                 flex;
+    flex:                    0 0 236px;
+    flex-direction:          column;
+    gap:                     2px;
+    max-height:              calc(100vh - 48px);
+    overflow-y:              auto;
+    padding:                 14px 12px;
+    position:                sticky;
+    top:                     24px;
+}
+
+.rr-rail-title {
+    color:          var(--text-3);
+    font-size:      11px;
+    font-weight:    700;
+    letter-spacing: .09em;
+    margin:         2px 10px 10px;
+    text-transform: uppercase;
+}
+
+.rr-rail a {
+    align-items:     center;
+    border-radius:   6px;
+    color:           var(--text);
+    display:         flex;
+    font-size:       13px;
+    gap:             10px;
+    padding:         8px 12px;
+    position:        relative;
+    text-decoration: none;
+}
+
+.rr-rail a:hover {
+    background: rgba(0, 0, 0, .045);
+}
+
+[data-theme="dark"] .rr-rail a:hover {
+    background: rgba(255, 255, 255, .05);
+}
+
+.rr-rail a.sel {
+    background: var(--nav-sel);
+}
+
+.rr-rail a.sel::before {
+    background:    var(--accent);
+    border-radius: 2px;
+    content:       "";
+    height:        16px;
+    left:          0;
+    position:      absolute;
+    top:           50%;
+    transform:     translateY(-50%);
+    width:         3px;
+}
+
+.rr-rail-no {
+    color:                var(--text-3);
+    flex:                 0 0 auto;
+    font-size:            11.5px;
+    font-variant-numeric: tabular-nums;
+    text-align:           right;
+    width:                18px;
+}
+
+.rr-rail a.sel .rr-rail-no {
+    color: var(--accent);
+}
+
+.rr-rail-tx {
+    overflow:      hidden;
+    text-overflow: ellipsis;
+    white-space:   nowrap;
+}
+
+.rr-doc section {
+    scroll-margin-top: 24px;
+}
+
+@media (max-width: 1024px) {
+    .rr-rail {
+        display: none;
+    }
+
+    .rr-layout {
+        max-width: 900px;
+    }
+}
+
+/* --- Cover block --- */
+.rr-cover {
+    border-bottom: 1px solid var(--stroke);
+    margin-bottom: 34px;
+    padding:       10px 0 30px;
+}
+
+.rr-eyebrow {
+    color:          var(--text-3);
+    font-size:      11px;
+    font-weight:    700;
+    letter-spacing: .16em;
+    margin-bottom:  20px;
+    text-transform: uppercase;
+}
+
+.rr-title {
+    font-size:      clamp(30px, 4.4vw, 42px);
+    font-weight:    600;
+    letter-spacing: -.025em;
+    line-height:    1.08;
+    margin:         0 0 12px;
+}
+
+.rr-subtitle {
+    color:       var(--text-2);
+    font-size:   18px;
+    font-weight: 400;
+    line-height: 1.45;
+    margin:      0 0 26px;
+}
+
+.rr-meta {
+    display:               grid;
+    gap:                   16px 28px;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    margin-bottom:         24px;
+}
+
+.rr-meta .rr-meta-wide {
+    grid-column: 1 / -1;
+}
+
+.rr-meta .k {
+    color:          var(--accent);
+    font-size:      10.5px;
+    font-weight:    700;
+    letter-spacing: .07em;
+    margin-bottom:  4px;
+    text-transform: uppercase;
+}
+
+.rr-meta .v {
+    color:       var(--text);
+    font-size:   13.5px;
+    line-height: 1.55;
+}
+
+.rr-cover-actions {
+    display:   flex;
+    flex-wrap: wrap;
+    gap:       10px;
+}
+
+/* --- Executive summary / callout --- */
+.rr-callout {
+    background:    linear-gradient(120deg, var(--card), transparent);
+    border:        1px solid var(--stroke);
+    border-left:   3px solid var(--accent);
+    border-radius: var(--radius);
+    margin:        0 0 34px;
+    padding:       20px 24px 22px;
+}
+
+.rr-doc .rr-callout > h2 {
+    align-items:    center;
+    color:          var(--text-3);
+    display:        flex;
+    font-size:      11px;
+    font-weight:    700;
+    gap:            8px;
+    letter-spacing: .09em;
+    margin:         0 0 14px;
+    text-transform: uppercase;
+}
+
+.rr-doc .rr-callout > h2::after {
+    background: var(--stroke);
+    content:    "";
+    flex:       1;
+    height:     1px;
+}
+
+/* --- Section & subsection headings --- */
+.rr-doc h2 {
+    font-size:         23px;
+    font-weight:       600;
+    letter-spacing:    -.015em;
+    line-height:       1.25;
+    margin:            42px 0 8px;
+    padding-top:       12px;
+    scroll-margin-top: 14px;
+}
+
+.rr-doc h2 .rr-no {
+    color:        var(--accent);
+    font-weight:  700;
+    margin-right: 4px;
+}
+
+.rr-doc h3 {
+    color:             var(--text);
+    font-size:         16.5px;
+    font-weight:       600;
+    margin:            28px 0 6px;
+    scroll-margin-top: 14px;
+}
+
+.rr-doc h3 .rr-no {
+    color:        var(--accent);
+    font-weight:  700;
+    margin-right: 3px;
+}
+
+.rr-doc h4 {
+    color:          var(--accent-2);
+    font-size:      12px;
+    font-weight:    700;
+    letter-spacing: .05em;
+    margin:         24px 0 6px;
+    text-transform: uppercase;
+}
+
+/* --- Body copy --- */
+.rr-doc p {
+    font-size:   15px;
+    line-height: 1.75;
+    margin:      0 0 16px;
+}
+
+.rr-doc p.rr-lead {
+    color:     var(--text-2);
+    font-size: 16px;
+}
+
+.rr-doc a {
+    color:           var(--accent);
+    text-decoration: none;
+}
+
+.rr-doc a:hover {
+    text-decoration: underline;
+}
+
+/* --- Block quotes --- */
+.rr-quote {
+    background:    var(--card);
+    border:        1px solid var(--stroke);
+    border-left:   3px solid var(--accent);
+    border-radius: 0 var(--radius) var(--radius) 0;
+    color:         var(--text);
+    font-size:     16px;
+    font-style:    italic;
+    line-height:   1.6;
+    margin:        20px 0 24px;
+    padding:       16px 22px;
+}
+
+.rr-quote cite {
+    color:      var(--text-3);
+    display:    block;
+    font-size:  12.5px;
+    font-style: normal;
+    margin-top: 10px;
+}
+
+/* --- Lists --- */
+.rr-doc ul.rr-list,
+.rr-doc ol.rr-list {
+    display:        flex;
+    flex-direction: column;
+    gap:            10px;
+    list-style:     none;
+    margin:         4px 0 20px;
+    padding:        0;
+}
+
+.rr-doc ul.rr-list > li {
+    font-size:    15px;
+    line-height:  1.7;
+    padding-left: 26px;
+    position:     relative;
+}
+
+.rr-doc ul.rr-list > li::before {
+    background:    var(--accent);
+    border-radius: 2px;
+    content:       "";
+    height:        7px;
+    left:          4px;
+    position:      absolute;
+    top:           10px;
+    transform:     rotate(45deg);
+    width:         7px;
+}
+
+.rr-doc ol.rr-list {
+    counter-reset: rr-li;
+}
+
+.rr-doc ol.rr-list > li {
+    counter-increment: rr-li;
+    font-size:         15px;
+    line-height:       1.7;
+    padding-left:      36px;
+    position:          relative;
+}
+
+.rr-doc ol.rr-list > li::before {
+    align-items:     center;
+    background:      var(--nav-sel);
+    border:          1px solid var(--stroke);
+    border-radius:   50%;
+    color:           var(--accent);
+    content:         counter(rr-li);
+    display:         flex;
+    font-size:       11.5px;
+    font-weight:     700;
+    height:          22px;
+    justify-content: center;
+    left:            0;
+    position:        absolute;
+    top:             2px;
+    width:           22px;
+}
+
+/* --- Display equations --- */
+.rr-eq {
+    align-items:   center;
+    background:    var(--card);
+    border:        1px solid var(--stroke);
+    border-radius: var(--radius);
+    display:       flex;
+    gap:           14px;
+    margin:        22px 0;
+    padding:       16px 20px;
+}
+
+.rr-eq-math {
+    flex:       1;
+    min-width:  0;
+    overflow-x: auto;
+    overflow-y: hidden;
+    text-align: center;
+}
+
+.rr-eq-math mjx-container[display="true"] {
+    margin: 0 !important;
+}
+
+.rr-eq-num {
+    color:                var(--text-3);
+    flex:                 0 0 auto;
+    font-size:            13px;
+    font-variant-numeric: tabular-nums;
+}
+
+/* MathJax colour follows the theme text colour automatically (currentColor) */
+.rr-doc mjx-container {
+    color: var(--text);
+}
+
+/* --- Tables --- */
+.rr-cap {
+    color:       var(--text);
+    font-size:   13.5px;
+    font-weight: 600;
+    margin:      30px 0 10px;
+}
+
+.rr-cap .rr-no {
+    color:        var(--accent);
+    font-weight:  700;
+    margin-right: 4px;
+}
+
+.rr-table-wrap {
+    border:        1px solid var(--stroke);
+    border-radius: var(--radius);
+    margin:        0 0 8px;
+    overflow-x:    auto;
+}
+
+.rr-table {
+    border-collapse: collapse;
+    font-size:       13px;
+    min-width:       540px;
+    width:           100%;
+}
+
+.rr-table th {
+    background:     var(--nav-sel);
+    border-bottom:  1px solid var(--stroke-strong);
+    color:          var(--text);
+    font-size:      11.5px;
+    font-weight:    700;
+    letter-spacing: .02em;
+    padding:        11px 14px;
+    text-align:     left;
+    vertical-align: top;
+}
+
+.rr-table td {
+    border-top:     1px solid var(--stroke);
+    color:          var(--text-2);
+    line-height:    1.5;
+    padding:        10px 14px;
+    vertical-align: top;
+}
+
+.rr-table tbody tr:hover td {
+    background: rgba(127, 127, 127, .05);
+}
+
+.rr-table td.rr-no-cell {
+    color:       #c42b1c;
+    font-weight: 600;
+}
+
+[data-theme="dark"] .rr-table td.rr-no-cell {
+    color: #ff6a5c;
+}
+
+.rr-src {
+    color:      var(--text-3);
+    font-size:  11.5px;
+    font-style: italic;
+    margin:     8px 0 26px;
+}
+
+/* --- References --- */
+.rr-refs {
+    list-style: none;
+    margin:     0;
+    padding:    0;
+}
+
+.rr-refs > li {
+    border-top:  1px solid var(--stroke);
+    color:       var(--text-2);
+    display:     flex;
+    font-size:   13px;
+    gap:         12px;
+    line-height: 1.6;
+    padding:     11px 0;
+}
+
+.rr-refs > li:first-child {
+    border-top: none;
+}
+
+.rr-refs .rr-ref-no {
+    color:       var(--accent);
+    flex:        0 0 auto;
+    font-weight: 700;
+    min-width:   30px;
+}
+
+/* --- Footer --- */
+.rr-footer {
+    border-top:     1px solid var(--stroke);
+    color:          var(--text-3);
+    font-size:      12px;
+    letter-spacing: .04em;
+    margin-top:     44px;
+    padding-top:    22px;
+    text-align:     center;
+}
+
+@media (max-width: 680px) {
+    .rr-main {
+        padding: 0 0 64px;
+    }
+
+    .rr-doc {
+        border-left:   none;
+        border-radius: 0;
+        border-right:  none;
+        padding:       28px 18px 40px;
+    }
+
+    .rr-theme span:last-child {
+        display: none;
+    }
+
+    .rr-theme {
+        border-radius: 50%;
+        padding:       9px;
+        right:         12px;
+        top:           12px;
+    }
+}
