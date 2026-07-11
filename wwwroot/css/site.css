@@ -2335,8 +2335,7 @@ body.rr-page {
     background: var(--bg);
     height:     auto;
     min-height: 100%;
-    overflow-x: hidden;
-    overflow-y: auto;
+    overflow:   visible;
 }
 
 .rr-main {
@@ -2389,6 +2388,150 @@ body.rr-page {
 .rr-theme .gi {
     align-items: center;
     display:     flex;
+}
+
+/* Floating "Contents" button — mobile only; opens the TOC modal */
+.rr-contents-btn {
+    -webkit-backdrop-filter: blur(20px) saturate(1.4);
+    backdrop-filter:         blur(20px) saturate(1.4);
+    align-items:             center;
+    background:              var(--mica);
+    border:                  1px solid var(--stroke-strong);
+    border-radius:           20px;
+    box-shadow:              var(--shadow);
+    color:                   var(--text-2);
+    cursor:                  pointer;
+    display:                 none;
+    font-family:             inherit;
+    font-size:               12.5px;
+    gap:                     8px;
+    left:                    18px;
+    padding:                 8px 14px;
+    position:                fixed;
+    top:                     18px;
+    z-index:                 50;
+}
+
+.rr-contents-btn:hover {
+    border-color: var(--accent);
+    color:        var(--text);
+}
+
+.rr-contents-btn .gi {
+    align-items: center;
+    display:     flex;
+}
+
+/* Contents modal */
+.rr-cmodal {
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter:         blur(5px);
+    align-items:             flex-start;
+    background:              rgba(0, 0, 0, .42);
+    display:                 none;
+    inset:                   0;
+    justify-content:         flex-start;
+    padding:                 64px 16px 20px;
+    position:                fixed;
+    z-index:                 70;
+}
+
+.rr-cmodal.open {
+    display: flex;
+}
+
+.rr-cmodal-panel {
+    -webkit-backdrop-filter: blur(40px) saturate(1.4);
+    backdrop-filter:         blur(40px) saturate(1.4);
+    background:              var(--mica);
+    border:                  1px solid var(--stroke-strong);
+    border-radius:           14px;
+    box-shadow:              var(--shadow);
+    display:                 flex;
+    flex-direction:          column;
+    max-height:              calc(100vh - 96px);
+    overflow:                hidden;
+    width:                   min(340px, 100%);
+}
+
+.rr-cmodal-head {
+    align-items:   center;
+    border-bottom: 1px solid var(--stroke);
+    display:       flex;
+    gap:           12px;
+    padding:       13px 12px 13px 18px;
+}
+
+.rr-cmodal-title {
+    color:          var(--text-3);
+    flex:           1;
+    font-size:      11px;
+    font-weight:    700;
+    letter-spacing: .09em;
+    text-transform: uppercase;
+}
+
+.rr-cmodal-close {
+    align-items:     center;
+    background:      transparent;
+    border:          none;
+    border-radius:   6px;
+    color:           var(--text-2);
+    cursor:          pointer;
+    display:         flex;
+    flex:            0 0 auto;
+    font-size:       15px;
+    height:          30px;
+    justify-content: center;
+    width:           30px;
+}
+
+.rr-cmodal-close:hover {
+    background: rgba(127, 127, 127, .14);
+}
+
+.rr-cmodal-list {
+    display:        flex;
+    flex-direction: column;
+    gap:            2px;
+    overflow-y:     auto;
+    padding:        8px;
+}
+
+.rr-cmodal-list a {
+    align-items:     center;
+    border-radius:   6px;
+    color:           var(--text);
+    display:         flex;
+    font-size:       14px;
+    gap:             12px;
+    padding:         10px 12px;
+    text-decoration: none;
+}
+
+.rr-cmodal-list a:hover {
+    background: rgba(0, 0, 0, .045);
+}
+
+[data-theme="dark"] .rr-cmodal-list a:hover {
+    background: rgba(255, 255, 255, .05);
+}
+
+.rr-cmodal-list a.sel {
+    background: var(--nav-sel);
+}
+
+.rr-cmodal-no {
+    color:                var(--text-3);
+    flex:                 0 0 auto;
+    font-size:            11.5px;
+    font-variant-numeric: tabular-nums;
+    text-align:           right;
+    width:                18px;
+}
+
+.rr-cmodal-list a.sel .rr-cmodal-no {
+    color: var(--accent);
 }
 
 /* In-document table of contents */
@@ -2566,6 +2709,10 @@ body.rr-page {
 
     .rr-layout {
         max-width: 900px;
+    }
+
+    .rr-contents-btn {
+        display: inline-flex;
     }
 }
 
@@ -2957,10 +3104,11 @@ body.rr-page {
         border-left:   none;
         border-radius: 0;
         border-right:  none;
-        padding:       28px 18px 40px;
+        padding:       56px 18px 40px;
     }
 
-    .rr-theme span:last-child {
+    .rr-theme span:last-child,
+    .rr-contents-btn span:last-child {
         display: none;
     }
 
@@ -2968,6 +3116,13 @@ body.rr-page {
         border-radius: 50%;
         padding:       9px;
         right:         12px;
+        top:           12px;
+    }
+
+    .rr-contents-btn {
+        border-radius: 50%;
+        left:          12px;
+        padding:       9px;
         top:           12px;
     }
 }

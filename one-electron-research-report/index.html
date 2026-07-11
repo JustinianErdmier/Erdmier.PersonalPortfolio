@@ -100,831 +100,1070 @@
                                                                                                                                                                                                                                                                              y2="4.22" /></svg></span><span id="themeLabel">Dark mode</span>
         </button>
 
+        <button aria-controls="contentsModal"
+                aria-expanded="false"
+                aria-haspopup="dialog"
+                aria-label="Open contents"
+                class="rr-contents-btn"
+                id="contentsBtn">
+            <span aria-hidden="true"
+                  class="gi"><svg fill="none"
+                                  height="17"
+                                  stroke="currentColor"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                  stroke-width="1.7"
+                                  viewBox="0 0 24 24"
+                                  width="17"><line x1="8"
+                                                   x2="20"
+                                                   y1="6"
+                                                   y2="6" /><line x1="8"
+                                                                  x2="20"
+                                                                  y1="12"
+                                                                  y2="12" /><line x1="8"
+                                                                                  x2="20"
+                                                                                  y1="18"
+                                                                                  y2="18" /><circle cx="4"
+                                                                                                    cy="6"
+                                                                                                    r="1" /><circle cx="4"
+                                                                                                                    cy="12"
+                                                                                                                    r="1" /><circle cx="4"
+                                                                                                                                    cy="18"
+                                                                                                                                    r="1" /></svg></span><span>Contents</span>
+        </button>
+
+        <div class="rr-cmodal"
+             id="contentsModal">
+            <div aria-label="Contents"
+                 aria-modal="true"
+                 class="rr-cmodal-panel"
+                 role="dialog">
+                <div class="rr-cmodal-head">
+                    <div class="rr-cmodal-title">Contents</div>
+                    <button aria-label="Close contents"
+                            class="rr-cmodal-close"
+                            id="contentsClose">✕
+                    </button>
+                </div>
+                <nav aria-label="Table of contents"
+                     class="rr-cmodal-list">
+                    <a data-spy="summary"
+                       href="#summary"><span class="rr-cmodal-no">—</span><span>Executive Summary</span></a>
+                    <a data-spy="s1"
+                       href="#s1"><span class="rr-cmodal-no">1</span><span>Introduction &amp; Scope</span></a>
+                    <a data-spy="s2"
+                       href="#s2"><span class="rr-cmodal-no">2</span><span>Wheeler–Feynman (1940)</span></a>
+                    <a data-spy="s3"
+                       href="#s3"><span class="rr-cmodal-no">3</span><span>Stueckelberg (1941)</span></a>
+                    <a data-spy="s4"
+                       href="#s4"><span class="rr-cmodal-no">4</span><span>Feynman 1949</span></a>
+                    <a data-spy="s5"
+                       href="#s5"><span class="rr-cmodal-no">5</span><span>Nambu's Extension</span></a>
+                    <a data-spy="s6"
+                       href="#s6"><span class="rr-cmodal-no">6</span><span>Worldline Self-Intersections</span></a>
+                    <a data-spy="s7"
+                       href="#s7"><span class="rr-cmodal-no">7</span><span>Self-Intersections in QFT</span></a>
+                    <a data-spy="s8"
+                       href="#s8"><span class="rr-cmodal-no">8</span><span>Bern–Kosower–Strassler</span></a>
+                    <a data-spy="s9"
+                       href="#s9"><span class="rr-cmodal-no">9</span><span>Grassmann &amp; Spin</span></a>
+                    <a data-spy="s10"
+                       href="#s10"><span class="rr-cmodal-no">10</span><span>Topological Approaches</span></a>
+                    <a data-spy="s11"
+                       href="#s11"><span class="rr-cmodal-no">11</span><span>Modern Reinterpretations</span></a>
+                    <a data-spy="s12"
+                       href="#s12"><span class="rr-cmodal-no">12</span><span>Critical Analysis</span></a>
+                    <a data-spy="s13"
+                       href="#s13"><span class="rr-cmodal-no">13</span><span>Outlook &amp; Takeaways</span></a>
+                    <a data-spy="s14"
+                       href="#s14"><span class="rr-cmodal-no">14</span><span>References</span></a>
+                </nav>
+            </div>
+        </div>
+
         <main class="rr-main">
-            <article class="rr-doc">
-                <!-- ===== Cover ===== -->
-                <header class="rr-cover"
-                        id="top">
-                    <div class="rr-eyebrow">Comprehensive Research Report • Theoretical Physics</div>
-                    <h1 class="rr-title">The One-Electron Universe Hypothesis</h1>
-                    <p class="rr-subtitle">From Wheeler &amp; Feynman's 1940 Conjecture to Modern Worldline Topology</p>
-                    <div class="rr-meta">
-                        <div>
-                            <div class="k">Prepared by</div>
-                            <div class="v">Justinian Erdmier</div>
-                        </div>
-                        <div>
-                            <div class="k">Date</div>
-                            <div class="v">10 July 2026</div>
-                        </div>
-                        <div class="rr-meta-wide">
-                            <div class="k">Scope</div>
-                            <div class="v">Historical origins, formal QFT treatment, worldline self-intersections, Grassmann variable methods, topological reinterpretations, and
-                                           open experimental questions. Covers literature from 1941 to 2026.
+            <div class="rr-layout">
+                <nav aria-label="Section navigation"
+                     class="rr-rail">
+                    <div class="rr-rail-title">Contents</div>
+                    <a data-spy="summary"
+                       href="#summary"><span class="rr-rail-no">—</span><span class="rr-rail-tx">Executive Summary</span></a>
+                    <a data-spy="s1"
+                       href="#s1"><span class="rr-rail-no">1</span><span class="rr-rail-tx">Introduction &amp; Scope</span></a>
+                    <a data-spy="s2"
+                       href="#s2"><span class="rr-rail-no">2</span><span class="rr-rail-tx">Wheeler–Feynman (1940)</span></a>
+                    <a data-spy="s3"
+                       href="#s3"><span class="rr-rail-no">3</span><span class="rr-rail-tx">Stueckelberg (1941)</span></a>
+                    <a data-spy="s4"
+                       href="#s4"><span class="rr-rail-no">4</span><span class="rr-rail-tx">Feynman 1949</span></a>
+                    <a data-spy="s5"
+                       href="#s5"><span class="rr-rail-no">5</span><span class="rr-rail-tx">Nambu's Extension</span></a>
+                    <a data-spy="s6"
+                       href="#s6"><span class="rr-rail-no">6</span><span class="rr-rail-tx">Worldline Self-Intersections</span></a>
+                    <a data-spy="s7"
+                       href="#s7"><span class="rr-rail-no">7</span><span class="rr-rail-tx">Self-Intersections in QFT</span></a>
+                    <a data-spy="s8"
+                       href="#s8"><span class="rr-rail-no">8</span><span class="rr-rail-tx">Bern–Kosower–Strassler</span></a>
+                    <a data-spy="s9"
+                       href="#s9"><span class="rr-rail-no">9</span><span class="rr-rail-tx">Grassmann &amp; Spin</span></a>
+                    <a data-spy="s10"
+                       href="#s10"><span class="rr-rail-no">10</span><span class="rr-rail-tx">Topological Approaches</span></a>
+                    <a data-spy="s11"
+                       href="#s11"><span class="rr-rail-no">11</span><span class="rr-rail-tx">Modern Reinterpretations</span></a>
+                    <a data-spy="s12"
+                       href="#s12"><span class="rr-rail-no">12</span><span class="rr-rail-tx">Critical Analysis</span></a>
+                    <a data-spy="s13"
+                       href="#s13"><span class="rr-rail-no">13</span><span class="rr-rail-tx">Outlook &amp; Takeaways</span></a>
+                    <a data-spy="s14"
+                       href="#s14"><span class="rr-rail-no">14</span><span class="rr-rail-tx">References</span></a>
+                </nav>
+                <article class="rr-doc">
+                    <!-- ===== Cover ===== -->
+                    <header class="rr-cover"
+                            id="top">
+                        <div class="rr-eyebrow">Comprehensive Research Report • Theoretical Physics</div>
+                        <h1 class="rr-title">The One-Electron Universe Hypothesis</h1>
+                        <p class="rr-subtitle">From Wheeler &amp; Feynman's 1940 Conjecture to Modern Worldline Topology</p>
+                        <div class="rr-meta">
+                            <div>
+                                <div class="k">Prepared by</div>
+                                <div class="v">Justinian Erdmier</div>
+                            </div>
+                            <div>
+                                <div class="k">Date</div>
+                                <div class="v">10 July 2026</div>
+                            </div>
+                            <div class="rr-meta-wide">
+                                <div class="k">Scope</div>
+                                <div class="v">Historical origins, formal QFT treatment, worldline self-intersections, Grassmann variable methods, topological reinterpretations,
+                                               and
+                                               open experimental questions. Covers literature from 1941 to 2026.
+                                </div>
+                            </div>
+                            <div class="rr-meta-wide">
+                                <div class="k">Classification</div>
+                                <div class="v">Academic Research Monograph — Unrestricted Distribution</div>
                             </div>
                         </div>
-                        <div class="rr-meta-wide">
-                            <div class="k">Classification</div>
-                            <div class="v">Academic Research Monograph — Unrestricted Distribution</div>
+                        <div class="rr-cover-actions">
+                            <!--suppress HtmlUnknownTarget -->
+                            <a class="btn primary"
+                               href="../wwwroot/documents/The One-Electron Universe Hypothesis %E2%80%94 Research Report.pdf"
+                               rel="noopener noreferrer"
+                               target="_blank">
+                                <svg fill="none"
+                                     height="15"
+                                     stroke="currentColor"
+                                     stroke-linecap="round"
+                                     stroke-linejoin="round"
+                                     stroke-width="1.9"
+                                     viewBox="0 0 24 24"
+                                     width="15">
+                                    <path d="M12 3v12m0 0l-4-4m4 4l4-4" />
+                                    <path d="M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-2" />
+                                </svg>
+                                Download PDF</a>
                         </div>
-                    </div>
-                    <div class="rr-cover-actions">
-                        <!--suppress HtmlUnknownTarget -->
-                        <a class="btn primary"
-                           href="../wwwroot/documents/The One-Electron Universe Hypothesis %E2%80%94 Research Report.pdf"
-                           rel="noopener noreferrer"
-                           target="_blank">
-                            <svg fill="none"
-                                 height="15"
-                                 stroke="currentColor"
-                                 stroke-linecap="round"
-                                 stroke-linejoin="round"
-                                 stroke-width="1.9"
-                                 viewBox="0 0 24 24"
-                                 width="15">
-                                <path d="M12 3v12m0 0l-4-4m4 4l4-4" />
-                                <path d="M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-2" />
-                            </svg>
-                            Download PDF</a>
-                    </div>
-                </header>
+                    </header>
 
-                <!-- ===== Executive Summary ===== -->
-                <section class="rr-callout"
-                         id="summary">
-                    <h2>Executive Summary</h2>
-                    <ul class="rr-list">
-                        <li>The hypothesis, first proposed by John Wheeler to Richard Feynman in the spring of 1940, posits that every electron and positron in the observable
-                            universe is a single particle whose worldline weaves forwards and backwards through all of spacetime, intersecting any given constant-time hyperplane an
-                            astronomically large number of times.
-                        </li>
-                        <li>The decisive objection Feynman immediately raised is quantitative and still unresolved: the hypothesis demands equal numbers of electrons and positrons
-                            at every moment of cosmic history, yet the observable universe contains vastly more electrons than positrons — a discrepancy that cannot be argued away
-                            without invoking hidden positrons or a mechanism for baryon-number violation.
-                        </li>
-                        <li>The productive legacy of the idea exceeds the idea itself: Feynman "stole" the insight that positrons are electrons traversing worldlines backwards in
-                            time, encoding it in his 1949 <em>Theory of Positrons</em>, which became foundational to modern QED and to the Feynman-diagram representation of pair
-                            creation/annihilation.
-                        </li>
-                        <li>In QFT, worldline self-intersections are treated rigorously through the worldline (first-quantised) path integral: closed worldline loops map to
-                            one-loop vacuum diagrams, and self-approaching trajectories in Euclidean spacetime are precisely the worldline instantons responsible for Schwinger pair
-                            production.
-                        </li>
-                        <li>Modern formal revivals using Grassmann variables (for spin), knot invariants (Gauss linking number, Jones polynomial), and topological quantum field
-                            theory techniques offer a geometrically self-consistent framework that reproduces all standard QED results whilst interpreting fermionic statistics, the
-                            Pauli exclusion principle, and vacuum fluctuations as emergent topological consequences of a single braided worldline.
-                        </li>
-                    </ul>
-                </section>
+                    <!-- ===== Executive Summary ===== -->
+                    <section class="rr-callout"
+                             id="summary">
+                        <h2>Executive Summary</h2>
+                        <ul class="rr-list">
+                            <li>The hypothesis, first proposed by John Wheeler to Richard Feynman in the spring of 1940, posits that every electron and positron in the observable
+                                universe is a single particle whose worldline weaves forwards and backwards through all of spacetime, intersecting any given constant-time
+                                hyperplane an
+                                astronomically large number of times.
+                            </li>
+                            <li>The decisive objection Feynman immediately raised is quantitative and still unresolved: the hypothesis demands equal numbers of electrons and
+                                positrons
+                                at every moment of cosmic history, yet the observable universe contains vastly more electrons than positrons — a discrepancy that cannot be argued
+                                away
+                                without invoking hidden positrons or a mechanism for baryon-number violation.
+                            </li>
+                            <li>The productive legacy of the idea exceeds the idea itself: Feynman "stole" the insight that positrons are electrons traversing worldlines backwards
+                                in
+                                time, encoding it in his 1949 <em>Theory of Positrons</em>, which became foundational to modern QED and to the Feynman-diagram representation of
+                                pair
+                                creation/annihilation.
+                            </li>
+                            <li>In QFT, worldline self-intersections are treated rigorously through the worldline (first-quantised) path integral: closed worldline loops map to
+                                one-loop vacuum diagrams, and self-approaching trajectories in Euclidean spacetime are precisely the worldline instantons responsible for Schwinger
+                                pair
+                                production.
+                            </li>
+                            <li>Modern formal revivals using Grassmann variables (for spin), knot invariants (Gauss linking number, Jones polynomial), and topological quantum field
+                                theory techniques offer a geometrically self-consistent framework that reproduces all standard QED results whilst interpreting fermionic statistics,
+                                the
+                                Pauli exclusion principle, and vacuum fluctuations as emergent topological consequences of a single braided worldline.
+                            </li>
+                        </ul>
+                    </section>
 
-                <!-- ===== Table of Contents ===== -->
-                <nav aria-label="Table of contents"
-                     class="rr-toc">
-                    <div class="rr-toc-title">Contents</div>
-                    <div class="rr-toc-grid">
-                        <a href="#s1"><span class="rr-toc-no">1</span><span class="rr-toc-tx">Introduction and Scope</span></a>
-                        <a href="#s2"><span class="rr-toc-no">2</span><span class="rr-toc-tx">The Original Wheeler–Feynman Hypothesis (1940)</span></a>
-                        <a href="#s3"><span class="rr-toc-no">3</span><span class="rr-toc-tx">Independent Developments: Stueckelberg (1941)</span></a>
-                        <a href="#s4"><span class="rr-toc-no">4</span><span class="rr-toc-tx">From Hypothesis to Formalism: Feynman 1949</span></a>
-                        <a href="#s5"><span class="rr-toc-no">5</span><span class="rr-toc-tx">Nambu's Extension</span></a>
-                        <a href="#s6"><span class="rr-toc-no">6</span><span class="rr-toc-tx">Worldline Self-Intersections</span></a>
-                        <a href="#s7"><span class="rr-toc-no">7</span><span class="rr-toc-tx">Worldline Self-Intersections in QFT</span></a>
-                        <a href="#s8"><span class="rr-toc-no">8</span><span class="rr-toc-tx">The Bern–Kosower–Strassler Formalism</span></a>
-                        <a href="#s9"><span class="rr-toc-no">9</span><span class="rr-toc-tx">Grassmann Variables and the Spinning Worldline</span></a>
-                        <a href="#s10"><span class="rr-toc-no">10</span><span class="rr-toc-tx">Topological Approaches: Knots and Invariants</span></a>
-                        <a href="#s11"><span class="rr-toc-no">11</span><span class="rr-toc-tx">Modern Reinterpretations</span></a>
-                        <a href="#s12"><span class="rr-toc-no">12</span><span class="rr-toc-tx">Critical Analysis</span></a>
-                        <a href="#s13"><span class="rr-toc-no">13</span><span class="rr-toc-tx">Outlook and Key Takeaways</span></a>
-                        <a href="#s14"><span class="rr-toc-no">14</span><span class="rr-toc-tx">References</span></a>
-                    </div>
-                </nav>
-
-                <!-- ===== 1. Introduction ===== -->
-                <section id="s1">
-                    <h2><span class="rr-no">1.</span> Introduction and Scope</h2>
-                    <p class="rr-lead">Few ideas in the history of physics illustrate the relationship between bold conjecture and productive formalism more vividly than John
-                                       Wheeler's one-electron universe hypothesis. Proposed in a single telephone call in 1940 and rejected within the same conversation on
-                                       empirical grounds, the idea nevertheless propagated through the intellectual ecosystem of mid-twentieth-century physics. It seeded one of
-                                       QED's most powerful conceptual tools — the reinterpretation of antiparticles as particles travelling backwards in time. The worldline
-                                       perspective that Wheeler's proposal required has since blossomed, through the work of Stueckelberg, Feynman, Nambu, Schwinger, Fock, Bern,
-                                       Kosower, Strassler, and many others, into a sophisticated first-quantised formalism that computes quantum amplitudes more efficiently than
-                                       conventional second-quantised Feynman diagram methods in many regimes.</p>
-                    <p>This report traces the full intellectual arc of the one-electron hypothesis: its origin, its immediate formal consequences, the detailed physics of worldline
-                       self-intersections, and the modern program of topological and algebraic methods that have turned Wheeler's "tangled knot" metaphor into a rigorous
-                       calculational framework. The treatment is aimed at readers with graduate-level familiarity with quantum field theory and differential geometry, though the
-                       historical and conceptual sections are accessible to a broader audience. The report covers primary literature from 1941 to 2026, including recent work on
-                       worldline instantons in spatiotemporal fields, the monadic electron framework, and biquaternionic worldline analysis.</p>
-                </section>
-
-                <!-- ===== 2. Wheeler–Feynman ===== -->
-                <section id="s2">
-                    <h2><span class="rr-no">2.</span> The Original Wheeler–Feynman Hypothesis (1940)</h2>
-                    <h3><span class="rr-no">2.1</span> The Telephone Call and the Gedankenexperiment</h3>
-                    <p>In the spring of 1940, John Archibald Wheeler, then a professor at Princeton, telephoned his graduate student Richard Feynman with what he called a
-                       fundamental insight. "Feynman," he said, "I know why all electrons have the same charge and the same mass." The answer, he declared, was: "Because they are
-                       all the same electron!"</p>
-                    <p>The conceptual starting point is the observation that every electron in the universe is, empirically, absolutely identical to every other — same rest mass of
-                       \(9.109\times10^{-31}\,\mathrm{kg}\), same charge magnitude of \(1.602\times10^{-19}\,\mathrm{C}\), same spin-\(\tfrac{1}{2}\). In the particle physics of
-                       the late 1930s, this universality was a postulate rather than an explanation. Wheeler proposed that it followed inevitably from the radical claim that there
-                       is literally only one electron, and that every electron ever observed is a different segment of its single worldline threading through the entirety of cosmic
-                       history. The identical properties are identical because they belong, ultimately, to the same particle.</p>
-                    <p>This is not an outlandish idea within special relativity. A relativistic particle traces a worldline — a curve in four-dimensional Minkowski spacetime — as
-                       it evolves. The worldline is a geometric object in spacetime; it does not propagate through spacetime the way a ball rolls through a room. Wheeler's proposal
-                       was simply that this worldline, instead of having distinct endpoints for each physical electron, was a single connected curve of infinite (or cosmological)
-                       length, looped, knotted, and tangled through all of spacetime like an immense thread.</p>
-
-                    <h3><span class="rr-no">2.2</span> Worldline Topology and the Time-Slice Argument</h3>
-                    <p>Consider taking a "snapshot" of the universe at a fixed cosmic time \(t = t_0\). In spacetime language, this snapshot is a spacelike hypersurface
-                       \(\Sigma(t_0)\). The single worldline, being a curve in four-dimensional spacetime, intersects this hypersurface at multiple points. Each intersection point
-                       corresponds to an electron (if the worldline is locally traversed forwards in time) or a positron (if locally traversed backwards in time). The number of
-                       forward-moving intersections minus the number of backwards-moving intersections equals a topological invariant of the worldline — the net winding number —
-                       which Wheeler identified with the conserved total charge of the universe.</p>
-                    <p>If the worldline has \(n_+\) forward-moving intersections and \(n_-\) backwards-moving intersections with \(\Sigma(t_0)\), then the observable particle
-                       content at that moment consists of \(n_+\) electrons and \(n_-\) positrons, for a net charge of \(-(n_+ - n_-)e\). The simplest consistent scenario is a
-                       worldline that begins and ends at the boundary of spacetime (the Big Bang and the ultimate fate of the universe) with no net winding, implying \(n_+ = n_-\)
-                       — equal numbers of electrons and positrons. This constraint is what immediately doomed the original hypothesis empirically, as Feynman noted at once.</p>
-                    <p>The topology of such a worldline in four dimensions is rich. In 3+1 dimensions, a curve can be knotted and braided, and the intersections with time-slices
-                       can be counted using standard tools from differential topology. The Gauss linking number, computable for closed curves, and the Jones polynomial, a more
-                       refined knot invariant, encode geometric information about how the worldline self-entangles. These topological objects will prove central to modern
-                       formalisms discussed in Sections 10–11.</p>
-
-                    <h3><span class="rr-no">2.3</span> Feynman's Reception and Immediate Objections</h3>
-                    <p>Feynman was an ideal interlocutor for this idea — brilliant, mathematically fearless, and constitutionally sceptical of ornate hypotheses not grounded in
-                       calculation. His response was swift and lethal: the hypothesis required equal numbers of electrons and positrons in the observable universe, but observations
-                       showed electrons comfortably outnumbering positrons by an enormous factor. Wheeler, undaunted, speculated that the "missing" positrons might be hidden inside
-                       protons, but Feynman dismissed this as "not a satisfactory explanation."</p>
-                    <p>What Feynman did take seriously — and explicitly credited to Wheeler — was the narrower insight that positrons could be represented as electrons traversing
-                       their worldlines backwards in time. This partial extraction of the idea, stripped of its cosmological ambition, became the conceptual nucleus of some of the
-                       most important papers in twentieth-century physics. As Feynman said in his 1965 Nobel lecture:</p>
-                    <blockquote class="rr-quote">
-                        "I did not take the idea that all the electrons were the same one from him as seriously as I took the observation that positrons could simply be represented
-                        as electrons going from the future to the past in a back section of their world lines. That, I stole!"
-                        <cite>— Richard P. Feynman, Nobel Lecture, 1965</cite>
-                    </blockquote>
-                </section>
-
-                <!-- ===== 3. Stueckelberg ===== -->
-                <section id="s3">
-                    <h2><span class="rr-no">3.</span> Independent and Parallel Developments: Stueckelberg (1941)</h2>
-                    <p>The reinterpretation of antiparticles as time-reversed particles was not solely Wheeler's priority. In 1941, the Swiss physicist Ernst Carl Gerlach
-                       Stueckelberg von Breidenbach independently arrived at the same picture in his paper "La signification du temps propre en mécanique ondulatoire," published in
-                        <em>Helvetica Physica Acta</em> 14 (1941): 51–80.</p>
-                    <p>Stueckelberg's approach was grounded in classical relativistic mechanics rather than quantum field theory. He took advantage of the general coordinate
-                       invariance of the worldline parameter — that is, the freedom to parameterise the worldline by any smooth monotonic function rather than the particle's proper
-                       time alone. By choosing a parameterisation in which the worldline could "fold back" in coordinate time, Stueckelberg showed that what a local observer
-                       perceives as a positron approaching from the future and annihilating an electron is mathematically identical to a single electron whose worldline,
-                       parameterised globally, reverses its time coordinate at the annihilation event.</p>
-                    <p>Stueckelberg's construction was remarkably prescient. He showed explicitly that:</p>
-                    <ol class="rr-list">
-                        <li>A particle's worldline can cross the hypersurface \(t = \text{const}\) twice, once moving forwards and once backwards, at what an observer would
-                            identify as a pair creation or annihilation event.
-                        </li>
-                        <li>The charge of the time-reversed segment flips the sign, yielding positive charge — the positron — from the same equation of motion as the electron, with
-                            only the sign of the covariant derivative of proper time changing.
-                        </li>
-                        <li>This picture can be second-quantised consistently, reproducing the results of hole theory.</li>
-                    </ol>
-                    <p>The parallel discovery by Stueckelberg was not widely absorbed into the English-language physics community at the time, partly due to World War II and partly
-                       due to the language barrier. When Feynman published his 1949 paper, he explicitly acknowledged Stueckelberg's priority, writing that negative energy states
-                       "appear in a form which may be pictured (as by Stückelberg) in space-time as waves travelling away from the external potential backwards in time."</p>
-                </section>
-
-                <!-- ===== 4. Feynman 1949 ===== -->
-                <section id="s4">
-                    <h2><span class="rr-no">4.</span> From Hypothesis to Formalism: Feynman 1949 and the Theory of Positrons</h2>
-                    <p>Feynman's 1949 paper "The Theory of Positrons," published in <em>Physical Review</em> 76 (6): 749–759, is where the worldline-reversal picture was given its
-                       definitive mathematical form and integrated into quantum theory. The paper's central move is to replace the Dirac "hole theory" — which required a fully
-                       occupied negative-energy sea — with a reinterpretation of the Dirac propagator.</p>
-                    <p>In hole theory, a positron is the absence of a negative-energy electron. This picture is conceptually awkward, physically unmotivated, and calculationally
-                       cumbersome. Feynman showed that the same physical results — pair production, pair annihilation, scattering — follow from choosing boundary conditions on the
-                       propagator such that:</p>
-                    <ol class="rr-list">
-                        <li>Positive-energy states propagate forwards in time (electron moving into the future).</li>
-                        <li>Negative-energy states propagate backwards in time (positron = electron moving into the past).</li>
-                    </ol>
-                    <p>The Feynman propagator \(K_+(2,1)\), defined with these boundary conditions, automatically encodes all orders of virtual pair creation and annihilation in a
-                       single, compact expression. A single diagram representing "an electron at event 1 scattering to event 2" implicitly contains, depending on the time ordering
-                       of events 1 and 2, the interpretations: (a) ordinary forwards scattering; (b) pair annihilation at event 2 if \(t_2 &lt; t_1\); and (c) pair production at
-                       event 1 if an additional vertex is present.</p>
-                    <p>This is precisely the worldline self-intersection/time-reversal idea made calculational. The propagator \(K_+(2,1)\) is the amplitude for a particle to
-                       traverse its worldline from spacetime event 1 to spacetime event 2, and the fact that the same amplitude handles both electrons and positrons is the
-                       mathematical encoding of Wheeler's original geometric picture, stripped of its cosmological overreach. The Feynman–Stueckelberg interpretation of
-                       antiparticles remains the standard one in all modern QFT textbooks.</p>
-                </section>
-
-                <!-- ===== 5. Nambu ===== -->
-                <section id="s5">
-                    <h2><span class="rr-no">5.</span> Nambu's Extension and the Standard Interpretation of Antiparticles</h2>
-                    <p>Yoichiro Nambu (later a Nobel laureate) took the Wheeler–Feynman–Stueckelberg worldline picture and generalised it to all pair-creation and annihilation
-                       events in <em>Progress of Theoretical Physics</em> 5 (1950): 614–633. His formulation makes the cosmological aspect of Wheeler's hypothesis into a local,
-                       event-by-event statement:</p>
-                    <blockquote class="rr-quote">
-                        "The eventual creation and annihilation of pairs that may occur now and then is no creation nor annihilation, but only a change of directions of moving
-                        particles, from past to future, or from future to past."
-                        <cite>— Yoichiro Nambu, 1950</cite>
-                    </blockquote>
-                    <p>Nambu treated all electrons and positrons as segments of worldlines, with pair creation corresponding to a worldline turning from backwards-in-time to
-                       forward-in-time at a single spacetime event, and pair annihilation corresponding to a worldline turning from forward-in-time to backwards-in-time. In this
-                       picture, the total "length" of the worldline is conserved modulo topology, and the number of particles observable at any instant is simply the number of
-                       intersections of all worldlines with the corresponding time slice.</p>
-                    <p>Nambu's work cemented the Stueckelberg–Feynman picture as the correct physical framework for understanding antiparticles in relativistic quantum field
-                       theory, and its language is the natural one for the worldline formalism discussed in Sections 7–9.</p>
-                </section>
-
-                <!-- ===== 6. Worldline Self-Intersections ===== -->
-                <section id="s6">
-                    <h2><span class="rr-no">6.</span> Worldline Self-Intersections: Geometry, Physics, and Interpretation</h2>
-                    <h3><span class="rr-no">6.1</span> What a Worldline Self-Intersection Means</h3>
-                    <p>A worldline self-intersection occurs when a single particle's spacetime trajectory passes through the same spacetime point \(x^\mu\) more than once — i.e.
-                       when \(x^\mu(\tau_1) = x^\mu(\tau_2)\) for two distinct parameter values \(\tau_1 \neq \tau_2\). In Minkowski spacetime, this is a geometrically well-defined
-                       event with sharply different physical interpretations depending on context. It is important to distinguish several qualitatively different situations,
-                       summarised in Table 1 below.</p>
-
-                    <div class="rr-cap"><span class="rr-no">Table 1.</span> Classification of Worldline Self-Intersection Types</div>
-                    <div class="rr-table-wrap">
-                        <table class="rr-table">
-                            <thead>
-                                <tr>
-                                    <th>Intersection Type</th>
-                                    <th>Description</th>
-                                    <th>Physical Interpretation</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>Timelike self-intersection</td>
-                                    <td>Worldline crosses itself at the same spacetime point with both segments timelike.</td>
-                                    <td>True self-collision; requires closed timelike curves (CTCs); forbidden in classical GR.</td>
-                                </tr>
-                                <tr>
-                                    <td>Spacelike close approach</td>
-                                    <td>Two segments of the worldline are spatially near simultaneously.</td>
-                                    <td>Self-Coulomb interaction; treated perturbatively in QED self-energy.</td>
-                                </tr>
-                                <tr>
-                                    <td>Time-reversed crossing</td>
-                                    <td>Forward-going and backwards-going segments meet at the same spacetime event.</td>
-                                    <td>Pair creation or annihilation event in the Feynman–Stueckelberg picture.</td>
-                                </tr>
-                                <tr>
-                                    <td>Euclidean self-intersection (instanton)</td>
-                                    <td>Worldline in Wick-rotated spacetime forms a closed loop.</td>
-                                    <td>Schwinger pair production; vacuum decay; topological contribution to effective action.</td>
-                                </tr>
-                                <tr>
-                                    <td>Lightlike coincidence</td>
-                                    <td>Two segments of worldline touch on the light cone.</td>
-                                    <td>Radiation reaction; Liénard–Wiechert field self-interaction.</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                    <p class="rr-src">Source: Compiled from Feynman (1949), Stueckelberg (1941), and Schubert (2001).</p>
-
-                    <h3><span class="rr-no">6.2</span> Classification of Intersection Types</h3>
-                    <p>In the one-electron universe picture, where a single worldline traces all of spacetime, intersections are generic rather than exceptional. The worldline
-                       \(x^\mu(\tau)\) is parameterized by an arbitrary monotonic parameter \(\tau\) (which Stueckelberg first systematically exploited), and the physical time
-                       coordinate \(x^0(\tau)\) is allowed to be non-monotonic. Every time \(x^0(\tau)\) achieves a local maximum or minimum — i.e. every time \(\dot{x}^0(\tau) =
-                       0\) and changes sign — the worldline has "turned around in time", generating what observers perceive as a pair creation or annihilation event.</p>
-                    <p>For a worldline of total parameter length \(T\) with \(N\) time-reversals, a fixed-time slice at generic \(t\) sees approximately \(N/2 + 1\) intersections,
-                       half identified as electrons and half as positrons. The net winding number \(w = (\text{electrons}) - (\text{positrons})\) is conserved globally and equals
-                       the total charge in units of \(e\). This is the rigorous formalisation of Wheeler's time-slice counting argument.</p>
-
-                    <h3><span class="rr-no">6.3</span> Observable Consequences of Intersections</h3>
-                    <p>The immediate physical consequence of a time-reversal intersection is a pair creation or annihilation event. In standard QED: a worldline turning from
-                       future-directed to past-directed at event \(x\) corresponds to pair annihilation — an electron and positron converge at \(x\) and annihilate, typically
-                       producing two photons (to conserve energy-momentum and angular momentum). A worldline turning from past-directed to future-directed at event \(x\)
-                       corresponds to pair production — a sufficiently energetic photon (or electromagnetic field) induces an electron-positron pair to materialise at \(x\).</p>
-                    <p>The observable signatures of these intersection events are among the most well-measured phenomena in particle physics: the 511 keV gamma-ray lines from
-                       positron-electron annihilation (the basis of PET imaging), Bhabha scattering cross-sections (measured to better than \(10^{-4}\) precision at LEP), and pair
-                       production rates from high-energy photons. Every such measurement is indirect confirmation of the physical content of worldline time-reversals — the
-                       structural element that Wheeler's hypothesis required. What the one-electron hypothesis adds beyond standard QED is the claim that all these intersection
-                       events belong to the same worldline. This claim has no observable consequence distinguishable from standard QED at the level of individual scattering events;
-                       its only testable prediction is global (the matter-antimatter equality constraint), which it fails.</p>
-                </section>
-
-                <!-- ===== 7. Self-Intersections in QFT ===== -->
-                <section id="s7">
-                    <h2><span class="rr-no">7.</span> Worldline Self-Intersections in Quantum Field Theory</h2>
-                    <h3><span class="rr-no">7.1</span> The First-Quantised (Worldline) Path Integral</h3>
-                    <p>The modern worldline formalism treats quantum field theory amplitudes as quantum mechanics on the particle's worldline rather than as field operations in a
-                       Hilbert space. The bridge between the two descriptions is the proper-time representation of the propagator:</p>
-                    <div class="rr-eq">
-                        <div class="rr-eq-math">\[\langle x_2|\,\frac{1}{-\partial^2 + m^2}\,|x_1\rangle = \int_0^\infty\! dT \int_{x(0)=x_1}^{x(T)=x_2}\!\!
-                                                \mathcal{D}x^\mu(\tau)\,\exp\!\left(-\int_0^T\!\left[\frac{\dot{x}^2}{4}+m^2\right]d\tau\right)\]
+                    <!-- ===== Table of Contents ===== -->
+                    <nav aria-label="Table of contents"
+                         class="rr-toc">
+                        <div class="rr-toc-title">Contents</div>
+                        <div class="rr-toc-grid">
+                            <a href="#s1"><span class="rr-toc-no">1</span><span class="rr-toc-tx">Introduction and Scope</span></a>
+                            <a href="#s2"><span class="rr-toc-no">2</span><span class="rr-toc-tx">The Original Wheeler–Feynman Hypothesis (1940)</span></a>
+                            <a href="#s3"><span class="rr-toc-no">3</span><span class="rr-toc-tx">Independent Developments: Stueckelberg (1941)</span></a>
+                            <a href="#s4"><span class="rr-toc-no">4</span><span class="rr-toc-tx">From Hypothesis to Formalism: Feynman 1949</span></a>
+                            <a href="#s5"><span class="rr-toc-no">5</span><span class="rr-toc-tx">Nambu's Extension</span></a>
+                            <a href="#s6"><span class="rr-toc-no">6</span><span class="rr-toc-tx">Worldline Self-Intersections</span></a>
+                            <a href="#s7"><span class="rr-toc-no">7</span><span class="rr-toc-tx">Worldline Self-Intersections in QFT</span></a>
+                            <a href="#s8"><span class="rr-toc-no">8</span><span class="rr-toc-tx">The Bern–Kosower–Strassler Formalism</span></a>
+                            <a href="#s9"><span class="rr-toc-no">9</span><span class="rr-toc-tx">Grassmann Variables and the Spinning Worldline</span></a>
+                            <a href="#s10"><span class="rr-toc-no">10</span><span class="rr-toc-tx">Topological Approaches: Knots and Invariants</span></a>
+                            <a href="#s11"><span class="rr-toc-no">11</span><span class="rr-toc-tx">Modern Reinterpretations</span></a>
+                            <a href="#s12"><span class="rr-toc-no">12</span><span class="rr-toc-tx">Critical Analysis</span></a>
+                            <a href="#s13"><span class="rr-toc-no">13</span><span class="rr-toc-tx">Outlook and Key Takeaways</span></a>
+                            <a href="#s14"><span class="rr-toc-no">14</span><span class="rr-toc-tx">References</span></a>
                         </div>
-                        <div class="rr-eq-num">(1)</div>
-                    </div>
-                    <p>This is a path integral over all worldlines connecting \(x_1\) to \(x_2\) in proper time \(T\), weighted by the relativistic action. The effective action
-                       (generating functional for one-loop corrections) is obtained by taking the trace over closed worldlines — precisely the loops of the Feynman diagram
-                       expansion.</p>
+                    </nav>
 
-                    <h3><span class="rr-no">7.2</span> Schwinger Proper Time, the Heat Kernel, and Fock's Representation</h3>
-                    <p>The proper-time representation has a distinguished history. Fock first introduced a proper-time parameterisation of the electron propagator in 1937;
-                       Schwinger systematised it in 1951 as the "heat kernel" representation of the propagator, obtaining the celebrated Euler-Heisenberg effective Lagrangian for
-                       QED in a constant electromagnetic field:</p>
-                    <div class="rr-eq">
-                        <div class="rr-eq-math">\[\mathcal{L}_{\mathrm{EH}} = \frac{1}{8\pi^2}\int_0^\infty \frac{dT}{T^3}\,e^{-m^2
-                                                T}\left[\,eET\coth(eET)-1-\frac{(eET)^2}{3}\,\right]\]
+                    <!-- ===== 1. Introduction ===== -->
+                    <section id="s1">
+                        <h2><span class="rr-no">1.</span> Introduction and Scope</h2>
+                        <p class="rr-lead">Few ideas in the history of physics illustrate the relationship between bold conjecture and productive formalism more vividly than John
+                                           Wheeler's one-electron universe hypothesis. Proposed in a single telephone call in 1940 and rejected within the same conversation on
+                                           empirical grounds, the idea nevertheless propagated through the intellectual ecosystem of mid-twentieth-century physics. It seeded one of
+                                           QED's most powerful conceptual tools — the reinterpretation of antiparticles as particles travelling backwards in time. The worldline
+                                           perspective that Wheeler's proposal required has since blossomed, through the work of Stueckelberg, Feynman, Nambu, Schwinger, Fock,
+                                           Bern,
+                                           Kosower, Strassler, and many others, into a sophisticated first-quantised formalism that computes quantum amplitudes more efficiently
+                                           than
+                                           conventional second-quantised Feynman diagram methods in many regimes.</p>
+                        <p>This report traces the full intellectual arc of the one-electron hypothesis: its origin, its immediate formal consequences, the detailed physics of
+                           worldline
+                           self-intersections, and the modern program of topological and algebraic methods that have turned Wheeler's "tangled knot" metaphor into a rigorous
+                           calculational framework. The treatment is aimed at readers with graduate-level familiarity with quantum field theory and differential geometry, though
+                           the
+                           historical and conceptual sections are accessible to a broader audience. The report covers primary literature from 1941 to 2026, including recent work on
+                           worldline instantons in spatiotemporal fields, the monadic electron framework, and biquaternionic worldline analysis.</p>
+                    </section>
+
+                    <!-- ===== 2. Wheeler–Feynman ===== -->
+                    <section id="s2">
+                        <h2><span class="rr-no">2.</span> The Original Wheeler–Feynman Hypothesis (1940)</h2>
+                        <h3><span class="rr-no">2.1</span> The Telephone Call and the Gedankenexperiment</h3>
+                        <p>In the spring of 1940, John Archibald Wheeler, then a professor at Princeton, telephoned his graduate student Richard Feynman with what he called a
+                           fundamental insight. "Feynman," he said, "I know why all electrons have the same charge and the same mass." The answer, he declared, was: "Because they
+                           are
+                           all the same electron!"</p>
+                        <p>The conceptual starting point is the observation that every electron in the universe is, empirically, absolutely identical to every other — same rest
+                           mass of
+                           \(9.109\times10^{-31}\,\mathrm{kg}\), same charge magnitude of \(1.602\times10^{-19}\,\mathrm{C}\), same spin-\(\tfrac{1}{2}\). In the particle physics
+                           of
+                           the late 1930s, this universality was a postulate rather than an explanation. Wheeler proposed that it followed inevitably from the radical claim that
+                           there
+                           is literally only one electron, and that every electron ever observed is a different segment of its single worldline threading through the entirety of
+                           cosmic
+                           history. The identical properties are identical because they belong, ultimately, to the same particle.</p>
+                        <p>This is not an outlandish idea within special relativity. A relativistic particle traces a worldline — a curve in four-dimensional Minkowski spacetime —
+                           as
+                           it evolves. The worldline is a geometric object in spacetime; it does not propagate through spacetime the way a ball rolls through a room. Wheeler's
+                           proposal
+                           was simply that this worldline, instead of having distinct endpoints for each physical electron, was a single connected curve of infinite (or
+                           cosmological)
+                           length, looped, knotted, and tangled through all of spacetime like an immense thread.</p>
+
+                        <h3><span class="rr-no">2.2</span> Worldline Topology and the Time-Slice Argument</h3>
+                        <p>Consider taking a "snapshot" of the universe at a fixed cosmic time \(t = t_0\). In spacetime language, this snapshot is a spacelike hypersurface
+                           \(\Sigma(t_0)\). The single worldline, being a curve in four-dimensional spacetime, intersects this hypersurface at multiple points. Each intersection
+                           point
+                           corresponds to an electron (if the worldline is locally traversed forwards in time) or a positron (if locally traversed backwards in time). The number of
+                           forward-moving intersections minus the number of backwards-moving intersections equals a topological invariant of the worldline — the net winding number
+                           —
+                           which Wheeler identified with the conserved total charge of the universe.</p>
+                        <p>If the worldline has \(n_+\) forward-moving intersections and \(n_-\) backwards-moving intersections with \(\Sigma(t_0)\), then the observable particle
+                           content at that moment consists of \(n_+\) electrons and \(n_-\) positrons, for a net charge of \(-(n_+ - n_-)e\). The simplest consistent scenario is a
+                           worldline that begins and ends at the boundary of spacetime (the Big Bang and the ultimate fate of the universe) with no net winding, implying \(n_+ =
+                           n_-\)
+                           — equal numbers of electrons and positrons. This constraint is what immediately doomed the original hypothesis empirically, as Feynman noted at once.</p>
+                        <p>The topology of such a worldline in four dimensions is rich. In 3+1 dimensions, a curve can be knotted and braided, and the intersections with
+                           time-slices
+                           can be counted using standard tools from differential topology. The Gauss linking number, computable for closed curves, and the Jones polynomial, a more
+                           refined knot invariant, encode geometric information about how the worldline self-entangles. These topological objects will prove central to modern
+                           formalisms discussed in Sections 10–11.</p>
+
+                        <h3><span class="rr-no">2.3</span> Feynman's Reception and Immediate Objections</h3>
+                        <p>Feynman was an ideal interlocutor for this idea — brilliant, mathematically fearless, and constitutionally sceptical of ornate hypotheses not grounded in
+                           calculation. His response was swift and lethal: the hypothesis required equal numbers of electrons and positrons in the observable universe, but
+                           observations
+                           showed electrons comfortably outnumbering positrons by an enormous factor. Wheeler, undaunted, speculated that the "missing" positrons might be hidden
+                           inside
+                           protons, but Feynman dismissed this as "not a satisfactory explanation."</p>
+                        <p>What Feynman did take seriously — and explicitly credited to Wheeler — was the narrower insight that positrons could be represented as electrons
+                           traversing
+                           their worldlines backwards in time. This partial extraction of the idea, stripped of its cosmological ambition, became the conceptual nucleus of some of
+                           the
+                           most important papers in twentieth-century physics. As Feynman said in his 1965 Nobel lecture:</p>
+                        <blockquote class="rr-quote">
+                            "I did not take the idea that all the electrons were the same one from him as seriously as I took the observation that positrons could simply be
+                            represented
+                            as electrons going from the future to the past in a back section of their world lines. That, I stole!"
+                            <cite>— Richard P. Feynman, Nobel Lecture, 1965</cite>
+                        </blockquote>
+                    </section>
+
+                    <!-- ===== 3. Stueckelberg ===== -->
+                    <section id="s3">
+                        <h2><span class="rr-no">3.</span> Independent and Parallel Developments: Stueckelberg (1941)</h2>
+                        <p>The reinterpretation of antiparticles as time-reversed particles was not solely Wheeler's priority. In 1941, the Swiss physicist Ernst Carl Gerlach
+                           Stueckelberg von Breidenbach independently arrived at the same picture in his paper "La signification du temps propre en mécanique ondulatoire,"
+                           published in
+                            <em>Helvetica Physica Acta</em> 14 (1941): 51–80.</p>
+                        <p>Stueckelberg's approach was grounded in classical relativistic mechanics rather than quantum field theory. He took advantage of the general coordinate
+                           invariance of the worldline parameter — that is, the freedom to parameterise the worldline by any smooth monotonic function rather than the particle's
+                           proper
+                           time alone. By choosing a parameterisation in which the worldline could "fold back" in coordinate time, Stueckelberg showed that what a local observer
+                           perceives as a positron approaching from the future and annihilating an electron is mathematically identical to a single electron whose worldline,
+                           parameterised globally, reverses its time coordinate at the annihilation event.</p>
+                        <p>Stueckelberg's construction was remarkably prescient. He showed explicitly that:</p>
+                        <ol class="rr-list">
+                            <li>A particle's worldline can cross the hypersurface \(t = \text{const}\) twice, once moving forwards and once backwards, at what an observer would
+                                identify as a pair creation or annihilation event.
+                            </li>
+                            <li>The charge of the time-reversed segment flips the sign, yielding positive charge — the positron — from the same equation of motion as the electron,
+                                with
+                                only the sign of the covariant derivative of proper time changing.
+                            </li>
+                            <li>This picture can be second-quantised consistently, reproducing the results of hole theory.</li>
+                        </ol>
+                        <p>The parallel discovery by Stueckelberg was not widely absorbed into the English-language physics community at the time, partly due to World War II and
+                           partly
+                           due to the language barrier. When Feynman published his 1949 paper, he explicitly acknowledged Stueckelberg's priority, writing that negative energy
+                           states
+                           "appear in a form which may be pictured (as by Stückelberg) in space-time as waves travelling away from the external potential backwards in time."</p>
+                    </section>
+
+                    <!-- ===== 4. Feynman 1949 ===== -->
+                    <section id="s4">
+                        <h2><span class="rr-no">4.</span> From Hypothesis to Formalism: Feynman 1949 and the Theory of Positrons</h2>
+                        <p>Feynman's 1949 paper "The Theory of Positrons," published in <em>Physical Review</em> 76 (6): 749–759, is where the worldline-reversal picture was given
+                           its
+                           definitive mathematical form and integrated into quantum theory. The paper's central move is to replace the Dirac "hole theory" — which required a fully
+                           occupied negative-energy sea — with a reinterpretation of the Dirac propagator.</p>
+                        <p>In hole theory, a positron is the absence of a negative-energy electron. This picture is conceptually awkward, physically unmotivated, and
+                           calculationally
+                           cumbersome. Feynman showed that the same physical results — pair production, pair annihilation, scattering — follow from choosing boundary conditions on
+                           the
+                           propagator such that:</p>
+                        <ol class="rr-list">
+                            <li>Positive-energy states propagate forwards in time (electron moving into the future).</li>
+                            <li>Negative-energy states propagate backwards in time (positron = electron moving into the past).</li>
+                        </ol>
+                        <p>The Feynman propagator \(K_+(2,1)\), defined with these boundary conditions, automatically encodes all orders of virtual pair creation and annihilation
+                           in a
+                           single, compact expression. A single diagram representing "an electron at event 1 scattering to event 2" implicitly contains, depending on the time
+                           ordering
+                           of events 1 and 2, the interpretations: (a) ordinary forwards scattering; (b) pair annihilation at event 2 if \(t_2 &lt; t_1\); and (c) pair production
+                           at
+                           event 1 if an additional vertex is present.</p>
+                        <p>This is precisely the worldline self-intersection/time-reversal idea made calculational. The propagator \(K_+(2,1)\) is the amplitude for a particle to
+                           traverse its worldline from spacetime event 1 to spacetime event 2, and the fact that the same amplitude handles both electrons and positrons is the
+                           mathematical encoding of Wheeler's original geometric picture, stripped of its cosmological overreach. The Feynman–Stueckelberg interpretation of
+                           antiparticles remains the standard one in all modern QFT textbooks.</p>
+                    </section>
+
+                    <!-- ===== 5. Nambu ===== -->
+                    <section id="s5">
+                        <h2><span class="rr-no">5.</span> Nambu's Extension and the Standard Interpretation of Antiparticles</h2>
+                        <p>Yoichiro Nambu (later a Nobel laureate) took the Wheeler–Feynman–Stueckelberg worldline picture and generalised it to all pair-creation and annihilation
+                           events in <em>Progress of Theoretical Physics</em> 5 (1950): 614–633. His formulation makes the cosmological aspect of Wheeler's hypothesis into a local,
+                           event-by-event statement:</p>
+                        <blockquote class="rr-quote">
+                            "The eventual creation and annihilation of pairs that may occur now and then is no creation nor annihilation, but only a change of directions of moving
+                            particles, from past to future, or from future to past."
+                            <cite>— Yoichiro Nambu, 1950</cite>
+                        </blockquote>
+                        <p>Nambu treated all electrons and positrons as segments of worldlines, with pair creation corresponding to a worldline turning from backwards-in-time to
+                           forward-in-time at a single spacetime event, and pair annihilation corresponding to a worldline turning from forward-in-time to backwards-in-time. In
+                           this
+                           picture, the total "length" of the worldline is conserved modulo topology, and the number of particles observable at any instant is simply the number of
+                           intersections of all worldlines with the corresponding time slice.</p>
+                        <p>Nambu's work cemented the Stueckelberg–Feynman picture as the correct physical framework for understanding antiparticles in relativistic quantum field
+                           theory, and its language is the natural one for the worldline formalism discussed in Sections 7–9.</p>
+                    </section>
+
+                    <!-- ===== 6. Worldline Self-Intersections ===== -->
+                    <section id="s6">
+                        <h2><span class="rr-no">6.</span> Worldline Self-Intersections: Geometry, Physics, and Interpretation</h2>
+                        <h3><span class="rr-no">6.1</span> What a Worldline Self-Intersection Means</h3>
+                        <p>A worldline self-intersection occurs when a single particle's spacetime trajectory passes through the same spacetime point \(x^\mu\) more than once —
+                           i.e.
+                           when \(x^\mu(\tau_1) = x^\mu(\tau_2)\) for two distinct parameter values \(\tau_1 \neq \tau_2\). In Minkowski spacetime, this is a geometrically
+                           well-defined
+                           event with sharply different physical interpretations depending on context. It is important to distinguish several qualitatively different situations,
+                           summarised in Table 1 below.</p>
+
+                        <div class="rr-cap"><span class="rr-no">Table 1.</span> Classification of Worldline Self-Intersection Types</div>
+                        <div class="rr-table-wrap">
+                            <table class="rr-table">
+                                <thead>
+                                    <tr>
+                                        <th>Intersection Type</th>
+                                        <th>Description</th>
+                                        <th>Physical Interpretation</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Timelike self-intersection</td>
+                                        <td>Worldline crosses itself at the same spacetime point with both segments timelike.</td>
+                                        <td>True self-collision; requires closed timelike curves (CTCs); forbidden in classical GR.</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Spacelike close approach</td>
+                                        <td>Two segments of the worldline are spatially near simultaneously.</td>
+                                        <td>Self-Coulomb interaction; treated perturbatively in QED self-energy.</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Time-reversed crossing</td>
+                                        <td>Forward-going and backwards-going segments meet at the same spacetime event.</td>
+                                        <td>Pair creation or annihilation event in the Feynman–Stueckelberg picture.</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Euclidean self-intersection (instanton)</td>
+                                        <td>Worldline in Wick-rotated spacetime forms a closed loop.</td>
+                                        <td>Schwinger pair production; vacuum decay; topological contribution to effective action.</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Lightlike coincidence</td>
+                                        <td>Two segments of worldline touch on the light cone.</td>
+                                        <td>Radiation reaction; Liénard–Wiechert field self-interaction.</td>
+                                    </tr>
+                                </tbody>
+                            </table>
                         </div>
-                        <div class="rr-eq-num">(2)</div>
-                    </div>
-                    <p>The imaginary part of this Lagrangian encodes the rate of pair production (Schwinger mechanism), nonperturbative in the electric field \(E\):</p>
-                    <div class="rr-eq">
-                        <div class="rr-eq-math">\[P \sim \exp\!\left(-\frac{\pi m^2}{eE}\right)\]</div>
-                        <div class="rr-eq-num">(3)</div>
-                    </div>
-                    <p>The exponential suppression means pair production is negligible for \(E\) much less than \(E_{\text{Schwinger}} = m^2/e \approx
-                       1.3\times10^{18}\,\mathrm{V/m}\) — a field strength that has not yet been achieved experimentally. The worldline path integral provides a particularly
-                       transparent derivation of this result: the imaginary part arises from closed worldline loops that are real saddle points of the Euclidean action — the
-                       worldline instantons.</p>
+                        <p class="rr-src">Source: Compiled from Feynman (1949), Stueckelberg (1941), and Schubert (2001).</p>
 
-                    <h3><span class="rr-no">7.3</span> Worldline Instantons and Pair Production</h3>
-                    <p>Worldline instantons are solutions to the classical equations of motion in Euclidean spacetime (\(t \to -i\tau_E\)) that are closed loops. For a constant
-                       electric field \(E\) in the \(z\)-direction, the instanton is a circle in the \((\tau_E, z)\) plane with radius \(r = m/(eE)\). This closed loop is precisely
-                       a worldline that: (1) begins as a positron moving backwards in coordinate time; (2) reaches a turning point and becomes an electron moving forwards in
-                       coordinate time; and (3) returns to its starting point — the closed loop represents a virtual pair that is created and annihilated by the background
-                       field.</p>
-                    <p>The saddle-point approximation to the worldline path integral gives the leading exponential \(\exp(-\pi m^2/(eE))\), whilst higher-order corrections
-                       (preexponential factors) require the ratio of functional determinants around the instanton. Recent work has generalised this framework to inhomogeneous,
-                       multi-pulse electromagnetic fields using discrete worldline instantons — numerically computed saddle points in multidimensional fields. For fields with \(N\)
-                       stationary points, there are \(N\) instantons at the amplitude level, yielding \(N(N+1)/2\) contributions at the probability level due to interference
-                       terms.</p>
-                    <p>In recent work (Degli Esposti &amp; Torgrimsson, <em>Phys. Rev. D</em> 112, 016026, 2025), worldline instantons in spatiotemporal fields have been shown to
-                       produce Moiré interference patterns in the electron-positron momentum spectrum and Aharonov-Bohm phases depending on the spatial separation of field pulses.
-                       These represent direct, measurable consequences of the topology of worldline self-approaches in background fields.</p>
+                        <h3><span class="rr-no">6.2</span> Classification of Intersection Types</h3>
+                        <p>In the one-electron universe picture, where a single worldline traces all of spacetime, intersections are generic rather than exceptional. The worldline
+                           \(x^\mu(\tau)\) is parameterized by an arbitrary monotonic parameter \(\tau\) (which Stueckelberg first systematically exploited), and the physical time
+                           coordinate \(x^0(\tau)\) is allowed to be non-monotonic. Every time \(x^0(\tau)\) achieves a local maximum or minimum — i.e. every time \(\dot{x}^0(\tau)
+                           =
+                           0\) and changes sign — the worldline has "turned around in time", generating what observers perceive as a pair creation or annihilation event.</p>
+                        <p>For a worldline of total parameter length \(T\) with \(N\) time-reversals, a fixed-time slice at generic \(t\) sees approximately \(N/2 + 1\)
+                           intersections,
+                           half identified as electrons and half as positrons. The net winding number \(w = (\text{electrons}) - (\text{positrons})\) is conserved globally and
+                           equals
+                           the total charge in units of \(e\). This is the rigorous formalisation of Wheeler's time-slice counting argument.</p>
 
-                    <h3><span class="rr-no">7.4</span> Do Worldline Self-Intersections Correspond to Observable Collisions?</h3>
-                    <p>This question requires careful disambiguation. In the worldline path integral, each path \(x^\mu(\tau)\) is a single configuration being integrated over. A
-                       self-intersection within one such path is interpreted differently depending on the context of the calculation. In Euclidean spacetime, a topologically
-                       distinct class of paths contributes to the path integral with a different weight. Worldlines that cross themselves form a set of measure zero in the
-                       path-integral measure (for smooth paths), but they carry topological information encoded in knot invariants. In the worldline instanton approach, the
-                       instanton loop itself is a self-intersection in the sense that its start and end points coincide — that is, a closed loop. This does not correspond to a
-                       physical particle-particle collision; it corresponds to a quantum tunnelling event (pair production).</p>
-                    <p>In Minkowski spacetime (real time), a genuine self-intersection requires a single particle to be at the same spatial location at two different times,
-                       possible only via a non-monotonic worldline (time reversal). This is the pair-creation/annihilation event by Stueckelberg and Feynman. In the one-electron
-                       universe picture, every pair production event is reinterpreted as the single worldline turning a corner in time — the electron "collides with itself" in the
-                       sense that the same worldline passes through the same neighbourhood of spacetime at two distinct proper times. The observable outcome — two 511 keV photons
-                       emitted back-to-back in pair annihilation — is entirely indistinguishable from standard QED. No additional observable effect arises from worldline
-                       self-intersections beyond what the Feynman diagram already predicts.</p>
-                </section>
+                        <h3><span class="rr-no">6.3</span> Observable Consequences of Intersections</h3>
+                        <p>The immediate physical consequence of a time-reversal intersection is a pair creation or annihilation event. In standard QED: a worldline turning from
+                           future-directed to past-directed at event \(x\) corresponds to pair annihilation — an electron and positron converge at \(x\) and annihilate, typically
+                           producing two photons (to conserve energy-momentum and angular momentum). A worldline turning from past-directed to future-directed at event \(x\)
+                           corresponds to pair production — a sufficiently energetic photon (or electromagnetic field) induces an electron-positron pair to materialise at
+                           \(x\).</p>
+                        <p>The observable signatures of these intersection events are among the most well-measured phenomena in particle physics: the 511 keV gamma-ray lines from
+                           positron-electron annihilation (the basis of PET imaging), Bhabha scattering cross-sections (measured to better than \(10^{-4}\) precision at LEP), and
+                           pair
+                           production rates from high-energy photons. Every such measurement is indirect confirmation of the physical content of worldline time-reversals — the
+                           structural element that Wheeler's hypothesis required. What the one-electron hypothesis adds beyond standard QED is the claim that all these intersection
+                           events belong to the same worldline. This claim has no observable consequence distinguishable from standard QED at the level of individual scattering
+                           events;
+                           its only testable prediction is global (the matter-antimatter equality constraint), which it fails.</p>
+                    </section>
 
-                <!-- ===== 8. Bern–Kosower–Strassler ===== -->
-                <section id="s8">
-                    <h2><span class="rr-no">8.</span> The Bern–Kosower–Strassler Worldline Formalism</h2>
-                    <h3><span class="rr-no">8.1</span> Origins in String Theory</h3>
-                    <p>The worldline formalism was dramatically reinvigorated in the late 1980s and early 1990s by Zvi Bern and David Kosower, who worked on the
-                       infinite-string-tension limit of string theory amplitudes. Their insight was that string theory, taken to the limit where the string tension becomes infinite
-                       (all massive string modes decouple), reduces to ordinary QFT, but in an integral representation far more compact than the Feynman diagram expansion. Bern and
-                       Kosower derived master formulae for \(N\)-gluon one-loop amplitudes in Yang-Mills theory — parameter-integral representations that encode all helicity and
-                       colour information in a single expression, without reference to individual Feynman diagrams. These Bern-Kosower rules are equivalent to the sum of all
-                       relevant Feynman diagrams but require fewer terms dramatically: the 4-gluon amplitude, for example, involves four Feynman diagrams in standard methods but is
-                       captured by a single Bern-Kosower integral.</p>
+                    <!-- ===== 7. Self-Intersections in QFT ===== -->
+                    <section id="s7">
+                        <h2><span class="rr-no">7.</span> Worldline Self-Intersections in Quantum Field Theory</h2>
+                        <h3><span class="rr-no">7.1</span> The First-Quantised (Worldline) Path Integral</h3>
+                        <p>The modern worldline formalism treats quantum field theory amplitudes as quantum mechanics on the particle's worldline rather than as field operations in
+                           a
+                           Hilbert space. The bridge between the two descriptions is the proper-time representation of the propagator:</p>
+                        <div class="rr-eq">
+                            <div class="rr-eq-math">\[\langle x_2|\,\frac{1}{-\partial^2 + m^2}\,|x_1\rangle = \int_0^\infty\! dT \int_{x(0)=x_1}^{x(T)=x_2}\!\!
+                                                    \mathcal{D}x^\mu(\tau)\,\exp\!\left(-\int_0^T\!\left[\frac{\dot{x}^2}{4}+m^2\right]d\tau\right)\]
+                            </div>
+                            <div class="rr-eq-num">(1)</div>
+                        </div>
+                        <p>This is a path integral over all worldlines connecting \(x_1\) to \(x_2\) in proper time \(T\), weighted by the relativistic action. The effective action
+                           (generating functional for one-loop corrections) is obtained by taking the trace over closed worldlines — precisely the loops of the Feynman diagram
+                           expansion.</p>
 
-                    <h3><span class="rr-no">8.2</span> Master Formulae and One-Loop Amplitudes</h3>
-                    <p>Strassler (1992) showed that the Bern-Kosower rules have a direct first-quantised derivation from the worldline path integral, without reference to string
-                       theory at all. The one-loop \(N\)-photon amplitude in spinor QED can be written as a path integral average over closed worldlines of proper-time length \(T\)
-                       of products of photon vertex operators \(V_\mu(k,\tau) = \varepsilon_\mu\,\dot{x}^\mu(\tau)\,e^{ik\cdot x(\tau)}\). Table 2 summarises the principal
-                       advantages of the worldline approach over conventional Feynman methods.</p>
+                        <h3><span class="rr-no">7.2</span> Schwinger Proper Time, the Heat Kernel, and Fock's Representation</h3>
+                        <p>The proper-time representation has a distinguished history. Fock first introduced a proper-time parameterisation of the electron propagator in 1937;
+                           Schwinger systematised it in 1951 as the "heat kernel" representation of the propagator, obtaining the celebrated Euler-Heisenberg effective Lagrangian
+                           for
+                           QED in a constant electromagnetic field:</p>
+                        <div class="rr-eq">
+                            <div class="rr-eq-math">\[\mathcal{L}_{\mathrm{EH}} = \frac{1}{8\pi^2}\int_0^\infty \frac{dT}{T^3}\,e^{-m^2
+                                                    T}\left[\,eET\coth(eET)-1-\frac{(eET)^2}{3}\,\right]\]
+                            </div>
+                            <div class="rr-eq-num">(2)</div>
+                        </div>
+                        <p>The imaginary part of this Lagrangian encodes the rate of pair production (Schwinger mechanism), nonperturbative in the electric field \(E\):</p>
+                        <div class="rr-eq">
+                            <div class="rr-eq-math">\[P \sim \exp\!\left(-\frac{\pi m^2}{eE}\right)\]</div>
+                            <div class="rr-eq-num">(3)</div>
+                        </div>
+                        <p>The exponential suppression means pair production is negligible for \(E\) much less than \(E_{\text{Schwinger}} = m^2/e \approx
+                           1.3\times10^{18}\,\mathrm{V/m}\) — a field strength that has not yet been achieved experimentally. The worldline path integral provides a particularly
+                           transparent derivation of this result: the imaginary part arises from closed worldline loops that are real saddle points of the Euclidean action — the
+                           worldline instantons.</p>
 
-                    <div class="rr-cap"><span class="rr-no">Table 2.</span> Comparison: Conventional Feynman Diagrams vs Worldline Formalism</div>
-                    <div class="rr-table-wrap">
-                        <table class="rr-table">
-                            <thead>
-                                <tr>
-                                    <th>Feature</th>
-                                    <th>Conventional Feynman Diagrams</th>
-                                    <th>Worldline Formalism</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>Photon symmetry</td>
-                                    <td>Must sum over crossed diagrams separately.</td>
-                                    <td>Manifest Bose symmetry of all external photons.</td>
-                                </tr>
-                                <tr>
-                                    <td>Dirac algebra</td>
-                                    <td>Extensive gamma-matrix traces required.</td>
-                                    <td>Replaced entirely by Grassmann integrals.</td>
-                                </tr>
-                                <tr>
-                                    <td>Spin effects</td>
-                                    <td>Separate spinor and scalar QED calculations.</td>
-                                    <td>Unified via worldline SUSY; single framework.</td>
-                                </tr>
-                                <tr>
-                                    <td>Multi-photon scaling</td>
-                                    <td>Diagram number grows factorially with \(N\).</td>
-                                    <td>Single master formula valid for all \(N\).</td>
-                                </tr>
-                                <tr>
-                                    <td>Gauge invariance</td>
-                                    <td>Verified diagram by diagram.</td>
-                                    <td>Manifest via integration by parts on the loop.</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                    <p class="rr-src">Source: Strassler, M. J. (1992); Schubert, C. (2001).</p>
+                        <h3><span class="rr-no">7.3</span> Worldline Instantons and Pair Production</h3>
+                        <p>Worldline instantons are solutions to the classical equations of motion in Euclidean spacetime (\(t \to -i\tau_E\)) that are closed loops. For a constant
+                           electric field \(E\) in the \(z\)-direction, the instanton is a circle in the \((\tau_E, z)\) plane with radius \(r = m/(eE)\). This closed loop is
+                           precisely
+                           a worldline that: (1) begins as a positron moving backwards in coordinate time; (2) reaches a turning point and becomes an electron moving forwards in
+                           coordinate time; and (3) returns to its starting point — the closed loop represents a virtual pair that is created and annihilated by the background
+                           field.</p>
+                        <p>The saddle-point approximation to the worldline path integral gives the leading exponential \(\exp(-\pi m^2/(eE))\), whilst higher-order corrections
+                           (preexponential factors) require the ratio of functional determinants around the instanton. Recent work has generalised this framework to inhomogeneous,
+                           multi-pulse electromagnetic fields using discrete worldline instantons — numerically computed saddle points in multidimensional fields. For fields with
+                           \(N\)
+                           stationary points, there are \(N\) instantons at the amplitude level, yielding \(N(N+1)/2\) contributions at the probability level due to interference
+                           terms.</p>
+                        <p>In recent work (Degli Esposti &amp; Torgrimsson, <em>Phys. Rev. D</em> 112, 016026, 2025), worldline instantons in spatiotemporal fields have been shown
+                           to
+                           produce Moiré interference patterns in the electron-positron momentum spectrum and Aharonov-Bohm phases depending on the spatial separation of field
+                           pulses.
+                           These represent direct, measurable consequences of the topology of worldline self-approaches in background fields.</p>
 
-                    <h3><span class="rr-no">8.3</span> Multi-Loop Extensions and Graph-Based Green's Functions</h3>
-                    <p>Beyond one loop, the worldline formalism requires multi-loop worldline Green's functions, which are constructed from the graph-theoretic structure of the
-                       loop diagram (the Schwinger-Dyson skeleton). Schubert and collaborators developed this program systematically through the 1990s and 2000s. The two-loop
-                       quenched QED photon propagator was reproduced from worldline methods by Bern and Dunbar, demonstrating that the formalism is not merely a rearrangement at
-                       one loop but a genuinely new calculational framework. Recent advances (arXiv:2503.08846, 2025) extend the formalism to extended worldline supersymmetry with
-                       \(N\) supercharges, where the worldline gauge multiplet contains an einbein \(e(\tau)\) (gauge field for worldline reparametrizations), gravitinos
-                       \(\chi_I(\tau)\) (gauge fields for the \(N\) worldline supersymmetries), and a gauge field \(a(\tau)\) for the R-symmetry rotating worldline fermions. This
-                       extended structure captures particles of arbitrary spin in a unified first-quantised framework.</p>
-                </section>
+                        <h3><span class="rr-no">7.4</span> Do Worldline Self-Intersections Correspond to Observable Collisions?</h3>
+                        <p>This question requires careful disambiguation. In the worldline path integral, each path \(x^\mu(\tau)\) is a single configuration being integrated over.
+                           A
+                           self-intersection within one such path is interpreted differently depending on the context of the calculation. In Euclidean spacetime, a topologically
+                           distinct class of paths contributes to the path integral with a different weight. Worldlines that cross themselves form a set of measure zero in the
+                           path-integral measure (for smooth paths), but they carry topological information encoded in knot invariants. In the worldline instanton approach, the
+                           instanton loop itself is a self-intersection in the sense that its start and end points coincide — that is, a closed loop. This does not correspond to a
+                           physical particle-particle collision; it corresponds to a quantum tunnelling event (pair production).</p>
+                        <p>In Minkowski spacetime (real time), a genuine self-intersection requires a single particle to be at the same spatial location at two different times,
+                           possible only via a non-monotonic worldline (time reversal). This is the pair-creation/annihilation event by Stueckelberg and Feynman. In the
+                           one-electron
+                           universe picture, every pair production event is reinterpreted as the single worldline turning a corner in time — the electron "collides with itself" in
+                           the
+                           sense that the same worldline passes through the same neighbourhood of spacetime at two distinct proper times. The observable outcome — two 511 keV
+                           photons
+                           emitted back-to-back in pair annihilation — is entirely indistinguishable from standard QED. No additional observable effect arises from worldline
+                           self-intersections beyond what the Feynman diagram already predicts.</p>
+                    </section>
 
-                <!-- ===== 9. Grassmann ===== -->
-                <section id="s9">
-                    <h2><span class="rr-no">9.</span> Grassmann Variables and the Spinning Worldline</h2>
-                    <h3><span class="rr-no">9.1</span> Fradkin's Representation of the Spin Factor</h3>
-                    <p>The essential challenge in applying the worldline path integral to spin-\(\tfrac{1}{2}\) particles is encoding the spin degrees of freedom. For a spinless
-                       particle, the path integral is purely bosonic (\(x^\mu(\tau)\)). For a spin-\(\tfrac{1}{2}\) particle, the Dirac equation demands a 4-component spinor
-                       structure. Fradkin (1966) showed that the spin factor — a path-ordered exponential of the field strength tensor contracted with the Lorentz generators — can
-                       be represented as a Grassmann path integral over anticommuting, Lorentz-vector-valued functions \(\psi^\mu(\tau)\) satisfying antiperiodic boundary
-                       conditions \(\psi^\mu(T) = -\psi^\mu(0)\). The Grassmann fields \(\psi^\mu(\tau)\) carry the spin degrees of freedom geometrically: their anticommutativity
-                       encodes the Pauli exclusion principle at the level of the path integrand, whilst the coupling \(F_{\mu\nu}\psi^\mu\psi^\nu\) generates the spin-magnetic
-                       moment interaction. The antiperiodic boundary condition selects the fermionic sector (R sector in string language) over the bosonic sector (NS sector).</p>
+                    <!-- ===== 8. Bern–Kosower–Strassler ===== -->
+                    <section id="s8">
+                        <h2><span class="rr-no">8.</span> The Bern–Kosower–Strassler Worldline Formalism</h2>
+                        <h3><span class="rr-no">8.1</span> Origins in String Theory</h3>
+                        <p>The worldline formalism was dramatically reinvigorated in the late 1980s and early 1990s by Zvi Bern and David Kosower, who worked on the
+                           infinite-string-tension limit of string theory amplitudes. Their insight was that string theory, taken to the limit where the string tension becomes
+                           infinite
+                           (all massive string modes decouple), reduces to ordinary QFT, but in an integral representation far more compact than the Feynman diagram expansion. Bern
+                           and
+                           Kosower derived master formulae for \(N\)-gluon one-loop amplitudes in Yang-Mills theory — parameter-integral representations that encode all helicity
+                           and
+                           colour information in a single expression, without reference to individual Feynman diagrams. These Bern-Kosower rules are equivalent to the sum of all
+                           relevant Feynman diagrams but require fewer terms dramatically: the 4-gluon amplitude, for example, involves four Feynman diagrams in standard methods
+                           but is
+                           captured by a single Bern-Kosower integral.</p>
 
-                    <h3><span class="rr-no">9.2</span> The N=1 Worldline Supersymmetry Algebra</h3>
-                    <p>The combined bosonic-Grassmann action possesses a <strong>worldline supersymmetry</strong> with a single supercharge \(Q = \psi^\mu \dot{x}^\mu\), which
-                       squares to the Hamiltonian \(Q^2 = H = -\dot{x}^2/2 + m^2/2\). The worldline action is invariant under the SUSY transformation:</p>
-                    <div class="rr-eq">
-                        <div class="rr-eq-math">\[\delta x^\mu = \varepsilon\,\psi^\mu, \qquad \delta\psi^\mu = -\varepsilon\,\dot{x}^\mu\]</div>
-                        <div class="rr-eq-num">(4)</div>
-                    </div>
-                    <p>for anticommuting parameter \(\varepsilon\). This \(N=1\) worldline supersymmetry is the first-quantised analogue of spacetime supersymmetry; it ensures the
-                       correct Dirac equation for the quantised particle and generates the Pauli exclusion principle via the Grassmann statistics of \(\psi^\mu\). Extending to
-                       \(N=2\) (two Grassmann directions \(\psi^\mu, \bar\psi^\mu\)) yields the bosonic spinning particle — a spin-1 system, relevant for Maxwell field propagation.
-                       \(N=4\) yields spin-2 (graviton propagation). This hierarchy of worldline supersymmetry is the first-quantised analogue of the supersymmetric multiplet
-                       structure and provides a unified framework for particles of all spins, without introducing spacetime supersymmetry.</p>
+                        <h3><span class="rr-no">8.2</span> Master Formulae and One-Loop Amplitudes</h3>
+                        <p>Strassler (1992) showed that the Bern-Kosower rules have a direct first-quantised derivation from the worldline path integral, without reference to
+                           string
+                           theory at all. The one-loop \(N\)-photon amplitude in spinor QED can be written as a path integral average over closed worldlines of proper-time length
+                           \(T\)
+                           of products of photon vertex operators \(V_\mu(k,\tau) = \varepsilon_\mu\,\dot{x}^\mu(\tau)\,e^{ik\cdot x(\tau)}\). Table 2 summarises the principal
+                           advantages of the worldline approach over conventional Feynman methods.</p>
 
-                    <h3><span class="rr-no">9.3</span> Colour Grassmann Variables and Non-Abelian Generalisation</h3>
-                    <p>For non-Abelian gauge theories (QCD, Yang-Mills), the worldline must carry colour degrees of freedom in addition to spin. Bern, Kosower, and subsequently
-                       Strassler showed that colour can be incorporated by adding a set of Grassmann variables \(c^a(\tau), \bar{c}^a(\tau)\) in the appropriate representation of
-                       the gauge group. Integration over the colour Grassmann variables yields Wilson lines and colour traces automatically, reproducing the full non-Abelian
-                       amplitude structure. In the context of the one-electron universe, the colour Grassmann variables provide an intriguing extension: if the single worldline
-                       carries colour as well as electric charge, the strong-force dynamics of quarks and gluons could, in principle, be described as topological structures of the
-                       same worldline. This remains speculative, but the mathematical framework exists.</p>
-                </section>
+                        <div class="rr-cap"><span class="rr-no">Table 2.</span> Comparison: Conventional Feynman Diagrams vs Worldline Formalism</div>
+                        <div class="rr-table-wrap">
+                            <table class="rr-table">
+                                <thead>
+                                    <tr>
+                                        <th>Feature</th>
+                                        <th>Conventional Feynman Diagrams</th>
+                                        <th>Worldline Formalism</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Photon symmetry</td>
+                                        <td>Must sum over crossed diagrams separately.</td>
+                                        <td>Manifest Bose symmetry of all external photons.</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Dirac algebra</td>
+                                        <td>Extensive gamma-matrix traces required.</td>
+                                        <td>Replaced entirely by Grassmann integrals.</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Spin effects</td>
+                                        <td>Separate spinor and scalar QED calculations.</td>
+                                        <td>Unified via worldline SUSY; single framework.</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Multi-photon scaling</td>
+                                        <td>Diagram number grows factorially with \(N\).</td>
+                                        <td>Single master formula valid for all \(N\).</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Gauge invariance</td>
+                                        <td>Verified diagram by diagram.</td>
+                                        <td>Manifest via integration by parts on the loop.</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <p class="rr-src">Source: Strassler, M. J. (1992); Schubert, C. (2001).</p>
 
-                <!-- ===== 10. Topological ===== -->
-                <section id="s10">
-                    <h2><span class="rr-no">10.</span> Topological Approaches: Knots, Braids, and Invariants</h2>
-                    <h3><span class="rr-no">10.1</span> The Worldline as a Knot in Spacetime</h3>
-                    <p>The one-electron universe picture implicitly requires the single worldline to be a knot — a closed or infinite curve in four-dimensional spacetime whose
-                       topology encodes physically observable quantities. The language of knot theory, developed rigorously in the 20th century, provides the natural mathematical
-                       framework for this analysis. A worldline that closes on itself — either as a particle loop in a Feynman diagram or as a worldline instanton — is
-                       mathematically a closed curve in 3+1 dimensions. In four spacetime dimensions, generically positioned curves do not intersect (they have "room" to miss each
-                       other), but worldline crossings and self-linkings can still be characterised topologically by projection onto 3D slices. The relevant topological invariants
-                       are summarised in Table 3.</p>
+                        <h3><span class="rr-no">8.3</span> Multi-Loop Extensions and Graph-Based Green's Functions</h3>
+                        <p>Beyond one loop, the worldline formalism requires multi-loop worldline Green's functions, which are constructed from the graph-theoretic structure of the
+                           loop diagram (the Schwinger-Dyson skeleton). Schubert and collaborators developed this program systematically through the 1990s and 2000s. The two-loop
+                           quenched QED photon propagator was reproduced from worldline methods by Bern and Dunbar, demonstrating that the formalism is not merely a rearrangement
+                           at
+                           one loop but a genuinely new calculational framework. Recent advances (arXiv:2503.08846, 2025) extend the formalism to extended worldline supersymmetry
+                           with
+                           \(N\) supercharges, where the worldline gauge multiplet contains an einbein \(e(\tau)\) (gauge field for worldline reparametrizations), gravitinos
+                           \(\chi_I(\tau)\) (gauge fields for the \(N\) worldline supersymmetries), and a gauge field \(a(\tau)\) for the R-symmetry rotating worldline fermions.
+                           This
+                           extended structure captures particles of arbitrary spin in a unified first-quantised framework.</p>
+                    </section>
 
-                    <div class="rr-cap"><span class="rr-no">Table 3.</span> Topological Invariants of Worldlines and Their Physical Interpretations</div>
-                    <div class="rr-table-wrap">
-                        <table class="rr-table">
-                            <thead>
-                                <tr>
-                                    <th>Invariant</th>
-                                    <th>Definition</th>
-                                    <th>Physical Interpretation</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>Gauss linking number \(\mathrm{Lk}(L_1, L_2)\)</td>
-                                    <td>Double line integral over the Gauss formula.</td>
-                                    <td>Topological EM phase; Aharonov-Bohm analogue.</td>
-                                </tr>
-                                <tr>
-                                    <td>Self-linking number (writhe)</td>
-                                    <td>Linking number of a curve with a parallel copy.</td>
-                                    <td>Worldline framing; related to anomalous magnetic moment.</td>
-                                </tr>
-                                <tr>
-                                    <td>Jones polynomial \(V_L(t)\)</td>
-                                    <td>Skein-relation polynomial from Reidemeister moves.</td>
-                                    <td>Non-Abelian statistics; quantum group structure.</td>
-                                </tr>
-                                <tr>
-                                    <td>Alexander polynomial</td>
-                                    <td>Determinant of Seifert matrix.</td>
-                                    <td>Genus of Seifert surface; charge conservation topology.</td>
-                                </tr>
-                                <tr>
-                                    <td>Winding number</td>
-                                    <td>Net crossings with time hyperplane.</td>
-                                    <td>Total conserved charge (net electrons minus positrons).</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                    <p class="rr-src">Source: Jones (1985); Atiyah (1988); Bizri (2025).</p>
+                    <!-- ===== 9. Grassmann ===== -->
+                    <section id="s9">
+                        <h2><span class="rr-no">9.</span> Grassmann Variables and the Spinning Worldline</h2>
+                        <h3><span class="rr-no">9.1</span> Fradkin's Representation of the Spin Factor</h3>
+                        <p>The essential challenge in applying the worldline path integral to spin-\(\tfrac{1}{2}\) particles is encoding the spin degrees of freedom. For a
+                           spinless
+                           particle, the path integral is purely bosonic (\(x^\mu(\tau)\)). For a spin-\(\tfrac{1}{2}\) particle, the Dirac equation demands a 4-component spinor
+                           structure. Fradkin (1966) showed that the spin factor — a path-ordered exponential of the field strength tensor contracted with the Lorentz generators —
+                           can
+                           be represented as a Grassmann path integral over anticommuting, Lorentz-vector-valued functions \(\psi^\mu(\tau)\) satisfying antiperiodic boundary
+                           conditions \(\psi^\mu(T) = -\psi^\mu(0)\). The Grassmann fields \(\psi^\mu(\tau)\) carry the spin degrees of freedom geometrically: their
+                           anticommutativity
+                           encodes the Pauli exclusion principle at the level of the path integrand, whilst the coupling \(F_{\mu\nu}\psi^\mu\psi^\nu\) generates the spin-magnetic
+                           moment interaction. The antiperiodic boundary condition selects the fermionic sector (R sector in string language) over the bosonic sector (NS
+                           sector).</p>
 
-                    <h3><span class="rr-no">10.2</span> Gauss Linking Number and the Anomalous Magnetic Moment</h3>
-                    <p>The most striking recent development in topological worldline physics is the identification of the <strong>anomalous magnetic moment</strong> — the Schwinger
-                       correction \((g-2)/2 = \alpha/(2\pi) \approx 1.16\times10^{-3}\) — with a topological self-linking contribution from the worldline. In the monadic electron
-                       framework (Bizri, 2025), the one-loop QED correction to the electron's magnetic moment arises when the worldline curves back and interacts with itself,
-                       forming a loop configuration characterised by the <strong>self-linking number (writhe)</strong> of the worldline. The result:</p>
-                    <div class="rr-eq">
-                        <div class="rr-eq-math">\[\Delta\mu = \frac{\alpha}{2\pi}\,\mu_B = \frac{e^2}{8\pi^2 m}\cdot \mathrm{Wr}(\text{worldline loop})\]</div>
-                        <div class="rr-eq-num">(5)</div>
-                    </div>
-                    <p>matches Schwinger's famous 1948 result exactly, but derives it from the topology of the worldline geometry rather than from perturbative loop integrals. This
-                       is a striking demonstration of how purely geometric, topological reasoning can reproduce a quantitative result previously obtained only through lengthy
-                       Feynman diagram calculations.</p>
+                        <h3><span class="rr-no">9.2</span> The N=1 Worldline Supersymmetry Algebra</h3>
+                        <p>The combined bosonic-Grassmann action possesses a <strong>worldline supersymmetry</strong> with a single supercharge \(Q = \psi^\mu \dot{x}^\mu\), which
+                           squares to the Hamiltonian \(Q^2 = H = -\dot{x}^2/2 + m^2/2\). The worldline action is invariant under the SUSY transformation:</p>
+                        <div class="rr-eq">
+                            <div class="rr-eq-math">\[\delta x^\mu = \varepsilon\,\psi^\mu, \qquad \delta\psi^\mu = -\varepsilon\,\dot{x}^\mu\]</div>
+                            <div class="rr-eq-num">(4)</div>
+                        </div>
+                        <p>for anticommuting parameter \(\varepsilon\). This \(N=1\) worldline supersymmetry is the first-quantised analogue of spacetime supersymmetry; it ensures
+                           the
+                           correct Dirac equation for the quantised particle and generates the Pauli exclusion principle via the Grassmann statistics of \(\psi^\mu\). Extending to
+                           \(N=2\) (two Grassmann directions \(\psi^\mu, \bar\psi^\mu\)) yields the bosonic spinning particle — a spin-1 system, relevant for Maxwell field
+                           propagation.
+                           \(N=4\) yields spin-2 (graviton propagation). This hierarchy of worldline supersymmetry is the first-quantised analogue of the supersymmetric multiplet
+                           structure and provides a unified framework for particles of all spins, without introducing spacetime supersymmetry.</p>
 
-                    <h3><span class="rr-no">10.3</span> Jones Polynomial and Topological Quantum Numbers</h3>
-                    <p>The Jones polynomial \(V_L(t)\), discovered by Vaughan Jones in 1984, is a knot invariant defined via the skein relation and computable from the R-matrix of
-                       a quantum group. In the TQFT context, it appears as the expectation value of a Wilson loop operator in Chern-Simons gauge theory. In the worldline context,
-                       the Jones polynomial encodes how the worldline self-entangles in a gauge-theory-dependent way. For the one-electron universe hypothesis, if the single
-                       worldline is a particular knot \(L\), its Jones polynomial \(V_L(t)\) is a topological invariant of the universe that would, in principle, be measurable
-                       through subtle correlations in quantum-interference experiments. Bizri (2025) proposes that distinct knot types of the worldline correspond to distinct
-                       topological quantum numbers — new conserved quantities beyond those of the Standard Model — and that these might predict small but detectable energy shifts
-                       in atomic spectroscopy.</p>
+                        <h3><span class="rr-no">9.3</span> Colour Grassmann Variables and Non-Abelian Generalisation</h3>
+                        <p>For non-Abelian gauge theories (QCD, Yang-Mills), the worldline must carry colour degrees of freedom in addition to spin. Bern, Kosower, and subsequently
+                           Strassler showed that colour can be incorporated by adding a set of Grassmann variables \(c^a(\tau), \bar{c}^a(\tau)\) in the appropriate representation
+                           of
+                           the gauge group. Integration over the colour Grassmann variables yields Wilson lines and colour traces automatically, reproducing the full non-Abelian
+                           amplitude structure. In the context of the one-electron universe, the colour Grassmann variables provide an intriguing extension: if the single worldline
+                           carries colour as well as electric charge, the strong-force dynamics of quarks and gluons could, in principle, be described as topological structures of
+                           the
+                           same worldline. This remains speculative, but the mathematical framework exists.</p>
+                    </section>
 
-                    <h3><span class="rr-no">10.4</span> Braid Group, Statistics, and the Pauli Exclusion Principle</h3>
-                    <p>In 2+1 dimensions, particle worldlines are curves in 3-dimensional spacetime, and their mutual braiding defines the braid group \(B_n\) for \(n\) particles.
-                       The representation theory of \(B_n\) determines the statistical phase acquired when two particles are exchanged: trivial phase (0) for bosons, phase \(\pi\)
-                       for fermions, and arbitrary phase for anyons. In 3+1 dimensions, worldlines cannot be knotted around each other in a topologically stable way (because there
-                       is an extra dimension for curves to avoid each other), and the statistics group reduces to the symmetric group \(S_n\), reproducing ordinary Bose-Einstein or
-                       Fermi-Dirac statistics.</p>
-                    <p>The Pauli exclusion principle for electrons — no two electrons in the same quantum state — is in the worldline picture equivalent to the topological
-                       impossibility of two worldline segments occupying the same spacetime trajectory simultaneously when both carry anticommuting Grassmann spin structure. For
-                       the one-electron universe, where there is only one worldline, the Pauli exclusion principle becomes the statement that the worldline cannot self-intersect in
-                       3D space in a topologically non-trivial way — a constraint enforced by the braid group relations and the Yang-Baxter equation. The fermionic statistics of
-                       the electron thus emerge as a geometric constraint on the worldline's topology rather than a separately postulated quantum principle.</p>
-                </section>
+                    <!-- ===== 10. Topological ===== -->
+                    <section id="s10">
+                        <h2><span class="rr-no">10.</span> Topological Approaches: Knots, Braids, and Invariants</h2>
+                        <h3><span class="rr-no">10.1</span> The Worldline as a Knot in Spacetime</h3>
+                        <p>The one-electron universe picture implicitly requires the single worldline to be a knot — a closed or infinite curve in four-dimensional spacetime whose
+                           topology encodes physically observable quantities. The language of knot theory, developed rigorously in the 20th century, provides the natural
+                           mathematical
+                           framework for this analysis. A worldline that closes on itself — either as a particle loop in a Feynman diagram or as a worldline instanton — is
+                           mathematically a closed curve in 3+1 dimensions. In four spacetime dimensions, generically positioned curves do not intersect (they have "room" to miss
+                           each
+                           other), but worldline crossings and self-linkings can still be characterised topologically by projection onto 3D slices. The relevant topological
+                           invariants
+                           are summarised in Table 3.</p>
 
-                <!-- ===== 11. Modern Reinterpretations ===== -->
-                <section id="s11">
-                    <h2><span class="rr-no">11.</span> Modern Reinterpretations of the One-Electron Universe</h2>
-                    <h3><span class="rr-no">11.1</span> The Monadic Electron Framework (Bizri, 2025)</h3>
-                    <p>The most technically developed recent revival of the one-electron universe idea is the Monadic Electron Universe framework proposed by Sam Bizri in two
-                       papers (April 2025). The framework starts from the standard worldline action for a spinning particle interacting with an electromagnetic field, augmented
-                       with Grassmann spin variables and topological terms — specifically, delta-function kink insertions at proper times when the worldline undergoes a time
-                       reversal. These kink terms mark pair creation/annihilation events and contribute boundary terms to the path integral that flip the sign of the charge.</p>
-                    <p>The framework reproduces all one-loop QED results and interprets the vacuum as a Planck-scale foam of virtual worldline loops. From worldline topology alone
-                       it derives: Dirac spinors (from the \(N=1\) worldline supersymmetry generated by \(\psi^\mu\)); Fermi-Dirac statistics (from the anticommuting nature of
-                       Grassmann fields); the anomalous magnetic moment (from the self-linking number of the one-loop worldline configuration); the Pauli exclusion principle (from
-                       the geometric impossibility of worldline self-intersection with coherent spin structure); and pair production (from worldline kinks/time-reversals). Bizri's
-                       second paper extends the framework to non-Abelian gauge theories by adding colour Grassmann variables, and to gravity by treating the worldline curvature as
-                       generating a long-range strain in the "braid network" of spacetime.</p>
-                    <p>Predicted experimental signatures include: spectroscopic shifts of order \(\Delta E/E \sim 10^{-19}\) in atomic systems (near the current sensitivity
-                       frontier of optical clocks); phase shifts \(\Delta\varphi \sim \lambda_C / L\) in electron interferometers with path length \(L \sim 1\,\mathrm{cm}\)
-                       (approximately \(10^{-12}\) rad — at the edge of current sensitivity); and corrections to \(g-2\) at order \(\Delta(g-2)/(g-2) \sim 10^{-14}\), within the
-                       target precision of proposed next-generation measurements.</p>
+                        <div class="rr-cap"><span class="rr-no">Table 3.</span> Topological Invariants of Worldlines and Their Physical Interpretations</div>
+                        <div class="rr-table-wrap">
+                            <table class="rr-table">
+                                <thead>
+                                    <tr>
+                                        <th>Invariant</th>
+                                        <th>Definition</th>
+                                        <th>Physical Interpretation</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Gauss linking number \(\mathrm{Lk}(L_1, L_2)\)</td>
+                                        <td>Double line integral over the Gauss formula.</td>
+                                        <td>Topological EM phase; Aharonov-Bohm analogue.</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Self-linking number (writhe)</td>
+                                        <td>Linking number of a curve with a parallel copy.</td>
+                                        <td>Worldline framing; related to anomalous magnetic moment.</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Jones polynomial \(V_L(t)\)</td>
+                                        <td>Skein-relation polynomial from Reidemeister moves.</td>
+                                        <td>Non-Abelian statistics; quantum group structure.</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Alexander polynomial</td>
+                                        <td>Determinant of Seifert matrix.</td>
+                                        <td>Genus of Seifert surface; charge conservation topology.</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Winding number</td>
+                                        <td>Net crossings with time hyperplane.</td>
+                                        <td>Total conserved charge (net electrons minus positrons).</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <p class="rr-src">Source: Jones (1985); Atiyah (1988); Bizri (2025).</p>
 
-                    <h3><span class="rr-no">11.2</span> The Electron Monad and Quantum Gravity</h3>
-                    <p>The holographic and quantum-gravity implications of the monadic picture are speculative but structurally interesting. If the electron's worldline is the
-                       fundamental object of the theory, then spacetime itself might be emergent from the worldline's braiding structure — an idea with resonances in holography
-                       (AdS/CFT), loop quantum gravity, and quantum graphity. The worldline entropy in this picture scales with the horizon area, satisfying the Bekenstein-Hawking
-                       relation \(S = A/(4\ell_P^2)\), which is consistent with, but not derived from, the holographic principle. These speculative extensions are not
-                       experimentally distinguished from the Standard Model at present, but they point towards a conceptually unified picture of matter and spacetime.</p>
+                        <h3><span class="rr-no">10.2</span> Gauss Linking Number and the Anomalous Magnetic Moment</h3>
+                        <p>The most striking recent development in topological worldline physics is the identification of the <strong>anomalous magnetic moment</strong> — the
+                           Schwinger
+                           correction \((g-2)/2 = \alpha/(2\pi) \approx 1.16\times10^{-3}\) — with a topological self-linking contribution from the worldline. In the monadic
+                           electron
+                           framework (Bizri, 2025), the one-loop QED correction to the electron's magnetic moment arises when the worldline curves back and interacts with itself,
+                           forming a loop configuration characterised by the <strong>self-linking number (writhe)</strong> of the worldline. The result:</p>
+                        <div class="rr-eq">
+                            <div class="rr-eq-math">\[\Delta\mu = \frac{\alpha}{2\pi}\,\mu_B = \frac{e^2}{8\pi^2 m}\cdot \mathrm{Wr}(\text{worldline loop})\]</div>
+                            <div class="rr-eq-num">(5)</div>
+                        </div>
+                        <p>matches Schwinger's famous 1948 result exactly, but derives it from the topology of the worldline geometry rather than from perturbative loop integrals.
+                           This
+                           is a striking demonstration of how purely geometric, topological reasoning can reproduce a quantitative result previously obtained only through lengthy
+                           Feynman diagram calculations.</p>
 
-                    <h3><span class="rr-no">11.3</span> Biquaternionic Analysis and the Implicit Unique Worldline</h3>
-                    <p>A mathematically distinct approach represents the electron worldline implicitly through biquaternion-valued functions \(F(Z)\) in the algebra \(\mathbb{B}\)
-                       of biquaternions (complexified quaternions). The \(\mathbb{B}\)-differentiability condition generalises the Cauchy-Riemann equations to the non-commutative
-                       setting. The resulting equations are Lorentz invariant on the Minkowski subspace of \(\mathbb{C}^4\), possess natural spinor and gauge structures, and reduce
-                       to a nonlinear generalisation of the Cauchy-Riemann equations. The implicit worldline in this framework is defined as the singular locus of the
-                       biquaternionic function — the set of points where the Jacobian determinant vanishes. This singular locus is the caustic set of the worldline, where multiple
-                       worldline sheets converge, corresponding physically to pair-creation/annihilation events. The framework provides a new global, coordinate-free description of
-                       the one-electron worldline that is fully consistent with relativistic covariance.</p>
-                </section>
+                        <h3><span class="rr-no">10.3</span> Jones Polynomial and Topological Quantum Numbers</h3>
+                        <p>The Jones polynomial \(V_L(t)\), discovered by Vaughan Jones in 1984, is a knot invariant defined via the skein relation and computable from the R-matrix
+                           of
+                           a quantum group. In the TQFT context, it appears as the expectation value of a Wilson loop operator in Chern-Simons gauge theory. In the worldline
+                           context,
+                           the Jones polynomial encodes how the worldline self-entangles in a gauge-theory-dependent way. For the one-electron universe hypothesis, if the single
+                           worldline is a particular knot \(L\), its Jones polynomial \(V_L(t)\) is a topological invariant of the universe that would, in principle, be measurable
+                           through subtle correlations in quantum-interference experiments. Bizri (2025) proposes that distinct knot types of the worldline correspond to distinct
+                           topological quantum numbers — new conserved quantities beyond those of the Standard Model — and that these might predict small but detectable energy
+                           shifts
+                           in atomic spectroscopy.</p>
 
-                <!-- ===== 12. Critical Analysis ===== -->
-                <section id="s12">
-                    <h2><span class="rr-no">12.</span> Critical Analysis: Strengths, Weaknesses, and Open Problems</h2>
-                    <h3><span class="rr-no">12.1</span> The Matter–Antimatter Asymmetry Objection</h3>
-                    <p>The central, and still decisive, empirical objection to the one-electron universe hypothesis is the observed matter-antimatter asymmetry. Every
-                       time-symmetric single worldline that begins and ends at the temporal boundaries of the universe must have equal numbers of forward-moving (electron) and
-                       backwards-moving (positron) segments at any given cosmic time. This requires \(n_{\text{electrons}} = n_{\text{positrons}}\) throughout cosmic history, in
-                       sharp contradiction with observation.</p>
-                    <p>Quantitatively, the baryon-to-photon ratio is measured to be \(\eta = n_b/n_\gamma \approx 6.1\times10^{-10}\) (from BBN and CMB), and the lepton sector
-                       shows a comparable asymmetry (about \(10^{10}\) electrons per positron in the observable universe). Wheeler's suggestion that the missing positrons were
-                       hidden inside protons is incompatible with the known quark structure of the proton established by deep inelastic scattering experiments at SLAC and HERA.
-                       Modern cosmological explanations for matter-antimatter asymmetry — baryogenesis via electroweak sphaleron processes, leptogenesis from heavy Majorana
-                       neutrino decay, or the Affleck-Dine mechanism — all require specific CP-violating physics that is orthogonal to and incompatible with the one-electron
-                       universe in its literal form. The monadic electron reinterpretations acknowledge this objection by attributing the asymmetry to the "initial conditions of
-                       the worldline topology", but this is a placeholder assertion rather than a derived result. Table 4 summarises the observational incompatibilities.</p>
+                        <h3><span class="rr-no">10.4</span> Braid Group, Statistics, and the Pauli Exclusion Principle</h3>
+                        <p>In 2+1 dimensions, particle worldlines are curves in 3-dimensional spacetime, and their mutual braiding defines the braid group \(B_n\) for \(n\)
+                           particles.
+                           The representation theory of \(B_n\) determines the statistical phase acquired when two particles are exchanged: trivial phase (0) for bosons, phase
+                           \(\pi\)
+                           for fermions, and arbitrary phase for anyons. In 3+1 dimensions, worldlines cannot be knotted around each other in a topologically stable way (because
+                           there
+                           is an extra dimension for curves to avoid each other), and the statistics group reduces to the symmetric group \(S_n\), reproducing ordinary
+                           Bose-Einstein or
+                           Fermi-Dirac statistics.</p>
+                        <p>The Pauli exclusion principle for electrons — no two electrons in the same quantum state — is in the worldline picture equivalent to the topological
+                           impossibility of two worldline segments occupying the same spacetime trajectory simultaneously when both carry anticommuting Grassmann spin structure.
+                           For
+                           the one-electron universe, where there is only one worldline, the Pauli exclusion principle becomes the statement that the worldline cannot
+                           self-intersect in
+                           3D space in a topologically non-trivial way — a constraint enforced by the braid group relations and the Yang-Baxter equation. The fermionic statistics
+                           of
+                           the electron thus emerge as a geometric constraint on the worldline's topology rather than a separately postulated quantum principle.</p>
+                    </section>
 
-                    <div class="rr-cap"><span class="rr-no">Table 4.</span> Observational Compatibility of the One-Electron Hypothesis</div>
-                    <div class="rr-table-wrap">
-                        <table class="rr-table">
-                            <thead>
-                                <tr>
-                                    <th>Quantity</th>
-                                    <th>Observed Value</th>
-                                    <th>One-Electron Prediction</th>
-                                    <th>Compatible?</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>\(n(e^-) / n(e^+)\)</td>
-                                    <td>\(\sim 10^{10}\)</td>
-                                    <td>\(= 1\) (exactly)</td>
-                                    <td class="rr-no-cell">No</td>
-                                </tr>
-                                <tr>
-                                    <td>Baryon-to-photon ratio</td>
-                                    <td>\(6.1\times10^{-10}\)</td>
-                                    <td>Zero (no net baryons)</td>
-                                    <td class="rr-no-cell">No</td>
-                                </tr>
-                                <tr>
-                                    <td>Proton internal structure</td>
-                                    <td>3 quarks (uud)</td>
-                                    <td>Electron-positron composite</td>
-                                    <td class="rr-no-cell">No</td>
-                                </tr>
-                                <tr>
-                                    <td>Leptogenesis requirement</td>
-                                    <td>CP violation needed</td>
-                                    <td>Single worldline = CP symmetric</td>
-                                    <td class="rr-no-cell">No</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                    <p class="rr-src">Source: PDG (2024); BBN constraints; deep inelastic scattering data (SLAC, HERA).</p>
+                    <!-- ===== 11. Modern Reinterpretations ===== -->
+                    <section id="s11">
+                        <h2><span class="rr-no">11.</span> Modern Reinterpretations of the One-Electron Universe</h2>
+                        <h3><span class="rr-no">11.1</span> The Monadic Electron Framework (Bizri, 2025)</h3>
+                        <p>The most technically developed recent revival of the one-electron universe idea is the Monadic Electron Universe framework proposed by Sam Bizri in two
+                           papers (April 2025). The framework starts from the standard worldline action for a spinning particle interacting with an electromagnetic field, augmented
+                           with Grassmann spin variables and topological terms — specifically, delta-function kink insertions at proper times when the worldline undergoes a time
+                           reversal. These kink terms mark pair creation/annihilation events and contribute boundary terms to the path integral that flip the sign of the
+                           charge.</p>
+                        <p>The framework reproduces all one-loop QED results and interprets the vacuum as a Planck-scale foam of virtual worldline loops. From worldline topology
+                           alone
+                           it derives: Dirac spinors (from the \(N=1\) worldline supersymmetry generated by \(\psi^\mu\)); Fermi-Dirac statistics (from the anticommuting nature of
+                           Grassmann fields); the anomalous magnetic moment (from the self-linking number of the one-loop worldline configuration); the Pauli exclusion principle
+                           (from
+                           the geometric impossibility of worldline self-intersection with coherent spin structure); and pair production (from worldline kinks/time-reversals).
+                           Bizri's
+                           second paper extends the framework to non-Abelian gauge theories by adding colour Grassmann variables, and to gravity by treating the worldline curvature
+                           as
+                           generating a long-range strain in the "braid network" of spacetime.</p>
+                        <p>Predicted experimental signatures include: spectroscopic shifts of order \(\Delta E/E \sim 10^{-19}\) in atomic systems (near the current sensitivity
+                           frontier of optical clocks); phase shifts \(\Delta\varphi \sim \lambda_C / L\) in electron interferometers with path length \(L \sim 1\,\mathrm{cm}\)
+                           (approximately \(10^{-12}\) rad — at the edge of current sensitivity); and corrections to \(g-2\) at order \(\Delta(g-2)/(g-2) \sim 10^{-14}\), within
+                           the
+                           target precision of proposed next-generation measurements.</p>
 
-                    <h3><span class="rr-no">12.2</span> Compatibility with the Standard Model</h3>
-                    <p>Modern reinterpretations of the one-electron universe within the worldline formalism are generally consistent with but do not derive the Standard Model. They
-                       reproduce QED exactly (guaranteed by the equivalence of the worldline formalism to second-quantised QED proven by Strassler in 1992). For QCD, the colour
-                       Grassmann variable extension is consistent with asymptotic freedom and confinement at a formal level. However, the actual calculation of the QCD spectrum
-                       (hadronic masses, confinement radius) requires the full non-perturbative machinery of lattice QCD or AdS/CFT. The weak force and Higgs mechanism present
-                       additional challenges, as the worldline formalism is most natural for gauge bosons and fermions in external fields, not for spontaneous
-                       symmetry-breaking.</p>
+                        <h3><span class="rr-no">11.2</span> The Electron Monad and Quantum Gravity</h3>
+                        <p>The holographic and quantum-gravity implications of the monadic picture are speculative but structurally interesting. If the electron's worldline is the
+                           fundamental object of the theory, then spacetime itself might be emergent from the worldline's braiding structure — an idea with resonances in holography
+                           (AdS/CFT), loop quantum gravity, and quantum graphity. The worldline entropy in this picture scales with the horizon area, satisfying the
+                           Bekenstein-Hawking
+                           relation \(S = A/(4\ell_P^2)\), which is consistent with, but not derived from, the holographic principle. These speculative extensions are not
+                           experimentally distinguished from the Standard Model at present, but they point towards a conceptually unified picture of matter and spacetime.</p>
 
-                    <h3><span class="rr-no">12.3</span> Observational and Experimental Status</h3>
-                    <p>The experimental status of the one-electron universe hypothesis as a hypothesis (rather than as the broader worldline formalism) is negative: no observation
-                       distinguishes it from ordinary QED, and its most specific prediction (matter-antimatter equality) is falsified. The worldline formalism, by contrast, is in
-                       excellent experimental health — it has been used to compute QED and QCD amplitudes in agreement with experiment to many decimal places. The topological
-                       extensions (Sections 10–11) make novel, specific predictions that are, as of 2026, untested but not yet falsified. Table 5 provides a quantitative overview
-                       of experimental sensitivities.</p>
+                        <h3><span class="rr-no">11.3</span> Biquaternionic Analysis and the Implicit Unique Worldline</h3>
+                        <p>A mathematically distinct approach represents the electron worldline implicitly through biquaternion-valued functions \(F(Z)\) in the algebra
+                           \(\mathbb{B}\)
+                           of biquaternions (complexified quaternions). The \(\mathbb{B}\)-differentiability condition generalises the Cauchy-Riemann equations to the
+                           non-commutative
+                           setting. The resulting equations are Lorentz invariant on the Minkowski subspace of \(\mathbb{C}^4\), possess natural spinor and gauge structures, and
+                           reduce
+                           to a nonlinear generalisation of the Cauchy-Riemann equations. The implicit worldline in this framework is defined as the singular locus of the
+                           biquaternionic function — the set of points where the Jacobian determinant vanishes. This singular locus is the caustic set of the worldline, where
+                           multiple
+                           worldline sheets converge, corresponding physically to pair-creation/annihilation events. The framework provides a new global, coordinate-free
+                           description of
+                           the one-electron worldline that is fully consistent with relativistic covariance.</p>
+                    </section>
 
-                    <div class="rr-cap"><span class="rr-no">Table 5.</span> Experimental Sensitivity to Topological Worldline Corrections</div>
-                    <div class="rr-table-wrap">
-                        <table class="rr-table">
-                            <thead>
-                                <tr>
-                                    <th>Observable</th>
-                                    <th>Standard QED Prediction</th>
-                                    <th>Topological Correction (est.)</th>
-                                    <th>Current Sensitivity</th>
-                                    <th>Near-Future Reach</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>Electron \(g-2\)</td>
-                                    <td>1.00115965218…</td>
-                                    <td>\(\delta \sim 10^{-14}\)</td>
-                                    <td>\(\delta \sim 10^{-13}\)</td>
-                                    <td>\(10^{-14}\) (proposed)</td>
-                                </tr>
-                                <tr>
-                                    <td>H atom ground-state energy</td>
-                                    <td>−13.6056… eV</td>
-                                    <td>\(\Delta E/E \sim 10^{-19}\)</td>
-                                    <td>\(10^{-18}\) (optical clocks)</td>
-                                    <td>\(10^{-19}\) (next-gen)</td>
-                                </tr>
-                                <tr>
-                                    <td>Electron interferometer phase</td>
-                                    <td>0 (std QED)</td>
-                                    <td>\(\Delta\varphi \sim 10^{-12}\) rad</td>
-                                    <td>\(\sim 10^{-11}\) rad</td>
-                                    <td>\(10^{-12}\) rad (proposed)</td>
-                                </tr>
-                                <tr>
-                                    <td>Vacuum birefringence</td>
-                                    <td>PVLAS: \(&lt; 10^{-21}\)</td>
-                                    <td>Topological \(\sim 10^{-22}\)</td>
-                                    <td>\(10^{-21}\) (PVLAS)</td>
-                                    <td>\(10^{-22}\) (ATLAS)</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                    <p class="rr-src">Source: Bizri (2025); Degli Esposti &amp; Torgrimsson (2025); Gabrielse group (2023).</p>
-                </section>
+                    <!-- ===== 12. Critical Analysis ===== -->
+                    <section id="s12">
+                        <h2><span class="rr-no">12.</span> Critical Analysis: Strengths, Weaknesses, and Open Problems</h2>
+                        <h3><span class="rr-no">12.1</span> The Matter–Antimatter Asymmetry Objection</h3>
+                        <p>The central, and still decisive, empirical objection to the one-electron universe hypothesis is the observed matter-antimatter asymmetry. Every
+                           time-symmetric single worldline that begins and ends at the temporal boundaries of the universe must have equal numbers of forward-moving (electron) and
+                           backwards-moving (positron) segments at any given cosmic time. This requires \(n_{\text{electrons}} = n_{\text{positrons}}\) throughout cosmic history,
+                           in
+                           sharp contradiction with observation.</p>
+                        <p>Quantitatively, the baryon-to-photon ratio is measured to be \(\eta = n_b/n_\gamma \approx 6.1\times10^{-10}\) (from BBN and CMB), and the lepton sector
+                           shows a comparable asymmetry (about \(10^{10}\) electrons per positron in the observable universe). Wheeler's suggestion that the missing positrons were
+                           hidden inside protons is incompatible with the known quark structure of the proton established by deep inelastic scattering experiments at SLAC and HERA.
+                           Modern cosmological explanations for matter-antimatter asymmetry — baryogenesis via electroweak sphaleron processes, leptogenesis from heavy Majorana
+                           neutrino decay, or the Affleck-Dine mechanism — all require specific CP-violating physics that is orthogonal to and incompatible with the one-electron
+                           universe in its literal form. The monadic electron reinterpretations acknowledge this objection by attributing the asymmetry to the "initial conditions
+                           of
+                           the worldline topology", but this is a placeholder assertion rather than a derived result. Table 4 summarises the observational incompatibilities.</p>
 
-                <!-- ===== 13. Outlook ===== -->
-                <section id="s13">
-                    <h2><span class="rr-no">13.</span> Outlook and Key Takeaways</h2>
-                    <h4>Short-Term Outlook (2026–2030)</h4>
-                    <p>The primary experimental battleground for topological worldline predictions is the electron anomalous magnetic moment. The current experimental value from
-                       Gabrielse's Harvard group (2023) agrees with the Standard Model prediction to 13 significant figures. Proposed next-generation experiments targeting the 14th
-                       digit would either constrain or begin to probe the topological corrections predicted by the monadic electron framework. Simultaneously, next-generation
-                       optical atomic clocks operating at the \(10^{-19}\) frequency level could probe the spectroscopic shifts predicted by worldline topology.</p>
-                    <h4>Medium-Term Outlook (2030–2040)</h4>
-                    <p>The worldline instanton program for Schwinger pair production will receive its first direct experimental test if laser facilities (ELI-NP, LUXE at DESY, or
-                       successors) reach field strengths approaching \(10^{18}\,\mathrm{V/m}\). The Moiré interference patterns and Aharonov-Bohm phases predicted by Degli Esposti
-                       and Torgrimsson (2025) in the electron-positron momentum spectrum provide a new class of observable signatures of worldline topology in strong-field physics
-                       — directly testing the instanton formalism in ways that probe the geometry of worldline self-approaches.</p>
-                    <h4>Long-Term Outlook (2040+)</h4>
-                    <p>The question of whether a single-worldline description of matter is a reinterpretation of standard physics (empirically equivalent, computationally superior
-                       in some regimes) or a theory with new predictions (distinguishable from the Standard Model) hinges on whether topological quantum numbers beyond the Standard
-                       Model's \(U(1) \times SU(2) \times SU(3)\) charges can be identified and measured.</p>
-                    <h4>Numbered Actionable Takeaways</h4>
-                    <ol class="rr-list">
-                        <li>Treat the worldline formalism as a calculational tool, not just a philosophical reinterpretation. For multi-photon QED amplitudes and one-loop effective
-                            actions in background fields, it is strictly superior to conventional Feynman diagram methods — use it for any calculation involving more than four
-                            external photons at one loop.
-                        </li>
-                        <li>Follow the worldline instanton literature for strong-field physics. The Degli Esposti-Torgrimsson 2025 results on Moiré patterns and Aharonov-Bohm
-                            phases in Schwinger pair production represent the most direct connection between worldline topology and near-future experiment.
-                        </li>
-                        <li>Track next-generation \(g-2\) proposals. Any improvement beyond the \(10^{-13}\) level will begin testing the topological corrections predicted by the
-                            monadic electron model — if such corrections are real, they are the most accessible experimental signature of the one-electron universe picture.
-                        </li>
-                        <li>Engage with the biquaternionic worldline program. The implicit worldline formulation (Section 11.3) offers a potentially new global description of
-                            worldline topology that could unify the caustic structure of worldlines with the pair-production physics — mathematically rich and underexplored.
-                        </li>
-                        <li>Revisit the matter-antimatter asymmetry constraint before advancing any literal version of the one-electron universe hypothesis. Any serious revival
-                            must provide a mechanism for the worldline topology to generate \(n(e^-)/n(e^+) \approx 10^{10}\) from first principles, without which the hypothesis
-                            remains observationally ruled out.
-                        </li>
-                        <li>Explore Grassmann colour variable extensions for QCD worldline calculations. The non-Abelian generalisation is technically well-defined and has been
-                            used for one-loop amplitudes; higher-loop extensions with colour Grassmann variables could yield new insights into quark confinement and asymptotic
-                            freedom from a first-quantised perspective.
-                        </li>
-                        <li>Connect worldline topology to quantum information. The braid group structure of worldlines (Section 10.4) is formally identical to the anyon statistics
-                            used in topological quantum computation. The Kitaev-Preskill program for fault-tolerant quantum computing using non-Abelian anyons is, in a precise
-                            mathematical sense, a direct application of worldline braiding physics — a connection that deserves more attention in the foundational physics
-                            literature.
-                        </li>
-                    </ol>
-                </section>
+                        <div class="rr-cap"><span class="rr-no">Table 4.</span> Observational Compatibility of the One-Electron Hypothesis</div>
+                        <div class="rr-table-wrap">
+                            <table class="rr-table">
+                                <thead>
+                                    <tr>
+                                        <th>Quantity</th>
+                                        <th>Observed Value</th>
+                                        <th>One-Electron Prediction</th>
+                                        <th>Compatible?</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>\(n(e^-) / n(e^+)\)</td>
+                                        <td>\(\sim 10^{10}\)</td>
+                                        <td>\(= 1\) (exactly)</td>
+                                        <td class="rr-no-cell">No</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Baryon-to-photon ratio</td>
+                                        <td>\(6.1\times10^{-10}\)</td>
+                                        <td>Zero (no net baryons)</td>
+                                        <td class="rr-no-cell">No</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Proton internal structure</td>
+                                        <td>3 quarks (uud)</td>
+                                        <td>Electron-positron composite</td>
+                                        <td class="rr-no-cell">No</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Leptogenesis requirement</td>
+                                        <td>CP violation needed</td>
+                                        <td>Single worldline = CP symmetric</td>
+                                        <td class="rr-no-cell">No</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <p class="rr-src">Source: PDG (2024); BBN constraints; deep inelastic scattering data (SLAC, HERA).</p>
 
-                <!-- ===== 14. References ===== -->
-                <section id="s14">
-                    <h2><span class="rr-no">14.</span> References</h2>
-                    <ol class="rr-refs">
-                        <li><span class="rr-ref-no">[1]</span><span>Wheeler, J.A. (attributed, oral communication). Telephone call to Richard Feynman, Princeton, spring 1940. Recounted in: Feynman, R.P., Nobel Lecture, Nobel Foundation, 11 December 1965.</span>
-                        </li>
-                        <li>
-                            <span class="rr-ref-no">[2]</span><span>Stueckelberg, E.C.G. "La signification du temps propre en mécanique ondulatoire." <em>Helvetica Physica Acta</em> 14 (1941): 51–80.</span>
-                        </li>
-                        <li><span class="rr-ref-no">[3]</span><span>Feynman, R.P. "The Theory of Positrons." <em>Physical Review</em> 76 (6): 749–759, 15 September 1949. DOI: 10.1103/PhysRev.76.749.</span>
-                        </li>
-                        <li><span class="rr-ref-no">[4]</span><span>Nambu, Y. "Force Potentials in Quantum Field Theory." <em>Progress of Theoretical Physics</em> 5 (4): 614–633, 1950. DOI: 10.1143/PTP.5.614.</span>
-                        </li>
-                        <li>
-                            <span class="rr-ref-no">[5]</span><span>Schweber, S.S. <em>QED and the Men Who Made It.</em> Princeton University Press, 1994. ISBN 0-691-03327-7.</span>
-                        </li>
-                        <li><span class="rr-ref-no">[6]</span><span>Ruegg, H., and Ruiz-Altaba, M. "Stueckelberg 1937–1942: The B-Field and Antiparticles as Time-Reversed Particles." In <em>The Stueckelberg Mechanism.</em> Springer, 2004.</span>
-                        </li>
-                        <li>
-                            <span class="rr-ref-no">[7]</span><span>Schwinger, J. "On Gauge Invariance and Vacuum Polarization." <em>Physical Review</em> 82 (5): 664–679, 1951.</span>
-                        </li>
-                        <li><span class="rr-ref-no">[8]</span><span>Bern, Z., and Kosower, D. "The computation of loop amplitudes in gauge theories." <em>Nuclear Physics B</em> 379 (1–2): 451–561, 1992.</span>
-                        </li>
-                        <li>
-                            <span class="rr-ref-no">[9]</span><span>Strassler, M.J. "Field theory without Feynman diagrams: one-loop effective Lagrangians." <em>Nuclear Physics B</em> 385 (1–2): 145–184, 1992.</span>
-                        </li>
-                        <li><span class="rr-ref-no">[10]</span><span>Schubert, C. "Perturbative Quantum Field Theory in the String-Inspired Formalism." <em>Physics Reports</em> 355 (2–3): 73–234, 2001. arXiv:hep-th/0101036.</span>
-                        </li>
-                        <li><span class="rr-ref-no">[11]</span><span>Dunne, G.V., and Schubert, C. "Worldline instantons and pair production in inhomogeneous fields." <em>Physical Review D</em> 72, 105004, 2005.</span>
-                        </li>
-                        <li><span class="rr-ref-no">[12]</span><span>Edwards, J.P., et al. "Perturbative Quantum Field Theory in the Worldline Formalism." arXiv:1912.10004 [hep-th], 2019.</span>
-                        </li>
-                        <li><span class="rr-ref-no">[13]</span><span>Degli Esposti, G., and Torgrimsson, G. "Schwinger pair production in spacetime fields: Moiré patterns, Aharonov-Bohm phases, and Sturm-Liouville eigenvalues." <em>Physical Review D</em> 112, 016026, 2025. DOI: 10.1103/3143-w4w3.</span>
-                        </li>
-                        <li><span class="rr-ref-no">[14]</span><span>Degli Esposti, G., and Torgrimsson, G. "Worldline instantons for nonlinear Breit-Wheeler pair production and Compton scattering." <em>Physical Review D</em> 105, 096036, 2022. DOI: 10.1103/PhysRevD.105.096036.</span>
-                        </li>
-                        <li><span class="rr-ref-no">[15]</span><span>Schubert, C., et al. "Integration techniques for worldline integrals." arXiv:2208.06585, 2022.</span></li>
-                        <li><span class="rr-ref-no">[16]</span><span><em>Advances in the Worldline Approach to Quantum Field Theory.</em> arXiv:2503.08846 [quant-ph], 2025.</span>
-                        </li>
-                        <li><span class="rr-ref-no">[17]</span><span>Bizri, S. "The Electron Monad: The One-Electron Universe Revisited — A Monistic Model of Quantum Spacetime." Independent Researcher, April 2025.</span>
-                        </li>
-                        <li><span class="rr-ref-no">[18]</span><span>Bizri, S. "The Monadic Electron Universe." Extended paper with Grassmann/colour variable treatment. Independent Researcher, 2025.</span>
-                        </li>
-                        <li>
-                            <span class="rr-ref-no">[19]</span><span>Anon. "Implicit Unique Worldline, 'one-electron Universe,' and (bi)quaternionic analysis." arXiv.org preprint.</span>
-                        </li>
-                        <li><span class="rr-ref-no">[20]</span><span>Atiyah, M.F. "Topological quantum field theory." <em>Publications Mathématiques de l'IHÉS</em> 68: 175–186, 1988.</span>
-                        </li>
-                        <li><span class="rr-ref-no">[21]</span><span>Kitaev, A. "Fault-tolerant quantum computation by anyons." <em>Annals of Physics</em> 303 (1): 2–30, 2003. arXiv:quant-ph/9707021.</span>
-                        </li>
-                        <li><span class="rr-ref-no">[22]</span><span>Feynman, R.P. "The Development of the Space-Time View of Quantum Electrodynamics." Nobel Lecture. Nobel Foundation, 11 December 1965.</span>
-                        </li>
-                        <li><span class="rr-ref-no">[23]</span><span>Fradkin, E.S. "Application of functional methods in quantum field theory and quantum statistics." <em>Nuclear Physics B</em> 76 (2): 588–624, 1966.</span>
-                        </li>
-                        <li><span class="rr-ref-no">[24]</span><span>Bern, Z., Dunbar, D.C., and Shimada, T. "String-based methods for one-loop graphs in field theory." <em>Physics Letters B</em> 312 (1–2): 277–284, 1993.</span>
-                        </li>
-                        <li><span class="rr-ref-no">[25]</span><span>Jones, V.F.R. "A polynomial invariant for knots via von Neumann algebras." <em>Bulletin of the American Mathematical Society</em> 12 (1): 103–111, 1985.</span>
-                        </li>
-                    </ol>
-                </section>
+                        <h3><span class="rr-no">12.2</span> Compatibility with the Standard Model</h3>
+                        <p>Modern reinterpretations of the one-electron universe within the worldline formalism are generally consistent with but do not derive the Standard Model.
+                           They
+                           reproduce QED exactly (guaranteed by the equivalence of the worldline formalism to second-quantised QED proven by Strassler in 1992). For QCD, the colour
+                           Grassmann variable extension is consistent with asymptotic freedom and confinement at a formal level. However, the actual calculation of the QCD spectrum
+                           (hadronic masses, confinement radius) requires the full non-perturbative machinery of lattice QCD or AdS/CFT. The weak force and Higgs mechanism present
+                           additional challenges, as the worldline formalism is most natural for gauge bosons and fermions in external fields, not for spontaneous
+                           symmetry-breaking.</p>
 
-                <div class="rr-footer">Research Report • The One-Electron Universe Hypothesis • Justinian Erdmier • 10 July 2026</div>
-            </article>
+                        <h3><span class="rr-no">12.3</span> Observational and Experimental Status</h3>
+                        <p>The experimental status of the one-electron universe hypothesis as a hypothesis (rather than as the broader worldline formalism) is negative: no
+                           observation
+                           distinguishes it from ordinary QED, and its most specific prediction (matter-antimatter equality) is falsified. The worldline formalism, by contrast, is
+                           in
+                           excellent experimental health — it has been used to compute QED and QCD amplitudes in agreement with experiment to many decimal places. The topological
+                           extensions (Sections 10–11) make novel, specific predictions that are, as of 2026, untested but not yet falsified. Table 5 provides a quantitative
+                           overview
+                           of experimental sensitivities.</p>
+
+                        <div class="rr-cap"><span class="rr-no">Table 5.</span> Experimental Sensitivity to Topological Worldline Corrections</div>
+                        <div class="rr-table-wrap">
+                            <table class="rr-table">
+                                <thead>
+                                    <tr>
+                                        <th>Observable</th>
+                                        <th>Standard QED Prediction</th>
+                                        <th>Topological Correction (est.)</th>
+                                        <th>Current Sensitivity</th>
+                                        <th>Near-Future Reach</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Electron \(g-2\)</td>
+                                        <td>1.00115965218…</td>
+                                        <td>\(\delta \sim 10^{-14}\)</td>
+                                        <td>\(\delta \sim 10^{-13}\)</td>
+                                        <td>\(10^{-14}\) (proposed)</td>
+                                    </tr>
+                                    <tr>
+                                        <td>H atom ground-state energy</td>
+                                        <td>−13.6056… eV</td>
+                                        <td>\(\Delta E/E \sim 10^{-19}\)</td>
+                                        <td>\(10^{-18}\) (optical clocks)</td>
+                                        <td>\(10^{-19}\) (next-gen)</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Electron interferometer phase</td>
+                                        <td>0 (std QED)</td>
+                                        <td>\(\Delta\varphi \sim 10^{-12}\) rad</td>
+                                        <td>\(\sim 10^{-11}\) rad</td>
+                                        <td>\(10^{-12}\) rad (proposed)</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Vacuum birefringence</td>
+                                        <td>PVLAS: \(&lt; 10^{-21}\)</td>
+                                        <td>Topological \(\sim 10^{-22}\)</td>
+                                        <td>\(10^{-21}\) (PVLAS)</td>
+                                        <td>\(10^{-22}\) (ATLAS)</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <p class="rr-src">Source: Bizri (2025); Degli Esposti &amp; Torgrimsson (2025); Gabrielse group (2023).</p>
+                    </section>
+
+                    <!-- ===== 13. Outlook ===== -->
+                    <section id="s13">
+                        <h2><span class="rr-no">13.</span> Outlook and Key Takeaways</h2>
+                        <h4>Short-Term Outlook (2026–2030)</h4>
+                        <p>The primary experimental battleground for topological worldline predictions is the electron anomalous magnetic moment. The current experimental value
+                           from
+                           Gabrielse's Harvard group (2023) agrees with the Standard Model prediction to 13 significant figures. Proposed next-generation experiments targeting the
+                           14th
+                           digit would either constrain or begin to probe the topological corrections predicted by the monadic electron framework. Simultaneously, next-generation
+                           optical atomic clocks operating at the \(10^{-19}\) frequency level could probe the spectroscopic shifts predicted by worldline topology.</p>
+                        <h4>Medium-Term Outlook (2030–2040)</h4>
+                        <p>The worldline instanton program for Schwinger pair production will receive its first direct experimental test if laser facilities (ELI-NP, LUXE at DESY,
+                           or
+                           successors) reach field strengths approaching \(10^{18}\,\mathrm{V/m}\). The Moiré interference patterns and Aharonov-Bohm phases predicted by Degli
+                           Esposti
+                           and Torgrimsson (2025) in the electron-positron momentum spectrum provide a new class of observable signatures of worldline topology in strong-field
+                           physics
+                           — directly testing the instanton formalism in ways that probe the geometry of worldline self-approaches.</p>
+                        <h4>Long-Term Outlook (2040+)</h4>
+                        <p>The question of whether a single-worldline description of matter is a reinterpretation of standard physics (empirically equivalent, computationally
+                           superior
+                           in some regimes) or a theory with new predictions (distinguishable from the Standard Model) hinges on whether topological quantum numbers beyond the
+                           Standard
+                           Model's \(U(1) \times SU(2) \times SU(3)\) charges can be identified and measured.</p>
+                        <h4>Numbered Actionable Takeaways</h4>
+                        <ol class="rr-list">
+                            <li>Treat the worldline formalism as a calculational tool, not just a philosophical reinterpretation. For multi-photon QED amplitudes and one-loop
+                                effective
+                                actions in background fields, it is strictly superior to conventional Feynman diagram methods — use it for any calculation involving more than four
+                                external photons at one loop.
+                            </li>
+                            <li>Follow the worldline instanton literature for strong-field physics. The Degli Esposti-Torgrimsson 2025 results on Moiré patterns and Aharonov-Bohm
+                                phases in Schwinger pair production represent the most direct connection between worldline topology and near-future experiment.
+                            </li>
+                            <li>Track next-generation \(g-2\) proposals. Any improvement beyond the \(10^{-13}\) level will begin testing the topological corrections predicted by
+                                the
+                                monadic electron model — if such corrections are real, they are the most accessible experimental signature of the one-electron universe picture.
+                            </li>
+                            <li>Engage with the biquaternionic worldline program. The implicit worldline formulation (Section 11.3) offers a potentially new global description of
+                                worldline topology that could unify the caustic structure of worldlines with the pair-production physics — mathematically rich and underexplored.
+                            </li>
+                            <li>Revisit the matter-antimatter asymmetry constraint before advancing any literal version of the one-electron universe hypothesis. Any serious revival
+                                must provide a mechanism for the worldline topology to generate \(n(e^-)/n(e^+) \approx 10^{10}\) from first principles, without which the
+                                hypothesis
+                                remains observationally ruled out.
+                            </li>
+                            <li>Explore Grassmann colour variable extensions for QCD worldline calculations. The non-Abelian generalisation is technically well-defined and has been
+                                used for one-loop amplitudes; higher-loop extensions with colour Grassmann variables could yield new insights into quark confinement and asymptotic
+                                freedom from a first-quantised perspective.
+                            </li>
+                            <li>Connect worldline topology to quantum information. The braid group structure of worldlines (Section 10.4) is formally identical to the anyon
+                                statistics
+                                used in topological quantum computation. The Kitaev-Preskill program for fault-tolerant quantum computing using non-Abelian anyons is, in a precise
+                                mathematical sense, a direct application of worldline braiding physics — a connection that deserves more attention in the foundational physics
+                                literature.
+                            </li>
+                        </ol>
+                    </section>
+
+                    <!-- ===== 14. References ===== -->
+                    <section id="s14">
+                        <h2><span class="rr-no">14.</span> References</h2>
+                        <ol class="rr-refs">
+                            <li><span class="rr-ref-no">[1]</span><span>Wheeler, J.A. (attributed, oral communication). Telephone call to Richard Feynman, Princeton, spring 1940. Recounted in: Feynman, R.P., Nobel Lecture, Nobel Foundation, 11 December 1965.</span>
+                            </li>
+                            <li>
+                                <span class="rr-ref-no">[2]</span><span>Stueckelberg, E.C.G. "La signification du temps propre en mécanique ondulatoire." <em>Helvetica Physica Acta</em> 14 (1941): 51–80.</span>
+                            </li>
+                            <li><span class="rr-ref-no">[3]</span><span>Feynman, R.P. "The Theory of Positrons." <em>Physical Review</em> 76 (6): 749–759, 15 September 1949. DOI: 10.1103/PhysRev.76.749.</span>
+                            </li>
+                            <li><span class="rr-ref-no">[4]</span><span>Nambu, Y. "Force Potentials in Quantum Field Theory." <em>Progress of Theoretical Physics</em> 5 (4): 614–633, 1950. DOI: 10.1143/PTP.5.614.</span>
+                            </li>
+                            <li>
+                                <span class="rr-ref-no">[5]</span><span>Schweber, S.S. <em>QED and the Men Who Made It.</em> Princeton University Press, 1994. ISBN 0-691-03327-7.</span>
+                            </li>
+                            <li><span class="rr-ref-no">[6]</span><span>Ruegg, H., and Ruiz-Altaba, M. "Stueckelberg 1937–1942: The B-Field and Antiparticles as Time-Reversed Particles." In <em>The Stueckelberg Mechanism.</em> Springer, 2004.</span>
+                            </li>
+                            <li>
+                                <span class="rr-ref-no">[7]</span><span>Schwinger, J. "On Gauge Invariance and Vacuum Polarization." <em>Physical Review</em> 82 (5): 664–679, 1951.</span>
+                            </li>
+                            <li><span class="rr-ref-no">[8]</span><span>Bern, Z., and Kosower, D. "The computation of loop amplitudes in gauge theories." <em>Nuclear Physics B</em> 379 (1–2): 451–561, 1992.</span>
+                            </li>
+                            <li>
+                                <span class="rr-ref-no">[9]</span><span>Strassler, M.J. "Field theory without Feynman diagrams: one-loop effective Lagrangians." <em>Nuclear Physics B</em> 385 (1–2): 145–184, 1992.</span>
+                            </li>
+                            <li><span class="rr-ref-no">[10]</span><span>Schubert, C. "Perturbative Quantum Field Theory in the String-Inspired Formalism." <em>Physics Reports</em> 355 (2–3): 73–234, 2001. arXiv:hep-th/0101036.</span>
+                            </li>
+                            <li><span class="rr-ref-no">[11]</span><span>Dunne, G.V., and Schubert, C. "Worldline instantons and pair production in inhomogeneous fields." <em>Physical Review D</em> 72, 105004, 2005.</span>
+                            </li>
+                            <li><span class="rr-ref-no">[12]</span><span>Edwards, J.P., et al. "Perturbative Quantum Field Theory in the Worldline Formalism." arXiv:1912.10004 [hep-th], 2019.</span>
+                            </li>
+                            <li><span class="rr-ref-no">[13]</span><span>Degli Esposti, G., and Torgrimsson, G. "Schwinger pair production in spacetime fields: Moiré patterns, Aharonov-Bohm phases, and Sturm-Liouville eigenvalues." <em>Physical Review D</em> 112, 016026, 2025. DOI: 10.1103/3143-w4w3.</span>
+                            </li>
+                            <li><span class="rr-ref-no">[14]</span><span>Degli Esposti, G., and Torgrimsson, G. "Worldline instantons for nonlinear Breit-Wheeler pair production and Compton scattering." <em>Physical Review D</em> 105, 096036, 2022. DOI: 10.1103/PhysRevD.105.096036.</span>
+                            </li>
+                            <li><span class="rr-ref-no">[15]</span><span>Schubert, C., et al. "Integration techniques for worldline integrals." arXiv:2208.06585, 2022.</span></li>
+                            <li>
+                                <span class="rr-ref-no">[16]</span><span><em>Advances in the Worldline Approach to Quantum Field Theory.</em> arXiv:2503.08846 [quant-ph], 2025.</span>
+                            </li>
+                            <li><span class="rr-ref-no">[17]</span><span>Bizri, S. "The Electron Monad: The One-Electron Universe Revisited — A Monistic Model of Quantum Spacetime." Independent Researcher, April 2025.</span>
+                            </li>
+                            <li><span class="rr-ref-no">[18]</span><span>Bizri, S. "The Monadic Electron Universe." Extended paper with Grassmann/colour variable treatment. Independent Researcher, 2025.</span>
+                            </li>
+                            <li>
+                                <span class="rr-ref-no">[19]</span><span>Anon. "Implicit Unique Worldline, 'one-electron Universe,' and (bi)quaternionic analysis." arXiv.org preprint.</span>
+                            </li>
+                            <li><span class="rr-ref-no">[20]</span><span>Atiyah, M.F. "Topological quantum field theory." <em>Publications Mathématiques de l'IHÉS</em> 68: 175–186, 1988.</span>
+                            </li>
+                            <li><span class="rr-ref-no">[21]</span><span>Kitaev, A. "Fault-tolerant quantum computation by anyons." <em>Annals of Physics</em> 303 (1): 2–30, 2003. arXiv:quant-ph/9707021.</span>
+                            </li>
+                            <li><span class="rr-ref-no">[22]</span><span>Feynman, R.P. "The Development of the Space-Time View of Quantum Electrodynamics." Nobel Lecture. Nobel Foundation, 11 December 1965.</span>
+                            </li>
+                            <li><span class="rr-ref-no">[23]</span><span>Fradkin, E.S. "Application of functional methods in quantum field theory and quantum statistics." <em>Nuclear Physics B</em> 76 (2): 588–624, 1966.</span>
+                            </li>
+                            <li><span class="rr-ref-no">[24]</span><span>Bern, Z., Dunbar, D.C., and Shimada, T. "String-based methods for one-loop graphs in field theory." <em>Physics Letters B</em> 312 (1–2): 277–284, 1993.</span>
+                            </li>
+                            <li><span class="rr-ref-no">[25]</span><span>Jones, V.F.R. "A polynomial invariant for knots via von Neumann algebras." <em>Bulletin of the American Mathematical Society</em> 12 (1): 103–111, 1985.</span>
+                            </li>
+                        </ol>
+                    </section>
+
+                    <div class="rr-footer">Research Report • The One-Electron Universe Hypothesis • Justinian Erdmier • 10 July 2026</div>
+                </article>
+            </div>
         </main>
 
         <script>
@@ -954,21 +1193,136 @@
                     });
                 }
 
-                // Smooth in-page scrolling for the table of contents
-                document.querySelectorAll('.rr-toc-grid a[href^="#"]').forEach(function (a) {
+                // Scroll-spy: highlight the section currently in view, across both
+                // the desktop rail and the mobile contents modal.
+                const railLinks = Array.prototype.slice.call(document.querySelectorAll('.rr-rail a[data-spy]'));
+                const navLinks = Array.prototype.slice.call(document.querySelectorAll('.rr-rail a[data-spy], .rr-cmodal-list a[data-spy]'));
+                const targets = railLinks
+                    .map(function (a) { return document.getElementById(a.getAttribute('data-spy')); })
+                    .filter(Boolean);
+
+                function setActive(id) {
+                    navLinks.forEach(function (a) {
+                        const on = a.getAttribute('data-spy') === id;
+
+                        a.classList.toggle('sel', on);
+
+                        if (on) a.setAttribute('aria-current', 'true'); else a.removeAttribute('aria-current');
+                    });
+                }
+
+                // Which section is currently under the "reading line"?
+                function computeCurrent() {
+                    if (!targets.length) return null;
+
+                    // When the page is at (or effectively at) the bottom, the last
+                    // section is the active one — it may be too short to reach the top.
+                    if (window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 2) {
+                        return targets[targets.length - 1].id;
+                    }
+
+                    const line = 150; // px below the top of the viewport
+                    let current = targets[0].id;
+
+                    for (let i = 0; i < targets.length; i++) {
+                        if (targets[i].getBoundingClientRect().top <= line) current = targets[i].id; else break;
+                    }
+
+                    return current;
+                }
+
+                // A click locks the active item until the page actually arrives there,
+                // so it doesn't flicker through the sections the smooth scroll passes.
+                let lockedId = null;
+                let lockTimer = null;
+
+                function releaseLock() {
+                    lockedId = null;
+                    if (lockTimer) {
+                        clearTimeout(lockTimer);
+                        lockTimer = null;
+                    }
+                }
+
+                function lockTo(id) {
+                    lockedId = id;
+                    setActive(id);
+                    if (lockTimer) clearTimeout(lockTimer);
+                    // Safety net in case arrival is never detected exactly.
+                    lockTimer = setTimeout(releaseLock, 1500);
+                }
+
+                function updateActive() {
+                    const current = computeCurrent();
+
+                    if (lockedId) {
+                        setActive(lockedId);
+                        if (current === lockedId) releaseLock();
+                        return;
+                    }
+
+                    if (current) setActive(current);
+                }
+
+                // Contents modal (used on mobile, where the rail is hidden)
+                const contentsBtn = document.getElementById('contentsBtn');
+                const contentsModal = document.getElementById('contentsModal');
+                const contentsClose = document.getElementById('contentsClose');
+
+                function openModal() {
+                    if (!contentsModal) return;
+                    contentsModal.classList.add('open');
+                    if (contentsBtn) contentsBtn.setAttribute('aria-expanded', 'true');
+                }
+
+                function closeModal() {
+                    if (!contentsModal) return;
+                    contentsModal.classList.remove('open');
+                    if (contentsBtn) contentsBtn.setAttribute('aria-expanded', 'false');
+                }
+
+                if (contentsBtn) contentsBtn.addEventListener('click', openModal);
+                if (contentsClose) contentsClose.addEventListener('click', closeModal);
+                if (contentsModal) {
+                    contentsModal.addEventListener('click', function (ev) {
+                        if (ev.target === contentsModal) closeModal();
+                    });
+                }
+                document.addEventListener('keydown', function (ev) {
+                    if (ev.key === 'Escape') closeModal();
+                });
+
+                // Smooth in-page scrolling + lock for the in-document TOC, the rail, and the modal
+                document.querySelectorAll('.rr-toc-grid a[href^="#"], .rr-rail a[href^="#"], .rr-cmodal-list a[href^="#"]').forEach(function (a) {
                     a.addEventListener('click', function (ev) {
-                        const el = document.getElementById(a.getAttribute('href').slice(1));
+                        const id = a.getAttribute('href').slice(1);
+                        const el = document.getElementById(id);
 
                         if (el) {
                             ev.preventDefault();
+                            closeModal();
+                            lockTo(id);
                             el.scrollIntoView({
                                                   behavior: 'smooth',
                                                   block:    'start'
                                               });
-                            history.replaceState(null, '', a.getAttribute('href'));
+                            history.replaceState(null, '', '#' + id);
                         }
                     });
                 });
+
+                if (targets.length) {
+                    let scheduled = false;
+                    window.addEventListener('scroll', function () {
+                        if (scheduled) return;
+                        scheduled = true;
+                        setTimeout(function () {
+                            updateActive();
+                            scheduled = false;
+                        }, 100);
+                    }, {passive: true});
+                    updateActive();
+                }
             })();
         </script>
     </body>
